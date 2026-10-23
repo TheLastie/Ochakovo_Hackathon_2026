@@ -1,0 +1,45 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ochakovo
+      POSTGRES_USER: ochakovo
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in.env}
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U ochakovo']
+      interval: 5s
+      retries: 15
+  app:
+    build: {context:., dockerfile: infra/Dockerfile}
+    environment: &env
+      POSTGRES_HOST: db
+      POSTGRES_DB: ochakovo
+      POSTGRES_USER: ochakovo
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in.env}
+      SECRET_KEY: ${SECRET_KEY:?Set SECRET_KEY in.env}
+      OCHAKOVO_DEBUG: '0'
+      ALLOWED_HOSTS: ${ALLOWED_HOSTS:-localhost,127.0.0.1}
+      CSRF_TRUSTED_ORIGINS: ${CSRF_TRUSTED_ORIGINS:-}
+      TRUST_PROXY_HEADERS: ${TRUST_PROXY_HEADERS:-0}
+      SECURE_COOKIES: ${SECURE_COOKIES:-0}
+    command: sh -c 'python manage.py migrate && python manage.py collectstatic --noinput && gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 2'
+    volumes: [static:/app/staticfiles]
+    depends_on: {db: {condition: service_healthy}}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/')"]
+      interval: 10s
+      retries: 12
+  worker:
+    build: {context:., dockerfile: infra/Dockerfile}
+    environment: *env
+    command: sh -c 'while true; do python manage.py process_outbox; sleep 5; done'
+    depends_on: {app: {condition: service_healthy}}
+  nginx:
+    image: nginx:1.28-alpine
+    ports: ['127.0.0.1:8080:80']
+    volumes: ['./infra/nginx.conf:/etc/nginx/nginx.conf:ro', 'static:/static:ro']
+    depends_on: {app: {condition: service_healthy}}
+volumes:
+  pgdata:
+  static:

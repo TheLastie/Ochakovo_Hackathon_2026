@@ -1,0 +1,5 @@
+@font-face{font-family:Stratos;src:url('assets/fonts/Stratos-ExtraBold.woff2') format('woff2');font-weight:800;font-display:swap}
+@font-face{font-family:Stratos;src:url('assets/fonts/Stratos-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:Proxima;src:url('assets/fonts/ProximaNova-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Proxima;src:url('assets/fonts/ProximaNova-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:ProximaCondensed;src:url('assets/fonts/ProximaNovaCondensed-Bold.woff2') format('woff2');font-weight:700;font-display:swap}:root{--brand-red:#d50032;--surface:#fff;--ink:#151515;--surface-soft:#f6f5f2;--muted:#62625f;--line:#dcdcd7;--focus:#032ab2;--font-display:Stratos,Arial,sans-serif;--font-body:Proxima,Arial,sans-serif;--radius:4px;--container:1440px}

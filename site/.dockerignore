@@ -1,0 +1,7 @@
+.venv
+node_modules
+web/dist
+staticfiles
+local.sqlite3
+__pycache__
+*.py[cod]

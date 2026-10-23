@@ -1,0 +1,96 @@
+{% load static %}<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Карьера и профессии в Очаково.">
+  <title>Карьера в Очаково</title>
+  <link rel="icon" href="{% static 'brand/assets/favicon.svg' %}">
+  <link rel="stylesheet" href="{% static 'app/app.css' %}?v={{ asset_version }}">
+</head>
+<body>
+  <a class="skip" href="#main">К основному содержанию</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top"><img src="{% static 'brand/assets/ochakovo-logo.svg' %}" alt="Очаково"><span>Карьера</span></a>
+    <nav aria-label="Навигация">
+      <a href="#about">О компании</a>
+      <a href="#professions">Профессии</a>
+      <a href="#apply">Анкета</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap">
+      <p class="eyebrow">РАБОТА В ОЧАКОВО</p>
+      <h1>Карьера в Очаково</h1>
+      <p>Узнай о компании, посмотри примеры профессий и оставь анкету, если тебе интересно.</p>
+      <p class="actions"><a href="#professions">Посмотреть профессии ↓</a> <a href="#apply">Оставить анкету</a></p>
+    </section>
+
+    <section class="section wrap" id="about">
+      <h2>О компании</h2>
+      <p>Московское производство Очаково работает с 1978 года. Здесь создают напитки, а специалисты разных направлений вместе отвечают за качество и результат.</p>
+      <div class="image-placeholder" aria-label="Место для фотографии производства"><span>Место для фото производства</span></div>
+    </section>
+
+    <section class="section wrap" id="professions">
+      <h2>Профессии</h2>
+      <p>Несколько направлений для знакомства:</p>
+      <div class="role-list">
+        {% for role in roles %}
+        <article class="role-card">
+          <span>0{{ forloop.counter }}</span>
+          <div>
+            <p class="role-area">{{ role.area }}</p>
+            <h3>{{ role.title }}</h3>
+            <p>{{ role.description }}</p>
+          </div>
+          <a href="#apply" data-role="{{ role.id }}" aria-label="Выбрать направление: {{ role.title }}">Выбрать</a>
+        </article>
+        {% endfor %}
+      </div>
+      <p class="note">Актуальные вакансии и условия практики смотрите на сайте Очаково.</p>
+    </section>
+
+    <section class="section wrap" id="apply">
+      <h2>Анкета</h2>
+      <p>Расскажи о себе и выбери интересующее направление.</p>
+      <form id="application-form">
+        {% csrf_token %}
+        <label for="name">Имя</label>
+        <input id="name" name="name" autocomplete="given-name" maxlength="100" required>
+        <span class="field-error" data-error="name"></span>
+
+        <label for="email">Электронная почта</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <span class="field-error" data-error="email"></span>
+
+        <label for="application-role">Направление</label>
+        <select id="application-role" name="role">
+          <option value="undecided">Пока выбираю</option>
+          {% for role in roles %}<option value="{{ role.id }}">{{ role.title }}</option>{% endfor %}
+        </select>
+        <span class="field-error" data-error="role"></span>
+
+        <label for="availability">Когда удобно начать? (необязательно)</label>
+        <input id="availability" name="availability" maxlength="200">
+        <span class="field-error" data-error="availability"></span>
+
+        <label class="check"><input type="checkbox" name="consent" required> Согласен на обработку данных анкеты.</label>
+        <span class="field-error" data-error="consent"></span>
+        <button type="submit">Отправить анкету</button>
+        <p id="form-status" role="status"></p>
+      </form>
+    </section>
+
+    <section class="section wrap" id="faq">
+      <h2>Вопросы</h2>
+      <details><summary>Можно оставить анкету, если я учусь?</summary><p>Да. Условия практики уточняются для конкретного предложения.</p></details>
+      <details><summary>Где посмотреть вакансии?</summary><p><a href="https://ochakovo.ru/rabota/" target="_blank" rel="noopener">На официальном сайте Очаково</a>.</p></details>
+    </section>
+  </main>
+
+  <footer class="wrap"><a href="#top">Очаково · Карьера</a></footer>
+  <script type="module" src="{% static 'app/app.js' %}?v={{ asset_version }}"></script>
+</body>
+</html>
