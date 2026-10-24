@@ -122,7 +122,7 @@ class AnalyticsTests(TestCase):
                    'kind': 'game_start', 'role': 'chemist'})
         result = self.client.get('/admin102/?period=all')
         self.assertEqual(result.status_code, 200)
-        self.assertEqual(result.context['popularity'][0]['title'], 'Химик')
+        self.assertEqual(result.context['popularity'][0]['title'], 'Химик-лаборант')
         self.assertEqual(result.context['popularity'][0]['total'], 1)
 
 
@@ -205,7 +205,7 @@ class EditableCatalogTests(TestCase):
             root = Path(tmp)
             (root / 'web/public/videos').mkdir(parents=True)
             data = {'brandVideo': {'src': '', 'captions': ''}, 'roles': [{'id': 'lab_assistant', 'title': 'Лаборант'}],
-                    'retiredRoles': [{'id': 'chemist', 'title': 'Химик'}]}
+                    'retiredRoles': [{'id': 'chemist', 'title': 'Химик-лаборант'}]}
             path = root / 'web/content.json'
             path.write_text(json.dumps(data))
             payload = {
@@ -229,7 +229,7 @@ class EditableCatalogTests(TestCase):
                         'kind': 'game_complete',
                         'role': 'mikh'})
                 self.assertFalse(event.is_valid())
-                self.assertIn(('chemist', 'Химик'), application_role_choices())
+                self.assertIn(('chemist', 'Химик-лаборант'), application_role_choices())
                 data['roles'] = [{'id': 'warehouse', 'title': 'Кладовщик'}]
                 path.write_text(json.dumps(data))
                 self.assertFalse(
