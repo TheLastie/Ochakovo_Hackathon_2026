@@ -1,96 +1,23 @@
 {% load static %}<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Карьера и профессии в Очаково.">
-  <title>Карьера в Очаково</title>
-  <link rel="icon" href="{% static 'brand/assets/favicon.svg' %}">
-  <link rel="stylesheet" href="{% static 'app/app.css' %}?v={{ asset_version }}">
-</head>
-<body>
-  <a class="skip" href="#main">К основному содержанию</a>
-  <header class="site-header" id="top">
-    <a class="brand" href="#top"><img src="{% static 'brand/assets/ochakovo-logo.svg' %}" alt="Очаково"><span>Карьера</span></a>
-    <nav aria-label="Навигация">
-      <a href="#about">О компании</a>
-      <a href="#professions">Профессии</a>
-      <a href="#apply">Анкета</a>
-    </nav>
-  </header>
-
-  <main id="main">
-    <section class="hero wrap">
-      <p class="eyebrow">РАБОТА В ОЧАКОВО</p>
-      <h1>Карьера в Очаково</h1>
-      <p>Узнай о компании, посмотри примеры профессий и оставь анкету, если тебе интересно.</p>
-      <p class="actions"><a href="#professions">Посмотреть профессии ↓</a> <a href="#apply">Оставить анкету</a></p>
-    </section>
-
-    <section class="section wrap" id="about">
-      <h2>О компании</h2>
-      <p>Московское производство Очаково работает с 1978 года. Здесь создают напитки, а специалисты разных направлений вместе отвечают за качество и результат.</p>
-      <div class="image-placeholder" aria-label="Место для фотографии производства"><span>Место для фото производства</span></div>
-    </section>
-
-    <section class="section wrap" id="professions">
-      <h2>Профессии</h2>
-      <p>Несколько направлений для знакомства:</p>
-      <div class="role-list">
-        {% for role in roles %}
-        <article class="role-card">
-          <span>0{{ forloop.counter }}</span>
-          <div>
-            <p class="role-area">{{ role.area }}</p>
-            <h3>{{ role.title }}</h3>
-            <p>{{ role.description }}</p>
-          </div>
-          <a href="#apply" data-role="{{ role.id }}" aria-label="Выбрать направление: {{ role.title }}">Выбрать</a>
-        </article>
-        {% endfor %}
-      </div>
-      <p class="note">Актуальные вакансии и условия практики смотрите на сайте Очаково.</p>
-    </section>
-
-    <section class="section wrap" id="apply">
-      <h2>Анкета</h2>
-      <p>Расскажи о себе и выбери интересующее направление.</p>
-      <form id="application-form">
-        {% csrf_token %}
-        <label for="name">Имя</label>
-        <input id="name" name="name" autocomplete="given-name" maxlength="100" required>
-        <span class="field-error" data-error="name"></span>
-
-        <label for="email">Электронная почта</label>
-        <input id="email" name="email" type="email" autocomplete="email" required>
-        <span class="field-error" data-error="email"></span>
-
-        <label for="application-role">Направление</label>
-        <select id="application-role" name="role">
-          <option value="undecided">Пока выбираю</option>
-          {% for role in roles %}<option value="{{ role.id }}">{{ role.title }}</option>{% endfor %}
-        </select>
-        <span class="field-error" data-error="role"></span>
-
-        <label for="availability">Когда удобно начать? (необязательно)</label>
-        <input id="availability" name="availability" maxlength="200">
-        <span class="field-error" data-error="availability"></span>
-
-        <label class="check"><input type="checkbox" name="consent" required> Согласен на обработку данных анкеты.</label>
-        <span class="field-error" data-error="consent"></span>
-        <button type="submit">Отправить анкету</button>
-        <p id="form-status" role="status"></p>
-      </form>
-    </section>
-
-    <section class="section wrap" id="faq">
-      <h2>Вопросы</h2>
-      <details><summary>Можно оставить анкету, если я учусь?</summary><p>Да. Условия практики уточняются для конкретного предложения.</p></details>
-      <details><summary>Где посмотреть вакансии?</summary><p><a href="https://ochakovo.ru/rabota/" target="_blank" rel="noopener">На официальном сайте Очаково</a>.</p></details>
-    </section>
-  </main>
-
-  <footer class="wrap"><a href="#top">Очаково · Карьера</a></footer>
-  <script type="module" src="{% static 'app/app.js' %}?v={{ asset_version }}"></script>
-</body>
-</html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Узнай, кто создаёт знакомые напитки в Очаково, познакомься с профессиями и оставь анкету."><title>Работа в Очаково — первая смена</title><link rel="icon" href="{% static 'brand/assets/favicon.svg' %}"><link rel="stylesheet" href="{% static 'brand/tokens.css' %}"><link rel="stylesheet" href="{% static 'app/app.css' %}?v={{ asset_version }}"></head>
+<body><a class="skip" href="#main">Перейти к содержанию</a><header class="site-header"><a class="brand" href="#"><img src="{% static 'brand/assets/ochakovo-logo.svg' %}" alt="Очаково"><span>Первая смена</span></a><nav aria-label="Основная навигация"><a href="#about">Профессии</a><a href="#shift">Новая смена</a><a href="#faq">Вопросы</a></nav><a class="button small" href="#apply">Хочу в команду ↗</a></header>
+<main id="main"><section class="hero wrap"><div class="hero-copy"><div class="eyebrow"><span class="dot"></span> НАЧНИ СВОЙ ПУТЬ В ОЧАКОВО</div><h1>Найди своё<br>дело в<br><em>Очаково</em></h1><p class="lead">Узнай, кто создаёт знакомые напитки.<br>Познакомься с профессиями и командой.</p><div class="actions"><a class="button" href="#about">Узнать о профессиях <span>↗</span></a><a class="text-link" href="#apply">Оставить анкету ↓</a></div></div>
+<div class="hero-media" id="brand-media"><button class="hero-video" id="brand-video-cover" data-video="brand" aria-label="Познакомиться с Михалычем"><span class="video-topline">ОЧАКОВО ИЗНУТРИ <span>↗</span></span><span class="mikh-hero" aria-hidden="true"></span><span class="hello-note">Привет!<br>Я Михалыч.<svg viewBox="0 0 90 50" aria-hidden="true"><path d="M5 5Q50 45 80 25M65 23l17 1-6 16"/></svg></span><span class="hero-video-bottom"><span class="play">▶</span><span><strong>Покажу, как всё устроено</strong><small>{{ content.brandVideo.duration }} секунд · о компании и твоём старте</small></span></span></button><div id="brand-player" hidden></div></div></section>
+<section id="about" class="wrap about reveal"><div class="about-heading"><h2>Узнай, кто стоит<br>за знакомым вкусом</h2><p>С 1978 года в «Очаково» делают напитки.<br>А каждый день здесь делают общее дело.</p></div><div class="about-steps"><div><span>01</span><h3>Исследуй производство</h3><p>От первого образца в лаборатории до готовой партии на складе.</p></div><div><span>02</span><h3>Узнай о профессиях</h3><p>Посмотри, какие специалисты вместе создают знакомые напитки.</p></div><div><span>03</span><h3>Найди своё направление</h3><p>Расскажи, что тебе интересно. Анкету можно оставить сразу.</p></div></div></section>
+<section id="shift" class="game-only" aria-label="Первая смена — игра"><div class="game-stage" id="game-stage">
+<iframe id="factory-frame" title="Игровая сцена" data-src="{% static 'unity/index.html' %}" allow="autoplay; fullscreen" hidden></iframe>
+<iframe id="character-frame" title="Выбор персонажа" data-src="{% static 'game-menu/characters/index.html' %}" hidden></iframe>
+<div class="game-menu" id="game-menu">
+<img class="game-menu-art" id="game-menu-art" src="{% static 'game-menu/desk.png' %}" alt="" loading="lazy" decoding="async">
+<canvas class="game-menu-wind" id="game-menu-wind" aria-hidden="true"></canvas>
+<button class="game-menu-start" id="game-menu-start" type="button">За работу!</button>
+<button class="game-menu-sound" id="game-menu-sound" type="button" aria-label="Включить звук ветра" aria-pressed="false">
+<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 12h5l7-6v20l-7-6H5z" fill="currentColor"/><g class="sound-waves" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M21 11q5 5 0 10M25 7q9 9 0 18"/></g><path class="sound-muted" d="m22 12 7 8m0-8-7 8" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></svg>
+</button>
+<p class="game-menu-status" id="game-menu-status" role="status" aria-live="polite"></p>
+<noscript><p class="game-menu-nojs">Для запуска игры включи JavaScript в браузере.</p></noscript>
+</div></div></section>
+<section id="apply" class="wrap apply-grid reveal"><div class="apply-copy"><h2>Хочешь к нам<br><em>в команду?</em></h2><p class="lead">Расскажи немного о себе<br>и о том, что тебе интересно.</p><div class="mentor-note"><span class="mikh-avatar" aria-hidden="true"></span><p>«Пока не выбрал профессию?<br>Так и напиши — разберёмся вместе».<strong>Михалыч, твой проводник</strong></p></div><a class="text-link" href="https://ochakovo.ru/rabota/" target="_blank" rel="noopener">Посмотреть вакансии Очаково ↗</a></div><form id="application-form">{% csrf_token %}<div class="form-top"><h3>Давай знакомиться</h3><span>↗</span></div><label for="name">Как тебя зовут?</label><input id="name" name="name" autocomplete="given-name" maxlength="100" placeholder="Твоё имя" required><span class="field-error" data-error="name"></span><label for="email">Электронная почта</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required><span class="field-error" data-error="email"></span><label for="application-role">Какое направление интересно?</label><select id="application-role" name="role"><option value="undecided">Пока выбираю</option>{% for role in content.roles %}<option value="{{ role.id }}">{{ role.title }}</option>{% endfor %}</select><span class="field-error" data-error="role"></span><label for="availability">Когда удобно начать? <span class="muted">Необязательно</span></label><input id="availability" name="availability" maxlength="200" placeholder="Например, во время летних каникул"><span class="field-error" data-error="availability"></span><label class="check"><input type="checkbox" name="consent" required><span>Согласен на обработку имени, почты и ответов в анкете для рассмотрения моего интереса к работе.</span></label><span class="field-error" data-error="consent"></span><button class="button" type="submit">Отправить анкету <span>↗</span></button><p id="form-status" role="status"></p></form></section>
+<section id="faq" class="faq wrap reveal"><div><span class="eyebrow">МИХАЛЫЧ ОТВЕЧАЕТ</span><h2>Остались вопросы?</h2></div><div class="faq-list"><details><summary>Можно оставить анкету сейчас?</summary><p>Конечно. Выбери интересное направление и расскажи о себе. Игровой результат не нужен.</p></details><details><summary>А если у меня ещё нет опыта?</summary><p>Расскажи в анкете, что тебе интересно и когда ты готов начать. Возможность практики и требования зависят от выбранного направления.</p></details><details><summary>Какие есть направления?</summary><div class="faq-roles">{% for role in content.roles %}<p><strong>{{ role.title }}</strong><br>{{ role.description }}</p>{% endfor %}</div></details><details><summary>Где узнать условия работы?</summary><p>Актуальные предложения и требования размещены <a href="https://ochakovo.ru/rabota/" target="_blank" rel="noopener">на странице вакансий Очаково</a>. График и условия практики уточняются для конкретной позиции.</p></details></div></section></main>
+<footer class="wrap"><a class="brand" href="#"><img src="{% static 'brand/assets/ochakovo-logo.svg' %}" alt="Очаково"><span>Первая смена</span></a><a href="#">Наверх ↑</a></footer>
+{{ content|json_script:"site-content" }}<script type="module" src="{% static 'app/app.js' %}?v={{ asset_version }}"></script></body></html>

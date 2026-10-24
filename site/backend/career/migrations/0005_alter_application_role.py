@@ -6,14 +6,17 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
- dependencies = [
- ('career', '0004_alter_application_role'),
- ]
+    dependencies = [
+        ('career', '0004_alter_application_role'),
+    ]
 
- operations = [
- migrations.AlterField(
- model_name='application',
- name='role',
- field=models.CharField(choices=career.content.application_role_choices, max_length=40, verbose_name='Направление'),
- ),
- ]
+    operations = [
+        migrations.AlterField(
+            model_name='application',
+            name='role',
+            field=models.CharField(
+                choices=career.content.application_role_choices,
+                max_length=40,
+                verbose_name='Направление'),
+        ),
+    ]

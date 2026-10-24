@@ -7,39 +7,55 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
- initial = True
+    initial = True
 
- dependencies = [
- ]
+    dependencies = [
+    ]
 
- operations = [
- migrations.CreateModel(
- name='Application',
- fields=[
- ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
- ('idempotency_key', models.UUIDField(unique=True)),
- ('session_key', models.CharField(max_length=64)),
- ('name', models.CharField(max_length=100, verbose_name='Имя')),
- ('email', models.EmailField(max_length=254, verbose_name='Email')),
- ('role', models.CharField(max_length=40, verbose_name='Направление')),
- ('availability', models.CharField(blank=True, max_length=200, verbose_name='Когда удобно начать')),
- ('consent_version', models.CharField(default='local-demo-v1', max_length=40)),
- ('created_at', models.DateTimeField(auto_now_add=True, verbose_name='Создана')),
- ('status', models.CharField(choices=[('new', 'Новая'), ('contacted', 'Связались'), ('closed', 'Закрыта')], default='new', max_length=30, verbose_name='Статус')),
- ],
- options={
- 'verbose_name': 'демонстрационная анкета',
- 'verbose_name_plural': 'демонстрационные анкеты',
- },
- ),
- migrations.CreateModel(
- name='OutboxMessage',
- fields=[
- ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
- ('created_at', models.DateTimeField(auto_now_add=True)),
- ('delivered_at', models.DateTimeField(blank=True, null=True)),
- ('destination', models.CharField(default='internal_hr', max_length=40)),
- ('application', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='career.application')),
- ],
- ),
- ]
+    operations = [
+        migrations.CreateModel(
+            name='Application',
+            fields=[
+                ('id', models.UUIDField(default=uuid.uuid4,
+                 editable=False, primary_key=True, serialize=False)),
+                ('idempotency_key', models.UUIDField(unique=True)),
+                ('session_key', models.CharField(max_length=64)),
+                ('name', models.CharField(max_length=100, verbose_name='Имя')),
+                ('email', models.EmailField(max_length=254, verbose_name='Email')),
+                ('role', models.CharField(max_length=40, verbose_name='Направление')),
+                ('availability', models.CharField(blank=True,
+                 max_length=200, verbose_name='Когда удобно начать')),
+                ('consent_version', models.CharField(
+                    default='local-demo-v1', max_length=40)),
+                ('created_at', models.DateTimeField(
+                    auto_now_add=True, verbose_name='Создана')),
+                ('status',
+                 models.CharField(choices=[('new',
+                                            'Новая'),
+                                           ('contacted',
+                                            'Связались'),
+                                           ('closed',
+                                            'Закрыта')],
+                                  default='new',
+                                  max_length=30,
+                                  verbose_name='Статус')),
+            ],
+            options={
+                'verbose_name': 'демонстрационная анкета',
+                'verbose_name_plural': 'демонстрационные анкеты',
+            },
+        ),
+        migrations.CreateModel(
+            name='OutboxMessage',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('delivered_at', models.DateTimeField(blank=True, null=True)),
+                ('destination', models.CharField(
+                    default='internal_hr', max_length=40)),
+                ('application', models.OneToOneField(
+                    on_delete=django.db.models.deletion.CASCADE, to='career.application')),
+            ],
+        ),
+    ]

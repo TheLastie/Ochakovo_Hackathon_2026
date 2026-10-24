@@ -5,14 +5,14 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
- dependencies = [
- ('career', '0002_event_alter_application_options'),
- ]
+    dependencies = [
+        ('career', '0002_event_alter_application_options'),
+    ]
 
- operations = [
- migrations.AlterField(
- model_name='application',
- name='consent_version',
- field=models.CharField(default='career-interest-', max_length=40),
- ),
- ]
+    operations = [
+        migrations.AlterField(
+            model_name='application',
+            name='consent_version',
+            field=models.CharField(default='career-interest-', max_length=40),
+        ),
+    ]

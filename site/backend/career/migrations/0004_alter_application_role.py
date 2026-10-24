@@ -5,14 +5,27 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
- dependencies = [
- ('career', '0003_alter_application_consent_version'),
- ]
+    dependencies = [
+        ('career', '0003_alter_application_consent_version'),
+    ]
 
- operations = [
- migrations.AlterField(
- model_name='application',
- name='role',
- field=models.CharField(choices=[('line', 'Оператор линии'), ('chemist', 'Инженер-химик'), ('technologist', 'Технолог'), ('warehouse', 'Оператор склада'), ('undecided', 'Пока выбирает')], max_length=40, verbose_name='Направление'),
- ),
- ]
+    operations = [
+        migrations.AlterField(
+            model_name='application',
+            name='role',
+            field=models.CharField(
+                choices=[
+                    ('line',
+                     'Оператор линии'),
+                    ('chemist',
+                     'Инженер-химик'),
+                    ('technologist',
+                     'Технолог'),
+                    ('warehouse',
+                     'Оператор склада'),
+                    ('undecided',
+                     'Пока выбирает')],
+                max_length=40,
+                verbose_name='Направление'),
+        ),
+    ]

@@ -3,6 +3,7 @@ WORKDIR /app
 COPY package*.json tsconfig.json vite.config.js ./
 COPY web ./web
 RUN npm ci && npm run build
+
 FROM python:3.13-slim
 WORKDIR /app
 COPY requirements.txt .
@@ -11,6 +12,7 @@ COPY backend ./backend
 COPY brand ./brand
 COPY web/content.json ./web/content.json
 COPY web/templates ./web/templates
+COPY web/public ./web/public
 COPY --from=frontend /app/web/dist ./web/dist
 ENV PYTHONUNBUFFERED=1
 WORKDIR /app/backend

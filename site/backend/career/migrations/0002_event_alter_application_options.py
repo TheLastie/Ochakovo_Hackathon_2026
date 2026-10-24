@@ -6,28 +6,50 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
- dependencies = [
- ('career', '0001_initial'),
- ]
+    dependencies = [
+        ('career', '0001_initial'),
+    ]
 
- operations = [
- migrations.CreateModel(
- name='Event',
- fields=[
- ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
- ('session_key', models.CharField(db_index=True, max_length=64)),
- ('kind', models.CharField(choices=[('visit', 'Посещение'), ('video_open', 'Открытие видео'), ('video_play', 'Воспроизведение видео'), ('video_complete', 'Видео досмотрено')], db_index=True, max_length=30)),
- ('role', models.CharField(blank=True, max_length=40)),
- ('video', models.CharField(blank=True, max_length=40)),
- ('created_at', models.DateTimeField(auto_now_add=True, db_index=True)),
- ],
- options={
- 'verbose_name': 'событие',
- 'verbose_name_plural': 'события',
- },
- ),
- migrations.AlterModelOptions(
- name='application',
- options={'verbose_name': 'анкета', 'verbose_name_plural': 'анкеты'},
- ),
- ]
+    operations = [
+        migrations.CreateModel(
+            name='Event',
+            fields=[
+                ('id', models.UUIDField(default=uuid.uuid4,
+                 editable=False, primary_key=True, serialize=False)),
+                ('session_key', models.CharField(db_index=True, max_length=64)),
+                ('kind',
+                 models.CharField(choices=[('visit',
+                                            'Посещение'),
+                                           ('video_open',
+                                            'Открытие видео'),
+                                           ('video_play',
+                                            'Воспроизведение видео'),
+                                           ('video_complete',
+                                            'Видео досмотрено'),
+                                           ('game_open',
+                                            'Открытие игры'),
+                                           ('role_selected',
+                                            'Выбор профессии'),
+                                           ('game_start',
+                                            'Начало смены'),
+                                           ('game_complete',
+                                            'Завершение смены')],
+                                  db_index=True,
+                                  max_length=30)),
+                ('role', models.CharField(blank=True, max_length=40)),
+                ('video', models.CharField(blank=True, max_length=40)),
+                ('created_at', models.DateTimeField(
+                    auto_now_add=True, db_index=True)),
+            ],
+            options={
+                'verbose_name': 'событие',
+                'verbose_name_plural': 'события',
+            },
+        ),
+        migrations.AlterModelOptions(
+            name='application',
+            options={
+                'verbose_name': 'анкета',
+                'verbose_name_plural': 'анкеты'},
+        ),
+    ]

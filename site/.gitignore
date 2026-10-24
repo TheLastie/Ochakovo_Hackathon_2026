@@ -1,0 +1,23 @@
+.DS_Store
+__pycache__/
+.venv/
+.venv-art/
+node_modules/
+web/dist/
+web/public/unity/
+staticfiles/
+*.sqlite3
+.env
+.env.*
+!.env.example
+.local-admin.txt
+
+# Local generated assets, model caches, and presentation renders
+tmp/
+
+OchakovoFactoryWorld/Library/
+OchakovoFactoryWorld/Temp/
+OchakovoFactoryWorld/Logs/
+OchakovoFactoryWorld/obj/
+OchakovoFactoryWorld/UserSettings/
+OchakovoFactoryWorld/Builds/
