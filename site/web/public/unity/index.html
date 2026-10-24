@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Игровая сцена — скоро</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; margin: 0; }
+    body { display: grid; place-items: center; padding: 24px; color: #f1f0ed; background: #151516; }
+    main { width: min(100%, 520px); padding: 30px 32px; border: 1px solid #343436; border-radius: 16px; background: #1d1d1f; }
+    .mark { display: grid; place-items: center; width: 36px; height: 36px; margin-bottom: 22px; border-radius: 10px; color: #f3e7e3; background: #603b35; font-size: 18px; }
+    p { margin: 0; color: #aaa8a5; font-size: 14px; line-height: 1.6; }
+    h1 { margin: 8px 0 10px; font-size: clamp(20px, 5vw, 26px); line-height: 1.2; font-weight: 600; }
+    .eyebrow { color: #b9a09a; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <main id="unity-canvas" role="status" aria-live="polite">
+    <div class="mark" aria-hidden="true">↗</div>
+    <p class="eyebrow">Игровая сцена</p>
+    <h1>Сцена скоро появится</h1>
+    <p>Интерактивная игра сейчас готовится. Пока можно познакомиться с профессиями и выбрать свой путь на заводе.</p>
+  </main>
+</body>
+</html>
