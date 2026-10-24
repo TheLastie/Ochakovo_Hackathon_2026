@@ -23,5 +23,13 @@
     <h1>Сцена скоро появится</h1>
     <p>Интерактивная игра сейчас готовится. Пока можно познакомиться с профессиями и выбрать свой путь на заводе.</p>
   </main>
+  <script>
+    if (window.parent !== window) {
+      window.parent.postMessage(
+        { channel: 'ochakovo-unity', type: 'ready' },
+        location.origin,
+      );
+    }
+  </script>
 </body>
 </html>
