@@ -1,6 +1,9 @@
 from datetime import timedelta
 
-from django.contrib import admin
+from django.contrib import admin, messages
+from django.contrib.auth import get_user_model
+from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.forms import UserCreationForm
 from django.db.models import Count
 from django.utils import timezone
 
@@ -8,11 +11,24 @@ from .content import application_role_choices, load_content
 from .models import Application, Event
 
 
+User = get_user_model()
+
+
+class AdministratorCreationForm(UserCreationForm):
+    class Meta(UserCreationForm.Meta):
+        model = User
+        fields = ('username', 'first_name', 'last_name', 'email')
+
+
 class CareerAdminSite(admin.AdminSite):
     site_header = 'Очаково · команда'
     site_title = 'Очаково — заявки и статистика'
     index_title = 'Заявки и статистика'
     index_template = 'admin/dashboard.html'
+
+    def has_permission(self, request):
+        user = request.user
+        return user.is_active and user.is_superuser
 
     def index(self, request, extra_context=None):
         roles = dict(application_role_choices())
@@ -71,11 +87,62 @@ class CareerAdminSite(admin.AdminSite):
             'videos': videos,
             'period': period,
             'recent': applications.order_by('-created_at')[:8],
+            'active_admin_count': User.objects.filter(
+                is_active=True, is_superuser=True).count(),
         }
         return super().index(request, context)
 
 
 site = CareerAdminSite(name='career_admin')
+
+
+@admin.register(User, site=site)
+class AdministratorAdmin(UserAdmin):
+    add_form = AdministratorCreationForm
+    list_display = (
+        'username', 'first_name', 'last_name', 'email', 'is_active',
+        'last_login')
+    list_filter = ('is_active',)
+    search_fields = ('username', 'first_name', 'last_name', 'email')
+    ordering = ('username',)
+    readonly_fields = ('last_login', 'date_joined')
+    fieldsets = (
+        ('Учётная запись', {'fields': ('username', 'password')}),
+        ('Сотрудник', {'fields': ('first_name', 'last_name', 'email')}),
+        ('Доступ', {'fields': ('is_active',)}),
+        ('Даты', {'fields': ('last_login', 'date_joined')}),
+    )
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': (
+                'username', 'first_name', 'last_name', 'email',
+                'password1', 'password2'),
+        }),
+    )
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).filter(is_superuser=True)
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+    def save_model(self, request, obj, form, change):
+        if change and not obj.is_active:
+            another_active_admin = User.objects.filter(
+                is_active=True, is_superuser=True).exclude(pk=obj.pk).exists()
+            if obj.pk == request.user.pk or not another_active_admin:
+                messages.error(
+                    request,
+                    'Нельзя отключить текущего или последнего активного администратора.')
+                obj.is_active = True
+        obj.is_staff = True
+        obj.is_superuser = True
+        super().save_model(request, obj, form, change)
+
+    def changelist_view(self, request, extra_context=None):
+        context = {**(extra_context or {}), 'title': 'Учётные записи администраторов'}
+        return super().changelist_view(request, context)
 
 
 @admin.register(Application, site=site)

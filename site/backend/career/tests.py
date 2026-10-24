@@ -106,7 +106,7 @@ class AnalyticsTests(TestCase):
         self.assertEqual(Event.objects.filter(kind='video_open').count(), 1)
         self.assertEqual(Event.objects.filter(kind='video_play').count(), 0)
 
-    def test_dashboard_requires_staff_and_aggregates(self):
+    def test_dashboard_requires_superuser_and_aggregates(self):
         self.assertEqual(self.client.get('/admin102/').status_code, 302)
         self.assertEqual(self.client.get('/admin/').status_code, 404)
         user = get_user_model().objects.create_user(
@@ -114,6 +114,9 @@ class AnalyticsTests(TestCase):
         self.client.force_login(user)
         self.assertEqual(self.client.get('/admin102/').status_code, 302)
         user.is_staff = True
+        user.save()
+        self.assertEqual(self.client.get('/admin102/').status_code, 302)
+        user.is_superuser = True
         user.save()
         self.event({'id': str(uuid.uuid4()),
                    'kind': 'game_start', 'role': 'chemist'})
