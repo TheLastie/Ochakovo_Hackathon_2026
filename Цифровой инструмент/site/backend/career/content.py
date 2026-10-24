@@ -10,19 +10,20 @@ def load_content():
 
     def video(key, configured):
         result = dict(configured)
+        source_directory = settings.COMPANY_VIDEO_DIR if key == 'brand' else directory
         for extension in ('mp4', 'webm'):
             filename = f'{key}.{extension}'
-            if (directory / filename).is_file():
+            if (source_directory / filename).is_file():
                 result['src'] = f'/static/videos/{filename}?v={
                     (
-                        directory /
+                        source_directory /
                         filename).stat().st_mtime_ns}'
                 break
         captions = f'{key}.ru.vtt'
-        if (directory / captions).is_file():
+        if (source_directory / captions).is_file():
             result['captions'] = f'/static/videos/{captions}?v={
                 (
-                    directory /
+                    source_directory /
                     captions).stat().st_mtime_ns}'
         return result
 

@@ -131,10 +131,11 @@ class ContentTests(TestCase):
         with TemporaryDirectory() as tmp:
             root = Path(tmp)
             (root / 'web/public/videos').mkdir(parents=True)
+            (root / 'company-videos').mkdir()
             original = {'brandVideo': {'src': '', 'captions': '', 'title': 'Test', 'transcript': ''}, 'roles': [
                 {'id': 'brewer', 'title': 'Квасовар', 'video': {'src': '', 'captions': ''}}]}
             (root / 'web/content.json').write_text(json.dumps(original))
-            with override_settings(BASE_DIR=root):
+            with override_settings(BASE_DIR=root, COMPANY_VIDEO_DIR=root / 'company-videos'):
                 self.assertEqual(
                     load_content()['roles'][0]['video']['src'], '')
                 (root / 'web/public/videos/brewer.webm').touch()
@@ -142,7 +143,7 @@ class ContentTests(TestCase):
                     '/static/videos/brewer.webm?v='))
                 (root / 'web/public/videos/brewer.mp4').touch()
                 (root / 'web/public/videos/brewer.ru.vtt').touch()
-                (root / 'web/public/videos/brand.mp4').touch()
+                (root / 'company-videos/brand.mp4').touch()
                 data = load_content()
                 self.assertTrue(data['roles'][0]['video']['src'].startswith(
                     '/static/videos/brewer.mp4?v='))

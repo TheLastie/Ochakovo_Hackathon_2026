@@ -2,10 +2,10 @@
 __pycache__/
 .venv/
 .venv-art/
-site/node_modules/
-site/web/dist/
-site/staticfiles/
-site/local.sqlite3
+Цифровой инструмент/site/node_modules/
+Цифровой инструмент/site/web/dist/
+Цифровой инструмент/site/staticfiles/
+Цифровой инструмент/site/local.sqlite3
 *.sqlite3
 .env
 .env.*
@@ -22,3 +22,4 @@ site/local.sqlite3
 
 # Local generated assets, model caches, and presentation renders
 tmp/
+.playwright-cli/

@@ -11,7 +11,7 @@ services:
       interval: 5s
       retries: 15
   app:
-    build: {context:., dockerfile: infra/Dockerfile}
+    build: {context: ../.., dockerfile: Цифровой инструмент/site/infra/Dockerfile}
     environment: &env
       POSTGRES_HOST: db
       POSTGRES_DB: ochakovo
@@ -23,6 +23,8 @@ services:
       CSRF_TRUSTED_ORIGINS: ${CSRF_TRUSTED_ORIGINS:-}
       TRUST_PROXY_HEADERS: ${TRUST_PROXY_HEADERS:-0}
       SECURE_COOKIES: ${SECURE_COOKIES:-0}
+      OCHAKOVO_VIDEO_DIR: /app/company-videos
+      OCHAKOVO_CONCEPT_DOCUMENTS_DIR: /app/concept-docs
     command: sh -c 'python manage.py migrate && python manage.py collectstatic --noinput && gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 2'
     volumes: [static:/app/staticfiles]
     depends_on: {db: {condition: service_healthy}}
@@ -31,7 +33,7 @@ services:
       interval: 10s
       retries: 12
   worker:
-    build: {context:., dockerfile: infra/Dockerfile}
+    build: {context: ../.., dockerfile: Цифровой инструмент/site/infra/Dockerfile}
     environment: *env
     command: sh -c 'while true; do python manage.py process_outbox; sleep 5; done'
     depends_on: {app: {condition: service_healthy}}

@@ -1,6 +1,12 @@
 import os
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parents[2]
+REPOSITORY_DIR = BASE_DIR.parents[1]
+COMPANY_VIDEO_DIR = Path(os.getenv(
+    'OCHAKOVO_VIDEO_DIR', str(REPOSITORY_DIR / 'Видеоролик о компании')))
+CONCEPT_DOCUMENTS_DIR = Path(os.getenv(
+    'OCHAKOVO_CONCEPT_DOCUMENTS_DIR',
+    str(REPOSITORY_DIR / 'Концепция бренда' / 'Документы')))
 DEBUG = os.getenv('OCHAKOVO_DEBUG', '1') == '1'
 SECRET_KEY = os.getenv('SECRET_KEY', 'local-prototype-only-do-not-deploy')
 if not DEBUG and SECRET_KEY == 'local-prototype-only-do-not-deploy':
@@ -63,7 +69,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [('app', BASE_DIR / 'web/dist'),
-                    ('brand', BASE_DIR / 'brand'), BASE_DIR / 'web/public']
+                    ('brand', BASE_DIR / 'brand'), BASE_DIR / 'web/public',
+                    ('videos', COMPANY_VIDEO_DIR),
+                    ('concept-docs', CONCEPT_DOCUMENTS_DIR)]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DATA_UPLOAD_MAX_MEMORY_SIZE = 16384
 SESSION_COOKIE_HTTPONLY = True
