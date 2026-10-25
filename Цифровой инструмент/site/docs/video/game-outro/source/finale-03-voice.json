@@ -1,9 +1,0 @@
-{
-  "text": "Понравилась работа? Оставь анкету! Или познакомься с другой профессией. Я буду рядом.",
-  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-8bit",
-  "reference": "professions/chemist/source/voice-reference-greeting.wav",
-  "seed": 42,
-  "sample_rate": 24000,
-  "duration": 6.8,
-  "pitch_shift": 0
-}

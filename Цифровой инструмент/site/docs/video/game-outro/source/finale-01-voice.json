@@ -1,9 +1,0 @@
-{
-  "text": "Молодец! Кислый мохито никому не нравится. Ты вовремя заметил отклонение.",
-  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-8bit",
-  "reference": "professions/chemist/source/voice-reference-greeting.wav",
-  "seed": 42,
-  "sample_rate": 24000,
-  "duration": 5.92,
-  "pitch_shift": 0
-}

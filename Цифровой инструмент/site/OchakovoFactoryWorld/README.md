@@ -2,10 +2,8 @@
 
 Unity **6000.3.22f1**, Built-in Render Pipeline, WebGL.
 
-Основная сцена — `Assets/Scenes/Brewhouse.unity`: сохранённая производственная локация с прогулкой, персонажами, компьютерной головоломкой и проверкой pH для химика-лаборанта. Откройте сцену и нажмите Play.
+Открыть проект через Unity Hub и сцену `Assets/Scenes/Brewhouse.unity`. Это производственная локация с прогулкой, компьютерной головоломкой и лабораторной проверкой pH.
 
-Инструкции по запуску сайта и сборке — [README проекта](../README.md). Подробности игры — [docs/game/README.md](../docs/game/README.md).
+Запуск сайта и сборка описаны в [README сайта](../README.md). Сборка сохранённой сцены: `../scripts/build-factory.sh` из каталога проекта Unity. Генераторы Create Production Panorama / CreateAndBuild пересоздают композицию и могут заменить ручные изменения.
 
-Библиотека модулей — `Assets/FactoryKit/Prefabs/`, наборы Kenney CC0 — `Assets/ThirdParty/Kenney/`. Просмотровые сцены `Assets/FactoryKit/Scenes/AssetGallery.unity`, `AssemblyExample.unity` и ProductShowcase не заменяют основную сцену сайта. Исходники Blender и лицензии — в `../art/`; каталог — [docs/game/asset-library/README.md](../docs/game/asset-library/README.md).
-
-Обычная сборка использует сохранённую сцену. Команды генератора Create Production Panorama / CreateAndBuild пересоздают композицию: не используйте их после ручных изменений без намерения заменить сцену.
+Лицензии персонажей — [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt); лицензии Kenney — `Assets/ThirdParty/Kenney/*/License.txt`. Происхождение остальных используемых ресурсов указано в PROVENANCE-файлах рядом с ними.

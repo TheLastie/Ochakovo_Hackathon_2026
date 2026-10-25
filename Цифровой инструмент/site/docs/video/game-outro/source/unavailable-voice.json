@@ -1,9 +1,0 @@
-{
-  "text": "В рамках хакатона доступен только химик-лаборант. Давай попробуем? Я помогу!",
-  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-8bit",
-  "reference": "professions/chemist/source/voice-reference-greeting.wav",
-  "seed": 42,
-  "sample_rate": 24000,
-  "duration": 6.08,
-  "pitch_shift": 0
-}

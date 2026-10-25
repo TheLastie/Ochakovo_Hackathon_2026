@@ -6,5 +6,5 @@
 - Материалы `Scene_*` — производные фактурных материалов `Assets/FactoryKit`, отдельные от библиотеки.
 - Геометрия — существующая собственная библиотека `Assets/FactoryKit` и дополнительные самостоятельные 3D-формы `FactoryLocationBuilder`. Авторская композиция следует предоставленной пользователем панораме.
 
-- `Characters/` — базы Quaternius Universal Base Characters Standard и движения Universal Animation Library Standard (CC0) с рабочей одеждой и сборкой проекта в Blender. Исходные лицензии и FBX — `art/characters/vendor/`; описание — `art/characters/README.md`.
+- `Characters/` — базы Quaternius Universal Base Characters Standard и движения Universal Animation Library Standard (CC0) с рабочей одеждой и сборкой проекта в Blender. Лицензии — `OchakovoFactoryWorld/THIRD_PARTY_NOTICES.txt`.
 - `Textures/LineHMI_Animated.png`, `SteamSoft.png` — самостоятельная служебная графика проекта для индикаторов и мягких частиц.

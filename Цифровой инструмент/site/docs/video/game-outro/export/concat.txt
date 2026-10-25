@@ -1,3 +1,0 @@
-file 'finale-01.mp4'
-file 'finale-02.mp4'
-file 'finale-03.mp4'
