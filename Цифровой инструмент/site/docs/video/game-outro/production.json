@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-25",
+  "project": "https://flow.google.com/project/9e0cc2b3-14af-47fc-979b-7d56b85c7bae",
+  "model": "Omni 1.1 Flash",
+  "size": [
+    1280,
+    720
+  ],
+  "generatedClips": 7,
+  "retainedClips": 4,
+  "quotedCredits": 84,
+  "promptRecord": "Editorial generation instructions; actual per-call prompts remain in Flow. Shared reference explicitly supplied to every unified clip.",
+  "commonPrompt": "Adult fictional mentor Mikhalych matching reference: gray combed-back hair, mustache, round black glasses, gray jacket/red shoulders; beautiful adult 2D/3D animated film style. Bright modern beverage plant, steel, white walls/red accents, warm soft sunlight. Medium shot, slow push-in, calm natural gestures. No text, logos, subtitles or music. Russian spoken exact line, warm mature male voice, complete phrases.",
+  "clips": [
+    {
+      "file": "source/finale-01.mp4",
+      "flowAsset": "947861f5-100d-4bbf-9b90-c4025cf968a4",
+      "reference": "web/public/characters/mikh.png",
+      "line": "Молодец! Кислый мохито никому не нравится. Ты вовремя заметил отклонение.",
+      "sha256": "a2326b29ff3819ba5876837bcd0745465b8c3514a631da8c3003a1eb535f764e"
+    },
+    {
+      "file": "source/finale-02.mp4",
+      "flowAsset": "fc438959-a868-4a48-8dd5-25a50fda2770",
+      "reference": "source/finale-01.jpg",
+      "line": "И передал его технологу. Так команда сохраняет тот самый натуральный вкус.",
+      "sha256": "0c8ba95e557224d16f5c2e856c29c568f2419254f0dc6decc50690e8de2f2521"
+    },
+    {
+      "file": "source/finale-03.mp4",
+      "flowAsset": "aa671869-4a6a-4665-b9f0-fc85d431fa5c",
+      "reference": "source/finale-01.jpg",
+      "line": "Понравилась работа? Оставь анкету! Или познакомься с другой профессией. Я буду рядом.",
+      "sha256": "ce6cd84f96576348b621f6b3a2ea96efb404348a8e32f63a841d155795b2c2a3"
+    },
+    {
+      "file": "source/unavailable.mp4",
+      "flowAsset": "32b6eeb8-fe8e-4813-bd11-ad81798428b4",
+      "reference": "source/finale-01.jpg",
+      "line": "В рамках хакатона доступен только химик-лаборант. Давай попробуем? Я помогу!",
+      "sha256": "c29cf482c3ada7b618cf5591c4148710706721f9eff1ba7cf0321f2a67678b4c"
+    }
+  ]
+}

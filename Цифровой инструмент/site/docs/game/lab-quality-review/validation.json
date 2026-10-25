@@ -1,0 +1,123 @@
+{
+  "status": "passed",
+  "checks": [
+    "red markers and panorama-style avatar/progress",
+    "contextual Mikhalych help",
+    "help blocks game input and Escape is isolated",
+    "actual complaint request unlocks lab",
+    "textured bottles and glass",
+    "reset partial, measured, transferred and completed trials",
+    "pour works after each reset",
+    "wrong sample rejected",
+    "volume preserved in transfer",
+    "mixing",
+    "unrinsed electrode rejected",
+    "rinsed pH measurement",
+    "wrong decisions rejected",
+    "deviation sent to technologist",
+    "close/reopen preserves trial"
+  ],
+  "state": {
+    "role": "chemist",
+    "x": 3.3905673027038574,
+    "z": 3.533782720565796,
+    "walking": false,
+    "triangles": 158,
+    "cameraX": 0,
+    "cameraY": 19,
+    "cameraZ": -23,
+    "cameraSize": 5.349999904632568,
+    "paused": false,
+    "characterState": "Idle",
+    "animationTime": 13.899563789367676,
+    "productionTime": 55.36199951171875,
+    "bottleX": -4.3839192390441895,
+    "hmiFrame": 6,
+    "steamParticles": 27,
+    "steamEmitters": 2,
+    "npcStates": "OperatePanel,InspectSample,OperateValve",
+    "computerOpen": false,
+    "computerNear": false,
+    "computerCompleted": true,
+    "computerPage": "task",
+    "computerApp": "notepad",
+    "computerFiles": "LK023_Kvas.txt|LK024_MOXITO.txt|LK025_Kvas.txt",
+    "computerSelected": "LK024_MOXITO.txt",
+    "computerQuery": "",
+    "computerCalculator": "0",
+    "computerPhoto": "",
+    "computerPhotoZoom": false,
+    "computerPhotoAngle": 0,
+    "computerDetails": false,
+    "computerMaximized": false,
+    "computerTrashCount": 3,
+    "computerAppCount": 1,
+    "computerWindowX": 150,
+    "computerWindowY": 46,
+    "computerExplorerVisible": true,
+    "computerStartVisible": false,
+    "wrongFolders": 0,
+    "computerScreenX": 262.429931640625,
+    "computerScreenY": 235.6163330078125,
+    "labUnlocked": true,
+    "labOpen": true,
+    "labCompleted": false,
+    "labNear": true,
+    "helpOpen": false,
+    "labProbeRinsed": false,
+    "labPh": 0,
+    "labStep": 0,
+    "labCorrections": 3,
+    "labSampleMl": 5.463999271392822,
+    "labFlaskMl": 0,
+    "labMixTurns": 0,
+    "labScreenX": 864.2990112304688,
+    "labScreenY": 605.8980712890625,
+    "labHeld": "",
+    "labItems": [
+      {
+        "x": 130.196533203125,
+        "y": 502.2537841796875
+      },
+      {
+        "x": 307.451171875,
+        "y": 502.2537841796875
+      },
+      {
+        "x": 538.0389404296875,
+        "y": 481.6195983886719
+      },
+      {
+        "x": 796.86279296875,
+        "y": 481.6195983886719
+      },
+      {
+        "x": 1024.31396484375,
+        "y": 469.2391052246094
+      }
+    ]
+  },
+  "scriptErrors": [],
+  "buildAssets": [
+    {
+      "file": "WebGL.28db07951a2db57a.loader.js",
+      "sha256": "28db07951a2db57a301d65812a9eefd513d2af510aa7f8df5e0b828100ab17e1",
+      "bytes": 26983
+    },
+    {
+      "file": "WebGL.128cdee09fb91a11.data",
+      "sha256": "128cdee09fb91a115e9b330c581f53bb55569cd9f7e68bcbfc3dfc91e8a9e30f",
+      "bytes": 27407864
+    },
+    {
+      "file": "WebGL.7e6b097a3d8b9f2e.framework.js",
+      "sha256": "7e6b097a3d8b9f2ee4eac0de90edc7d0a02f99d7dde843598f540c1e70183bdb",
+      "bytes": 426398
+    },
+    {
+      "file": "WebGL.6f354741655154ee.wasm",
+      "sha256": "6f354741655154ee930e0b87dc4172f96782e185d38403f751bfe4c3fa44637f",
+      "bytes": 32064253
+    }
+  ]
+}

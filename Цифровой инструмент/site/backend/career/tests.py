@@ -241,7 +241,7 @@ class EditableCatalogTests(TestCase):
                         data={
                             **payload,
                             'role': 'warehouse'}).is_valid())
-                (root / 'web/public/videos/lab_assistant.mp4').touch()
+                (root / 'web/public/videos/warehouse.mp4').touch()
                 self.assertIn(
-                    '/lab_assistant.mp4?',
+                    '/warehouse.mp4?',
                     load_content()['roles'][0]['video']['src'])

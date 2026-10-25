@@ -1,0 +1,204 @@
+{
+  "duration": 30.0,
+  "narration_duration": 29.56,
+  "fps": 24,
+  "size": [
+    1280,
+    720
+  ],
+  "source": "Google Flow, Omni 1.1 Flash, five 6-second production clips",
+  "flow_project": "https://flow.google.com/project/54d557a8-dda9-4f2a-a10e-1f4839ecd715",
+  "flow_asset_ids": [
+    "a705b4a7-854a-49c1-96ca-bc24e42a7b08",
+    "7ed746d0-4d15-4115-b862-c3f772bd8f7e",
+    "e3db4ea4-2616-408f-ae5e-a7d778857e7e",
+    "cd306000-c1a1-4c82-af8b-1a8b39a2d203",
+    "9530967e-125d-4d9a-9844-2f1d8964f2b8"
+  ],
+  "credits_spent_before_mentor_revision": 50,
+  "credits_spent_expansion": 30,
+  "mentor_edit_credit_cost": "not displayed by direct editor",
+  "mentor_revision": {
+    "type": "Photorealistic Mikhalych identity replacement",
+    "tool": "Built-in imagegen reference + Google Flow video edit",
+    "reference": "source/mentor-mikhalych-reference.png",
+    "prompt": "mentor-reference-prompt.txt",
+    "edit_parent_asset_id": "9530967e-125d-4d9a-9844-2f1d8964f2b8",
+    "downloaded_result": "Laborant_learning_pipetting_tech…_20261024005213.mp4",
+    "adjacent_shot": "Reframed tablet handover to exclude previous mentor at right edge"
+  },
+  "timeline": [
+    {
+      "start": 0,
+      "end": 1.25,
+      "source": "source/03-flow.mp4",
+      "source_in": 1,
+      "source_out": 2,
+      "purpose": "macro sample"
+    },
+    {
+      "start": 1.25,
+      "end": 3.0,
+      "source": "source/01-flow.mp4",
+      "source_in": 2,
+      "source_out": 4,
+      "purpose": "sample"
+    },
+    {
+      "start": 3.0,
+      "end": 5.042,
+      "source": "source/01-flow.mp4",
+      "source_in": 0,
+      "source_out": 2,
+      "purpose": "mentor presents role"
+    },
+    {
+      "start": 5.042,
+      "end": 7.083,
+      "source": "source/03-flow.mp4",
+      "source_in": 2,
+      "source_out": 4,
+      "purpose": "knowledge: calculation"
+    },
+    {
+      "start": 7.083,
+      "end": 9.5,
+      "source": "source/03-flow.mp4",
+      "source_in": 4,
+      "source_out": 6,
+      "purpose": "knowledge: measurement"
+    },
+    {
+      "start": 9.5,
+      "end": 10.833,
+      "source": "source/01-flow.mp4",
+      "source_in": 2,
+      "source_out": 4,
+      "purpose": "take sample"
+    },
+    {
+      "start": 10.833,
+      "end": 12.25,
+      "source": "source/01-flow.mp4",
+      "source_in": 4,
+      "source_out": 6,
+      "purpose": "analysis"
+    },
+    {
+      "start": 12.25,
+      "end": 13.917,
+      "source": "source/02-flow.mp4",
+      "source_in": 0,
+      "source_out": 2,
+      "purpose": "compare"
+    },
+    {
+      "start": 13.917,
+      "end": 15.5,
+      "source": "source/04-flow.mp4",
+      "source_in": 0,
+      "source_out": 2,
+      "purpose": "notice"
+    },
+    {
+      "start": 15.5,
+      "end": 17.083,
+      "source": "source/04-flow.mp4",
+      "source_in": 2,
+      "source_out": 4,
+      "purpose": "check graph"
+    },
+    {
+      "start": 17.083,
+      "end": 18.708,
+      "source": "source/04-flow.mp4",
+      "source_in": 4,
+      "source_out": 6,
+      "purpose": "report"
+    },
+    {
+      "start": 18.708,
+      "end": 20.417,
+      "source": "source/05-flow.mp4",
+      "source_in": 0.8,
+      "source_out": 2.3,
+      "purpose": "experienced colleague"
+    },
+    {
+      "start": 20.417,
+      "end": 22.083,
+      "source": "source/05-flow.mp4",
+      "source_in": 3.5,
+      "source_out": 5,
+      "purpose": "young colleague acts"
+    },
+    {
+      "start": 22.083,
+      "end": 23.417,
+      "source": "source/03-flow.mp4",
+      "source_in": 0,
+      "source_out": 1,
+      "purpose": "attention"
+    },
+    {
+      "start": 23.417,
+      "end": 26.083,
+      "source": "source/03-flow.mp4",
+      "source_in": 4,
+      "source_out": 6,
+      "purpose": "skill"
+    },
+    {
+      "start": 26.083,
+      "end": 28.0,
+      "source": "source/02-flow.mp4",
+      "source_in": 4,
+      "source_out": 6,
+      "purpose": "Mikhalych invitation"
+    }
+  ],
+  "end_card": [
+    28,
+    30
+  ],
+  "voice_revision": {
+    "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-8bit",
+    "seed": 42,
+    "text": "Маленькая проба. Большая ответственность. Ты — химик-лаборант. Пригодятся химия, расчёт концентраций и точные измерения. Берёшь пробы, проводишь анализы, сверяешь показатели с нормой. Заметил отклонение? Фиксируешь результат и сообщаешь команде. Методики осваиваешь рядом с опытными коллегами. Твоя точность помогает сохранять качество знакомых напитков. Хочешь попробовать? Узнай больше о практике.",
+    "sample_rate": 24000,
+    "duration": 29.56,
+    "reference": "Exact opening greeting from web/public/videos/brand.mp4, 0–2.208333 seconds",
+    "reference_text": "Привет! Я Михалыч.",
+    "reference_unique_seconds": 2.208333,
+    "temperature": 0.35,
+    "top_p": 0.85,
+    "method": "ICL reference audio + exact reference transcript",
+    "voice_status": "Revised against greeting; awaiting user listening",
+    "pitch_shift_semitones": 0,
+    "speed_change": false,
+    "raw_duration": 30.08,
+    "pause_trims_seconds": [
+      [
+        4.9,
+        5.1
+      ],
+      [
+        9.58,
+        9.76
+      ],
+      [
+        14.13,
+        14.27
+      ]
+    ],
+    "removed_inter_sentence_silence_seconds": 0.5199999999999978,
+    "word_timing_stretched": false
+  },
+  "narration_speed_changed": false,
+  "original_flow_audio_used": false,
+  "fonts": [
+    "Stratos ExtraBold",
+    "Proxima Nova Bold"
+  ],
+  "status": "Revised complete film awaiting user approval; replaces 13.5-second cut"
+}

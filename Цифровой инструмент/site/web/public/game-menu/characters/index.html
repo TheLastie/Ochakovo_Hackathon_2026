@@ -55,6 +55,7 @@ document.addEventListener('visibilitychange',()=>{document.querySelector('#scree
 window.addEventListener('message',event=>{
  if(event.origin!==location.origin||event.source!==parent||event.data?.channel!=='ochakovo-menu')return;
  const data=event.data;
+ if(data.type==='select'&&roles.some(role=>role.id===data.role)){selected=data.role;render()}
  if(data.type==='sound'){muted=data.muted;const button=document.querySelector('.sound');button.setAttribute('aria-pressed',String(!muted));button.setAttribute('aria-label',muted?'Включить звук ветра':'Выключить звук ветра')}
  if(data.type==='active'){inactive=!data.value;document.querySelector('#screen').classList.toggle('paused',inactive||document.hidden);characterAction?.sync()}
  if(data.type==='loading'){

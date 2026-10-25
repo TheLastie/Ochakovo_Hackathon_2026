@@ -1,0 +1,962 @@
+{
+  "downloaded": "2026-10-24",
+  "license": "CC0-1.0",
+  "sources": [
+    {
+      "id": "factory",
+      "page": "https://kenney.nl/assets/factory-kit",
+      "download": "https://kenney.nl/media/pages/assets/factory-kit/edaac9d4f6-1777639602/kenney_factory-kit_3.0.zip",
+      "sha256": "7e31fb2308e90304672bd15cd18fa9d9f02c03731a8cbc57a8e3e1c181dfb0a7",
+      "archive_bytes": 4511890
+    },
+    {
+      "id": "city",
+      "page": "https://kenney.nl/assets/city-kit-industrial",
+      "download": "https://kenney.nl/media/pages/assets/city-kit-industrial/0ec35b139d-1788171848/kenney_city-kit-industrial_2.0.zip",
+      "sha256": "5b381164e5760f3830a2dbee43b972deee38b2a695d091b56e238ab2910c96d2",
+      "archive_bytes": 5045077
+    }
+  ],
+  "files": [
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/License.txt",
+      "bytes": 700,
+      "sha256": "61e86565dd297e143ad631594980eda0a17fc81a4cd7c6d71acf2f5e0cad30b6"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Textures/variation-a.png",
+      "bytes": 11792,
+      "sha256": "fd3ce1750733ad0ba62829862b3cbccf8d3f45a7aab41920a2c9af9d1d8a2872"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/arrow-basic.fbx",
+      "bytes": 26240,
+      "sha256": "5bee09a9c1ee8b1221b40c384413b7b18b43e15967ec60a1f631afceb8fe5664"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/structure-corner-inner.fbx",
+      "bytes": 26176,
+      "sha256": "3e3554841b8c77b851696745e95b274c90f2497e51699484a0fb6183b6d6e517"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/robot-arm-a.fbx",
+      "bytes": 87200,
+      "sha256": "e515dad2618a3ddc09a41770950709752e46d89a6a495e9bba42eeb5aa7096a9"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-bars-stripe-high.fbx",
+      "bytes": 35392,
+      "sha256": "a800976f36e30b65932f4106da872c4380060ccab3223721ebcc022e4d4c9aa5"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-stripe-corner.fbx",
+      "bytes": 32752,
+      "sha256": "8c03675d5213e7e3b01259684c6a05558e380cdf0476f217f0b34b9cf57f5962"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/door-wide-closed.fbx",
+      "bytes": 30544,
+      "sha256": "6ea7aa3698e689f773d58fd30897653dd0453a3387fccabf0c136a274b5360f8"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/machine-connection-hole.fbx",
+      "bytes": 32864,
+      "sha256": "8c44b4692483ecf114dbba0ccbbf8b6d9f5506a171c57bb63157c29a6876984f"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-cross.fbx",
+      "bytes": 27136,
+      "sha256": "24925ed0cc69bb411419b71b5b24aaa006e0d940fb4bb4346561eb323d42cc89"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/floor-large.fbx",
+      "bytes": 23952,
+      "sha256": "83e63975f4eb1a9f328e76d9d22b95d4e6085c13b70dee6f73fec95ae48882aa"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/box-small.fbx",
+      "bytes": 26688,
+      "sha256": "8a6889d8befa987a85a80b5454876867a46088a457d57b67b71b78fe99352fef"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-long-sides-part-middle.fbx",
+      "bytes": 27152,
+      "sha256": "d29b6f2c5355a335eafa7e292711944dc0f3d787e94f0e3449894eff604cc59e"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/robot-arm-b.fbx",
+      "bytes": 71040,
+      "sha256": "76edbf4ee679b0b369e0645eeff3ce78ff55a0d68985a960b9f4cb0157eb1208"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-stripe.fbx",
+      "bytes": 31936,
+      "sha256": "52b0a0bdad3fd949c02b1d3f7797ee1ca202b31530c213f6ae0edae559d9e0cf"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-bars-stripe-high-slope.fbx",
+      "bytes": 36544,
+      "sha256": "a89f428285ae67e88881551b9543ef714ce3ed198bc00fc2a41d9bd9f28c1735"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/cog-d.fbx",
+      "bytes": 27696,
+      "sha256": "86523c949b13a9afc9c50a8b64cede7fb052f49e41359b2395d3dfaa2f4acb8a"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-corner.fbx",
+      "bytes": 32240,
+      "sha256": "e617b37de25fde6a665ac000332fee19356a44e4f28165f373a80524c2f36208"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/cog-e.fbx",
+      "bytes": 28944,
+      "sha256": "e725bfc1735e0681fbf4e5aa6cb9dc0692c385071e81a51cafc0a4ac19dc5e86"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/piston-thin-square.fbx",
+      "bytes": 94320,
+      "sha256": "bf8f612c156e50bba41ca4f21f78a5476d046892dfb8737570de3293cc9883f1"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/catwalk-corner.fbx",
+      "bytes": 51376,
+      "sha256": "a162fbb9a3a55185b27672994ff75c848a2a7f565dcdad0cd53d25758acc5efb"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/catwalk-stairs.fbx",
+      "bytes": 50816,
+      "sha256": "9fa7ff96dcc3737435400394b27138c99b59522d5d8b5715d2e8546d3a54ff73"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/scanner-low.fbx",
+      "bytes": 29072,
+      "sha256": "5bbb567230536f3de3e3b80fe630f64d77227631c28a1e738b49fc3bd264bb24"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-glass-large-side.fbx",
+      "bytes": 31824,
+      "sha256": "47456ee5b35a6123a73792d497562254d41c47413a30e7f48907cc9eaa29b0d0"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-large-curve.fbx",
+      "bytes": 39392,
+      "sha256": "31742eb0757cd728ea83644672c27f4a7ded5daec4ff0a4feff38ce64d99cb38"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-sides.fbx",
+      "bytes": 31808,
+      "sha256": "37000a61781fe3e9e94d137cd7b171360732118d860ec5f0072b3df411c134e1"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/hopper-round.fbx",
+      "bytes": 29088,
+      "sha256": "417ad4521e3ff3498beaace7e459930bec271065e3ee7727759843fab991b5b5"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/screen-panel-small.fbx",
+      "bytes": 28752,
+      "sha256": "7c276114cb9c15e2600bbddb1e5d3a406c51e0eb1de334f201f954ad915ab634"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-long-sides.fbx",
+      "bytes": 31792,
+      "sha256": "bd1d24e0aa10846a18586798d7eb3286a632edf422eb620f6713fecbc8f439d5"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/screen-flat.fbx",
+      "bytes": 27360,
+      "sha256": "6e114fa58c77e6f33f937e2bf308cee554b6c2094e9a53744d81d66709a85575"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-large-long.fbx",
+      "bytes": 33008,
+      "sha256": "84be061e175bf1e9b071b9a573c809820af732b70968b97e5342c52dbced4146"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-long-sides-part-end.fbx",
+      "bytes": 29792,
+      "sha256": "cd6e780de1f3304e8e3e7ecf13dd5333f24b61ec551289eca866731f0cc7e20f"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/cog-a.fbx",
+      "bytes": 27312,
+      "sha256": "3157957b55504bc970b29b5b41ec7f7c1471c5dd65f2ff537cd8d07101e66786"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/indicator-special-area.fbx",
+      "bytes": 26160,
+      "sha256": "1383f3a80e61c5b4a3073e31e322ea160005aa401d0e51ce5b0cfa330fc6f918"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/box-large.fbx",
+      "bytes": 26512,
+      "sha256": "b1c2921d319fd8ce1745000d74f8760a8613194067b36401b4343d61673bf70d"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-bars-stripe-fence-slope.fbx",
+      "bytes": 39120,
+      "sha256": "18ac1a4871cdbd5743bf079efd836b4ca5cef4e186794bda09e639d6e4dd0f5d"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/screen-wide.fbx",
+      "bytes": 28256,
+      "sha256": "149987beebfc33e21afde78c05f5ee448c0a7b91c94f127fa97e5043c9560f04"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/hopper-high-round.fbx",
+      "bytes": 30256,
+      "sha256": "3ec547fb972dcc9c70dc39f2ece3f1a8e91f90306461deeee6062d9444f309ea"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/door-wide-half.fbx",
+      "bytes": 30272,
+      "sha256": "dc295b76457ea01ad2374f5f0387c792a0c56a433c72b740c1dfb7f40dff1cb8"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/structure-short.fbx",
+      "bytes": 31968,
+      "sha256": "01b8af36013b8951676a16bf547c3bd083cde3c77f16f1b3d900228ea01c8602"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-bars-high.fbx",
+      "bytes": 30704,
+      "sha256": "fcea1f645d9af6da191cab2d0d3ad25ac4a7db531ba7444a26f7c95d34f80d85"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/cog-b.fbx",
+      "bytes": 28352,
+      "sha256": "9149216ad00fd2c3b7b737b8b1dfaad327e82f50870a6cdf093014136dc4e1d7"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/warning-orange.fbx",
+      "bytes": 29888,
+      "sha256": "d42b6ac69ae54f424776a95f055a9321f1fa3962ce167f85417f053492314564"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/cog-c.fbx",
+      "bytes": 27424,
+      "sha256": "ba372542fd5a9e1419a70d8612390245092bf70f4edc3e7d34be4aa18d3b5ce3"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-long-stripe.fbx",
+      "bytes": 31968,
+      "sha256": "f40fed36a620530cb6d71172044ef664d9b6bf98fd562b88e3e4eeace57838ff"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-long-stripe-sides-part-middle.fbx",
+      "bytes": 25696,
+      "sha256": "a7e96556d3ac53b725a63f5dd735e4440e014175e9c24c7adabd4b84e6f1f3fe"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/machine.fbx",
+      "bytes": 32048,
+      "sha256": "20f2e7c3d82be8e2ec298c1802131d74b38cc9bb13852324f4fb5050914c26b2"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-glass-large-bump.fbx",
+      "bytes": 33360,
+      "sha256": "dbfbe515f93f2e1b4a26c5153567655042c5e499570ca72bce341f7fc008b52b"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/warning-traffic.fbx",
+      "bytes": 29568,
+      "sha256": "a675a867d35781fc337de2d5304f4d07ab0c93802ab2153a43e6c0421b869cfb"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/box-long.fbx",
+      "bytes": 26544,
+      "sha256": "4b41a68b5270be89e5b619c9f66768e3c49e6ee0e0f7596390dccbd24086cefb"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/machine-fortified.fbx",
+      "bytes": 33328,
+      "sha256": "e908dc505a3767bc64b480cc9ded288d9c84d3d0ad83fe1af9f26c4aef7ca1f5"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/structure-yellow-tall.fbx",
+      "bytes": 35312,
+      "sha256": "fd43f57584446559208c9fd13e58677fcfce43ea35318ff64f91a1873bcdd863"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/structure-doorway.fbx",
+      "bytes": 29616,
+      "sha256": "ad542404c435e4dc81dc8c9b370b3469b0b3cd2eabb39e80bf84bc11e8953a27"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/arrow.fbx",
+      "bytes": 26960,
+      "sha256": "eef5b18100afc9aa8de67d31d4142489277939aa7def0372f1063f4816fa56a8"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/hopper-square.fbx",
+      "bytes": 26208,
+      "sha256": "235962414352e1abca78d803a029ee7b15727cf13375d77bb53a365914f73c2b"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-stripe-sides-junction-t.fbx",
+      "bytes": 32448,
+      "sha256": "24fff4cacfc4c2474411c24b1a09d24d8b52bcf190f10fd6f457ed1ec32829a7"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/top-large-checkerboard.fbx",
+      "bytes": 26240,
+      "sha256": "1dea905bd9f2f63953d8529bee168db8e27e83c59ee3a685aace3e896a731459"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-large-junction.fbx",
+      "bytes": 37584,
+      "sha256": "a35100d1ba4fda90ae22fa783a7353e0528763f04c935385bc1b58258a592132"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/machine-window.fbx",
+      "bytes": 36688,
+      "sha256": "54653b08ec72118cdf5265c771491acc24cbab8735c5d6afa9c33746e0647593"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-glass-large-bend.fbx",
+      "bytes": 43040,
+      "sha256": "eaba3f1a923ae59f913596c4f1461f825ec45045758852044addbeb73985c5be"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/door-wide-open.fbx",
+      "bytes": 29600,
+      "sha256": "9e60039913e36003406be0570b05eb861d6f959ded1f49bb65cc44af3d0aac74"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-large-cross.fbx",
+      "bytes": 38448,
+      "sha256": "af11b892c5c9e96e1e5f6a8064fcaa5b0bfb8d19ddfb3fe9396fd222e6c9c3de"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/button-floor-square.fbx",
+      "bytes": 64064,
+      "sha256": "34f8528f4bb97c1d96193dbd23cb2af67fdc569a02ed438c9f10db7e0e361a55"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/lever-single.fbx",
+      "bytes": 62624,
+      "sha256": "3e1107e1d199ffe6489ff30a8462eaecb24a0f95a2dba33ccaa1dcaef4c112ab"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/structure-corner-outer.fbx",
+      "bytes": 26048,
+      "sha256": "4a85dc3fcc487f1bd8fdcacdd7964eefaa4184c2ec8d39fbb2103133c6984682"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-glass-large.fbx",
+      "bytes": 29008,
+      "sha256": "ca6bc48051f1791ea1004e5ff598e4df0fe9c969b36ace01144b7d2b897d9cd7"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/structure-medium.fbx",
+      "bytes": 32128,
+      "sha256": "0e3ea6ae8f7a23f7d57b69a9ae968a85cf93eced456523c2ab55f4b22e418c63"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-bars-stripe-fence.fbx",
+      "bytes": 37536,
+      "sha256": "80ba9a51a10a9a101cf597d0de50e6788a7a30793922d6d5d3cd80cc901ce81e"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/scanner-high.fbx",
+      "bytes": 30176,
+      "sha256": "e61c4c7ed865dcb52fb6f5a6fcbbcdf029fb2837ff02f9a1363d42bf263d8d9c"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/catwalk-cross.fbx",
+      "bytes": 32976,
+      "sha256": "1bd6b97f1b63f6f45a1541abad1abc8ae62a6f61076877c3494f275846a21636"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/machine-window-bar.fbx",
+      "bytes": 37280,
+      "sha256": "aa32459405eb20caaef293f5a549eec961a9ba64c060813717feafcd8d40b5d5"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/catwalk-stairs-loop.fbx",
+      "bytes": 38768,
+      "sha256": "a61707954fe44f4cadaa31f079ad27bbc382e7242dd093b1e530aeabe5547f62"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/screen-hanging-wide.fbx",
+      "bytes": 26928,
+      "sha256": "184a6d6de856746a563e42e6a6e3443f343d12f7cf044e9375266fa9319e1665"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/structure-tall.fbx",
+      "bytes": 32080,
+      "sha256": "30ca598d047bceaa7cd720b3ed8038fa9f0cf71a1c2f5ba73d0db9559565137b"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/piston-square.fbx",
+      "bytes": 94112,
+      "sha256": "eba6b83f440aa21ec333a2852c3633df3c2714f61ff4649a6dcbdc6514d3342b"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/indicator-special-cross.fbx",
+      "bytes": 26400,
+      "sha256": "9390059b1fac036f772cbdd10d1ad16cba4c3fa74d061c0b4f96fee66f8762aa"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-glass-large-junction.fbx",
+      "bytes": 32928,
+      "sha256": "dc778ebd47f3926e56dc5273c1645ee7434933dc0f9dad8a031ecd135e787955"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-long-part-middle.fbx",
+      "bytes": 25424,
+      "sha256": "7c7e6e13b756b9756c507c8b6365216f493bd1b967bbb704335a291c12f0ae59"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-sides-cross.fbx",
+      "bytes": 27152,
+      "sha256": "4e7f80160e0a36007308ff26b3367c22f6da6ea2b4927ac127294539e9a52116"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-sides-junction-t.fbx",
+      "bytes": 29136,
+      "sha256": "0ffe72f0c719f9bec85617b5f053f55246b46d67767b246a1beff770fa019655"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-stripe-junction-t.fbx",
+      "bytes": 32384,
+      "sha256": "8ee6ef597573203b4b31c14f54cdfbcbe2c4f94f1c4dd99cff7b3dad2e76e955"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/cone.fbx",
+      "bytes": 27392,
+      "sha256": "dbdb335f79a0108da4968e675ae2a2f4356d70b9f4bdf3f23b185e977d35a797"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-stripe-sides-cross.fbx",
+      "bytes": 31920,
+      "sha256": "b5c0c2ed7c0473630e2e6566fcfe640b1a6d93024a20118dcdec8d38ec51d222"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-bars-sides.fbx",
+      "bytes": 29360,
+      "sha256": "a73aebc7e4149b6173420fbd1233974e8a653c01d026b9fe7e26ea628b063153"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor.fbx",
+      "bytes": 30304,
+      "sha256": "e10ee0a27f561fd53575407f4dcd06453ea2fda28649659bde84fd48955f3d78"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-large-valve.fbx",
+      "bytes": 41152,
+      "sha256": "6d40576d8b5a9503e30efd029d8a63a20783ba54429a09580001c433c4a8a10e"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/structure-high.fbx",
+      "bytes": 32016,
+      "sha256": "3dd9e28ab70b05303e40ddc7b4078b2f23316778be65650ae72ee126e7db89db"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/crane-lift.fbx",
+      "bytes": 48096,
+      "sha256": "6803c6aebbd1690dd0a570fe7929f1c066c06a413d44f3ca7a0fd587fcc5622a"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/door.fbx",
+      "bytes": 55440,
+      "sha256": "6f8ca6949c433513c74630c2e7b2274fe2e8653b725f177fa4cfd54c709b9dd1"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-bars-high-slope.fbx",
+      "bytes": 31840,
+      "sha256": "e3caa2e51c9dbdf3c16aec04e954b69f3590e94e1093118fa5f6e7209020d3a9"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/structure-yellow-short.fbx",
+      "bytes": 31984,
+      "sha256": "ccee5cc7cb38776a7109a3a112926ebc285f7abb03ed3676084c8f57ae68d959"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-stripe-part-middle.fbx",
+      "bytes": 26288,
+      "sha256": "36348157d72434affda5829e4d3ec8ab7328d979d952f29505a64817d890febc"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/catwalk-junction.fbx",
+      "bytes": 39120,
+      "sha256": "c9a3d37765833823bfaf94ed386b177a6064a92757998917b9e20b23c619f2a1"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-large-side.fbx",
+      "bytes": 35616,
+      "sha256": "2dbd8415e30c916ba120c2d4ab7ce23c8cdf71be0d58392795178c6f601f0a52"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/floor.fbx",
+      "bytes": 23936,
+      "sha256": "30d9a797e530b78212e90e3c111b3c4ac1a35400d2c31d9754920fa94875812c"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/box-wide.fbx",
+      "bytes": 26608,
+      "sha256": "17920a45f3c3e11752a3a59d577af1d32d524543a51d887e69fa490c3e64b22e"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/button-floor-round.fbx",
+      "bytes": 62688,
+      "sha256": "9fd60732cd6140a352299dfcf548c1b519b3873500fc621a628e766c19cdccc5"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-glass-large-cross.fbx",
+      "bytes": 34464,
+      "sha256": "eeb1607b5c63932d1aa4323fc93297fc77e0b1582505b8372bc47b6fc0e13f84"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/machine-connection-pipe.fbx",
+      "bytes": 34048,
+      "sha256": "a4943d655f52aeddcb6023a41a01ae45b3ef644c8d576dd32bfa3a5f81a43e1e"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/structure-yellow-high.fbx",
+      "bytes": 35328,
+      "sha256": "5c8164ce0b9950e145c28a2136f240502471b1a22f8d4a31c271d8f51e612f8a"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/top.fbx",
+      "bytes": 23936,
+      "sha256": "2ebd3618dc82b87fdf686043497cc02d22679d17a4d562dde393345acbbaf863"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-long.fbx",
+      "bytes": 30256,
+      "sha256": "8679a08304b483f4e84d7c8c7cd60eb21f2e57c8e36890dc6af0b749922d4b5c"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/structure-yellow-medium.fbx",
+      "bytes": 35360,
+      "sha256": "d6134ad34b0e5fc908ca774610071619f827940cdafec36e0790c8df398c20d9"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/lever-double.fbx",
+      "bytes": 62448,
+      "sha256": "4df67ade16df5080b81dd0970b03d3777cb3ff0c15a97c850c63a5fe9441fd1c"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/structure-window-wide.fbx",
+      "bytes": 31568,
+      "sha256": "e7736a807c514c4bffd7a0fe0ae73edfcd929a7774b8200a1495db5d55beff81"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-junction-t.fbx",
+      "bytes": 28752,
+      "sha256": "a0a387b30d20d6db38e2065b253e74599f29d142b040395df51dfb708adb4b78"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/indicator-special-arrow.fbx",
+      "bytes": 25424,
+      "sha256": "495a564d6fb2bd818f6b5efe212e0b490a38b37ba63f39d594db748d498d80fc"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-stripe-part-end.fbx",
+      "bytes": 29744,
+      "sha256": "d4af1f535f29df97e1681ff7073c018ee85ee81c227b44baec74f623c982574f"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-glass-large-long.fbx",
+      "bytes": 29008,
+      "sha256": "8ef4f5c5a33c443b43249cdf92f84b7270dea68bd40bf806f1d7aea134af9bb9"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-long-stripe-sides-part-end.fbx",
+      "bytes": 30800,
+      "sha256": "f3bda3bafe758f8b3590c78d9b05a4e1b44c44262e2b75d42f0883488f85c425"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-bars-stripe-side.fbx",
+      "bytes": 33120,
+      "sha256": "3cb44ca35b2b1850675d44f45943d7fa6747e1bb55566547f3948ab11f24f9da"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-large-bump.fbx",
+      "bytes": 34896,
+      "sha256": "b0f8a368a3156e66303c997bcfd4074ee5a8b168688a0ea1cc24c0e21de03cbc"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/arrow-rounded.fbx",
+      "bytes": 25792,
+      "sha256": "db8f6104ebfebb1fbea75eb3e6106cb8c6826ec3e6cb9056deae9ca93c1777c9"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/hopper-high-square.fbx",
+      "bytes": 26320,
+      "sha256": "3d5a7fd74e1c85d43e82cd2e284bb55c98bf2e5adaeff5cabfd3cefaf59789a9"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-glass-large-valve.fbx",
+      "bytes": 39680,
+      "sha256": "8522519bb8418db0372568d81f982f5ec0002de0c0a8a0a02fb1628a84052782"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/crane-magnet.fbx",
+      "bytes": 29072,
+      "sha256": "a00b0c48bc1d406f66c8e5b3f6fa81e2935a688fc2ff871e854068e2b361b66a"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/button-floor-square-small.fbx",
+      "bytes": 64080,
+      "sha256": "b0685086ccd6a9f91684d5b7a3b0ccce6ff545567dbe06c32f4f3fd8643f65f2"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/structure-window.fbx",
+      "bytes": 30240,
+      "sha256": "94a8e8cfb9b29f148ba45b210566fdb49678f51aa97a4a51ddf3b9586874d1ce"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/piston-round.fbx",
+      "bytes": 99584,
+      "sha256": "879d20fa1a5e43f8dd184af35cc788cf3a0e9c1ee0a074a350aa82fd2ab41f67"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-long-stripe-sides.fbx",
+      "bytes": 33184,
+      "sha256": "f87492a976e809cb0002f137003523f96134a2f9b6c5e1db1b4ee31d57e0ddad"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/structure-wall.fbx",
+      "bytes": 27648,
+      "sha256": "c79666913d3f6ca3b5542f34ee5c0f2a3890dda69e86aa93a9b99cf30557a0c0"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/screen-hanging-small.fbx",
+      "bytes": 26640,
+      "sha256": "42f2cfd012daa94e0f96ba378191ea4b876a48eb2c5cdad4dc9485b6f0a5ee1c"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-glass-large-curve.fbx",
+      "bytes": 35760,
+      "sha256": "f7fb9aafe6623e1d076606753063a01e7b7a8b8b63dedc789ef15188b8b5687a"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/top-large.fbx",
+      "bytes": 23952,
+      "sha256": "88cd5fceef12887f59eb950fa579f86e4eeea64b3d93fb2e8db30206486871c9"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/arrow-basic-rounded.fbx",
+      "bytes": 28368,
+      "sha256": "95fe89cd2f55e4eda92ea07caa089c1dd62d46633bfbd7d6bf5743fbded8d72d"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/indicator-special-lines.fbx",
+      "bytes": 26048,
+      "sha256": "4d5be7d6d4a3e276abcbf41c1663a88bfa3d6cddb6df846204cf1eef115c9f4b"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-stripe-sides.fbx",
+      "bytes": 33184,
+      "sha256": "d4616431d32f6c10acbf8230be9c473a46f041306951a3543c208b5250679d80"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-bars-fence-slope.fbx",
+      "bytes": 34384,
+      "sha256": "bff94ee097e29d7108c25145b2658ee64204e96edc6d2ac45a52a11aa98baa78"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/catwalk-straight.fbx",
+      "bytes": 38992,
+      "sha256": "0e8bbf0519012e9be5952cf91b244cf47c5fe5c30df26f2e3eeee8071e10a5db"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-bars.fbx",
+      "bytes": 28400,
+      "sha256": "9235103f49ee1ea2db913f48f36b977c8ec94c70d539d200748675804b49fd89"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-large-bend.fbx",
+      "bytes": 45728,
+      "sha256": "9acaf425b7d65655289123012237c388cdbe78fbd840b537b5c54055fc1e4e1d"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/structure-doorway-wide.fbx",
+      "bytes": 29808,
+      "sha256": "08182a451f44bc08ddc4780cddfa4f4b63870716965770cfae2059be73fed37f"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/screen-panel-wide.fbx",
+      "bytes": 29136,
+      "sha256": "f4032db66bb6f76cb21af6abb141187f016f106975f40789ddb20ff34391b25a"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/piston-thin-round.fbx",
+      "bytes": 99504,
+      "sha256": "5582ce9d4a0f3f3a5bfc3bab2a1b3d37579afa501f04269f438d802fc24b1cef"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/crane.fbx",
+      "bytes": 44704,
+      "sha256": "64848ebf10a6e2889048398ae74ff27985a73243fdfedf1ba71e0727a507460f"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/screen-small.fbx",
+      "bytes": 27968,
+      "sha256": "b0738bd55dc0ca91a568f46be1348239f5a36e8511bc8eb3edd81705f767cea5"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/pipe-large.fbx",
+      "bytes": 32016,
+      "sha256": "c6d068b7d1ad8ec500d9b9d73d46e4c6e3c7a41df3c0492b904df297ea360d36"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/button-floor-round-small.fbx",
+      "bytes": 62704,
+      "sha256": "366e2024b13dfc6af14f7b27177ef272bdf49c458857afa79fedcae3034821c8"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-bars-stripe.fbx",
+      "bytes": 32000,
+      "sha256": "de1501c1e8a3dfa8c232764490c3916c1c4cf926e8979b1271fe12998846a5ab"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/machine-bed.fbx",
+      "bytes": 49104,
+      "sha256": "781cc2faa1531f056266e42650cceb3dd6dd855570fd05fc7af93afc8160a52d"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-stripe-cross.fbx",
+      "bytes": 31904,
+      "sha256": "f844afbb9a93cd47bb471b3700366f0cdcbf28a5c0174939581707bcd33e64a2"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/screen-panel-flat.fbx",
+      "bytes": 28240,
+      "sha256": "eecbece007b7aa04af77e832c345b8eee456278c49c2e26cb5e22aec98577cf5"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-bars-fence.fbx",
+      "bytes": 32928,
+      "sha256": "bdedbe4226585c8a343c3caef6b65866b4886523c7186026799bb9bf4be64c1f"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/conveyor-long-part-end.fbx",
+      "bytes": 28800,
+      "sha256": "f871f9b79b6e93d799073abe13aee3c3ecf437d94836e0a972c1e7e6adf1d7c9"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/oopi.fbx",
+      "bytes": 82592,
+      "sha256": "298236578b0ec595ecec0d21b2f1cb8333cf13a547639415a5a096ddc01b68af"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/FactoryKit/Models/Textures/colormap.png",
+      "bytes": 11813,
+      "sha256": "35d7bd6900dde0208429eeaec87fa17fbf024ed59f3f4eab54bc92802eba9dd7"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/License.txt",
+      "bytes": 708,
+      "sha256": "60a8c5c31191256ec9779dc18745dea6d69c46f4b29703459ce064c1765a59ea"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Textures/variation-c.png",
+      "bytes": 12343,
+      "sha256": "7234a1ca5cb7a2de90ef8ebc760abb98fb269b6364235343175249824a4689b4"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Textures/variation-b.png",
+      "bytes": 11888,
+      "sha256": "8f6e7998bc075f176c2395a100c43344ed21f052587325c62402704d2b38d1ff"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Textures/variation-a.png",
+      "bytes": 12222,
+      "sha256": "eb8c1f4d904d3337ee14deb0b66f19b7da17d77d8217d896199caee43e3eadd1"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/solar-panel-flat.fbx",
+      "bytes": 28960,
+      "sha256": "a955f12124e4f9c6152fb5e56f5dc96679503d048c89195b64a37d211c036729"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/solar-panel-landscape.fbx",
+      "bytes": 32240,
+      "sha256": "39f9c2c0949c585090642492613b148c5784914930ea18b34c806556cf490b45"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/shipping-container-b.fbx",
+      "bytes": 37568,
+      "sha256": "387ca625377d37fe7e1f1fc484398efcdc50274a2a365a09f9030cd8f854b01d"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/shipping-container-c.fbx",
+      "bytes": 36512,
+      "sha256": "c498061ede0c5594c6dd8ffd6e6596246912f22b757b1827249460527c5ef913"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/detail-tank-large.fbx",
+      "bytes": 50464,
+      "sha256": "09e5bbd1b7e4113fe00f1da91880803a46a294cc753ab35f066de770281e1f97"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/shipping-container-a.fbx",
+      "bytes": 36528,
+      "sha256": "b55604a70991f0d0fe6ba02b2c64d842636adfa65be0d32ff5d598834876804e"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/detail-tank.fbx",
+      "bytes": 37920,
+      "sha256": "c6f61b9561cac7ada41e0b0f291c0f49cc1ce2ab95ddf6efcdbe0ee797c740bd"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-o.fbx",
+      "bytes": 49200,
+      "sha256": "130620309e72dae35fd52c0d6eeedeafe24d4f32a7208931b3cd5a14fa5f0603"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-n.fbx",
+      "bytes": 60928,
+      "sha256": "2b066f0c42b45d1098721d4339c78a3e583918ec3570c5fe4c3c400e0df4cc11"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/solar-panel-portrait-group.fbx",
+      "bytes": 44176,
+      "sha256": "a6474cf396a34e0ec9784492b2339fa3b2754eebd55cd4453198b009e6ef59cb"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-l.fbx",
+      "bytes": 74656,
+      "sha256": "c414c510793159e8745e941a16636addda6f2750265b050856dc1eb1f649173d"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-m.fbx",
+      "bytes": 72752,
+      "sha256": "4147a0a46a0742e3c27c5280b5541966f25beb8f908cbf60afc271159127afcd"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-i.fbx",
+      "bytes": 52512,
+      "sha256": "a140372aed50e55d1c698b1486cca3e0ea05d60a3e66e48eecb46e553a1d8dc0"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/windmill-low.fbx",
+      "bytes": 53088,
+      "sha256": "0f1cea086a7a9c778e5adab2f5ff24aa097796d9a0ae530a93343804863e8138"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-h.fbx",
+      "bytes": 45504,
+      "sha256": "1acec31f54bc5c80d2dc113744b716589d9be6dc26972d9e7e0f590c064c7907"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-j.fbx",
+      "bytes": 54928,
+      "sha256": "c228cd098a2f84d6901a82e0aee213ab7ef17014c6cc49e899a174f6966a0362"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/windmill.fbx",
+      "bytes": 53072,
+      "sha256": "54f40e2a00354f5c1a5398e8456c6733e6491742e17998a853b9df5b1ed512c6"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-k.fbx",
+      "bytes": 46432,
+      "sha256": "09f442f744bc8d4cd3c359c3b4ead3e2e961816a47364769baf4b1a0c6d2dd2d"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-f.fbx",
+      "bytes": 67872,
+      "sha256": "6bddc57e317b2c94a957c01a9626c5bb46f72813f2069efa3542d87f64a988f0"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-q.fbx",
+      "bytes": 80352,
+      "sha256": "903c3224b5af39233a6e369df804f229184c2e8f9ffe1031f1bb31f01523432c"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/chimney-medium.fbx",
+      "bytes": 29120,
+      "sha256": "8dc4981eec6c8acd204f30013e12c326b28e0d48c5bdfbcccdd091e08530c04b"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-p.fbx",
+      "bytes": 59472,
+      "sha256": "a24ffdf5c4ace8e4b1b94d110fe7fe16090a989abd3ef513206bc2a5ed2f39b6"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-g.fbx",
+      "bytes": 59216,
+      "sha256": "5ad37cb526eec61e5e4df319954b9e4e6cae09d6516171e218ea6c7efe78b7a3"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-e.fbx",
+      "bytes": 66704,
+      "sha256": "58ba5182933c3f16163f1ac52b9c38b90afaa6c87acae84761caf96b1792312b"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-r.fbx",
+      "bytes": 85904,
+      "sha256": "315a24aee652b54e5b99a79e056e5c4ac26fe57179f2ad59b16d527f85865e54"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/solar-panel-portrait.fbx",
+      "bytes": 31632,
+      "sha256": "aae09a6d7e1dbaed9d234f8a41dafc53a18b0d9741779c2665de749ab2fe9ba7"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-s.fbx",
+      "bytes": 51264,
+      "sha256": "f1dc9380e41c9010eaa94120f3311bc6ea23e8da18f17b13a7bee2230ac38d83"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-d.fbx",
+      "bytes": 56512,
+      "sha256": "26ecbfb555b4df552bc1509631530fac9a618ef7375dbee117af5b971ed4a597"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-a.fbx",
+      "bytes": 79968,
+      "sha256": "1854cda5f4f87825efe792a399edf0fcc9f798b9f60845a983bbfc743e7a2849"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-t.fbx",
+      "bytes": 77008,
+      "sha256": "f953aedb3a652588907f5c58c8c64b48ef90ddb96b100d1879df932d810af1b8"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-c.fbx",
+      "bytes": 84528,
+      "sha256": "5866ec77f3c16c8fcf09b9554f6c213fc7eb905169bf6cb849dce9e95aad99ee"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/building-b.fbx",
+      "bytes": 90928,
+      "sha256": "df21b8fff0f1db116cde715f7dbadadad1af5a45acdb4f0a0e35ba77c24d068d"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/water-tower.fbx",
+      "bytes": 66976,
+      "sha256": "1676322390b68aa97ddbc7de1a0d87a0f1c3ef11034150ba2a237ec83100a09b"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/solar-panel-landscape-group.fbx",
+      "bytes": 45824,
+      "sha256": "fec12004458ada8fde210a4a2570be54952ab872e58c1f292f5406935b40def1"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/chimney-large.fbx",
+      "bytes": 33152,
+      "sha256": "c679eb85a14d0b29f8fe79d409d9d38a8ed763ee6f99d1f78997bc9ee698b499"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/chimney-basic.fbx",
+      "bytes": 26192,
+      "sha256": "5feeb14366d87c6abb86e3f76ee19617b4371e27a5287b678a342947517dd6c6"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/chimney-small.fbx",
+      "bytes": 26608,
+      "sha256": "2a1502f7dca65790ca818465867fa9144722e01d06e3566f7446b27cbc0c5fed"
+    },
+    {
+      "path": "OchakovoFactoryWorld/Assets/ThirdParty/Kenney/CityIndustrial/Models/Textures/colormap.png",
+      "bytes": 11986,
+      "sha256": "950f4f891ebd05a2affac810e6eeb0fea1511bc39039b65a3cbf2e17d17bc6a2"
+    }
+  ]
+}

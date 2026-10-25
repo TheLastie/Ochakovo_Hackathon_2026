@@ -1,0 +1,16 @@
+{
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-8bit",
+  "seed": 42,
+  "text": "Маленькая проба. Большая ответственность. Ты — химик-лаборант. Пригодятся химия, расчёт концентраций и точные измерения. Берёшь пробы, проводишь анализы, сверяешь показатели с нормой. Заметил отклонение? Фиксируешь результат и сообщаешь команде. Методики осваиваешь рядом с опытными коллегами. Твоя точность помогает сохранять качество знакомых напитков. Хочешь попробовать? Узнай больше о практике.",
+  "sample_rate": 24000,
+  "duration": 30.08,
+  "reference": "Exact opening greeting from web/public/videos/brand.mp4, 0–2.208333 seconds",
+  "reference_text": "Привет! Я Михалыч.",
+  "reference_unique_seconds": 2.208333,
+  "temperature": 0.35,
+  "top_p": 0.85,
+  "method": "ICL reference audio + exact reference transcript",
+  "voice_status": "Revised against greeting; awaiting user listening",
+  "pitch_shift_semitones": 0,
+  "speed_change": false
+}

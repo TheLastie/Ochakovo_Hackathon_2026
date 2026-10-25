@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "website": "previous version restored",
+  "state": {
+    "role": "chemist",
+    "x": 1,
+    "z": -3.6500000953674316,
+    "walking": false,
+    "triangles": 222,
+    "cameraX": 0,
+    "cameraY": 19,
+    "cameraZ": -23,
+    "cameraSize": 6.599999904632568,
+    "paused": false,
+    "characterState": "Idle",
+    "animationTime": 0.31759992241859436,
+    "productionTime": 0.8100000023841858,
+    "bottleX": -9.011199951171875,
+    "hmiFrame": 2,
+    "steamParticles": 9,
+    "steamEmitters": 3,
+    "npcStates": "OperatePanel,OperateValve,InspectSample"
+  }
+}

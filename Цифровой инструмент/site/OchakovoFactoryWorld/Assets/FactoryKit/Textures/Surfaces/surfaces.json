@@ -1,0 +1,130 @@
+{
+  "author": "Original project procedural textures",
+  "generated": "2026-10-24",
+  "size": 512,
+  "tileMetres": 1,
+  "normalConvention": "OpenGL tangent space; Unity TextureType.NormalMap",
+  "packedMap": "RGB metallic / A smoothness; linear",
+  "files": [
+    {
+      "file": "BrushedSteel_Albedo.png",
+      "sha256": "cfdd6c070dd547fee40f694bf176736e9775d2dea2ec8d9879debf401a16a744",
+      "bytes": 105561
+    },
+    {
+      "file": "BrushedSteel_Normal.png",
+      "sha256": "c27466a05707eebe80dec9e74a30d3d7e53cee4ce8d4c9cb3e1339a6d6a95833",
+      "bytes": 115926
+    },
+    {
+      "file": "BrushedSteel_MetallicSmoothness.png",
+      "sha256": "a29a81acecb06bfd93b1e89edc06c5c168896919a317c5609ed6f56d271b3764",
+      "bytes": 66373
+    },
+    {
+      "file": "BrushedSteel_Roughness.png",
+      "sha256": "6491c29acbfba90115dec0ed86470f135829660246c2721eb699d76c9a5ee130",
+      "bytes": 51234
+    },
+    {
+      "file": "FactoryTile_Albedo.png",
+      "sha256": "730b63632b9cb9fcfbb8ee1dabc7a6877cafefb62a4dadf7436e3ac0fe8ab4d9",
+      "bytes": 103567
+    },
+    {
+      "file": "FactoryTile_Normal.png",
+      "sha256": "77591f13570a4d937d4802c7be01def8a80a9eea4be0a393e47c6a115c533198",
+      "bytes": 39583
+    },
+    {
+      "file": "FactoryTile_MetallicSmoothness.png",
+      "sha256": "9bad9bbc29d1c1ed221f0324355488a956d94e3462079267e96282b8e3620559",
+      "bytes": 73289
+    },
+    {
+      "file": "FactoryTile_Roughness.png",
+      "sha256": "e9cb679d2db2fc50ab83ad3aecd5b730b4d7c05d7c47bbc0176f7cd2e12d4d66",
+      "bytes": 57210
+    },
+    {
+      "file": "PaintedMetal_Albedo.png",
+      "sha256": "e9295b0e32deb116b4284746225b87c719795e0c9d1268c70889702c45b1682a",
+      "bytes": 88062
+    },
+    {
+      "file": "PaintedMetal_Normal.png",
+      "sha256": "671e5cef0e15a9bbbbe73459cc2bcc0ebad5441dbcdf58e519255548a4c15209",
+      "bytes": 242383
+    },
+    {
+      "file": "PaintedMetal_MetallicSmoothness.png",
+      "sha256": "cc0707a23f9c6091dc2df87ff4d4c75a6a227428bd05b4861c0a1afdae6e1833",
+      "bytes": 72404
+    },
+    {
+      "file": "PaintedMetal_Roughness.png",
+      "sha256": "a14aed9c8e618330e19d5bff9321e643c366ebacaa002f96845a3237ca8d1109",
+      "bytes": 56531
+    },
+    {
+      "file": "Rubber_Albedo.png",
+      "sha256": "73b6748d17805b6044e7ffcad5ab8ea7c21bd0e7199c3769d52549c47df2809a",
+      "bytes": 151473
+    },
+    {
+      "file": "Rubber_Normal.png",
+      "sha256": "f9a428c551e34152697196afe82bb73e158f16c6585c73870e0543a96b8cf7fb",
+      "bytes": 378900
+    },
+    {
+      "file": "Rubber_MetallicSmoothness.png",
+      "sha256": "6819838042a2e691f5de8370758bad332d7d5b57242a5e59abdbac35b7907f13",
+      "bytes": 79170
+    },
+    {
+      "file": "Rubber_Roughness.png",
+      "sha256": "a7530e85a6e083d51f0d2d622df12acbc3ed33ef8a75805d0fe1de027c84e2c5",
+      "bytes": 61860
+    },
+    {
+      "file": "WoodGrain_Albedo.png",
+      "sha256": "3617ec7fc982abf1ee0684fa4df9506f86112273e5cf690ebf6ccfb67ecd6319",
+      "bytes": 108723
+    },
+    {
+      "file": "WoodGrain_Normal.png",
+      "sha256": "7c009cfb4f0ec4821b6eeecdb2fb22277f5e3571daa14f3a06f42b96511e6727",
+      "bytes": 26159
+    },
+    {
+      "file": "WoodGrain_MetallicSmoothness.png",
+      "sha256": "d62a42f6d2746b4bbe4bf37db97223a1c68f43c80c61a6187684ff0961a78cc4",
+      "bytes": 33925
+    },
+    {
+      "file": "WoodGrain_Roughness.png",
+      "sha256": "fb3aae1a8a1d9d90af0b5c14e0f797801d799c9e9bdea71e3076a3b19f08dfbc",
+      "bytes": 27120
+    },
+    {
+      "file": "KraftCardboard_Albedo.png",
+      "sha256": "faf305f670b3b32745944b47000e5fcd8bc3a614dfe6195d67f4ddfed62ec9fa",
+      "bytes": 111048
+    },
+    {
+      "file": "KraftCardboard_Normal.png",
+      "sha256": "2e5d0833684ec26cb3a67985c5a0e5b9f37e00782c0d61d779b5ae68ba2127be",
+      "bytes": 233349
+    },
+    {
+      "file": "KraftCardboard_MetallicSmoothness.png",
+      "sha256": "5df32e35093a521f71c8aab2a77430526168bad92a8affcd6b6cba6697111292",
+      "bytes": 89678
+    },
+    {
+      "file": "KraftCardboard_Roughness.png",
+      "sha256": "31916edc4376fe66383ffe0b88d1cf59efa4441e18f460ac9b09f8441c589178",
+      "bytes": 69578
+    }
+  ]
+}

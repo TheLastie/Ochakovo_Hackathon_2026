@@ -1,0 +1,116 @@
+{
+  "status": "passed",
+  "checks": [
+    "27–30 ml accepted without exact timing",
+    "moving outside cylinder before release still accepts portion",
+    "holding automatically stops at exactly 30 ml",
+    "holding beyond stop cannot overflow",
+    "reset and second assisted pour",
+    "30 ml transfers intact"
+  ],
+  "unlock": "diagnostic; task-file gating covered by quality-review regression",
+  "toleranceVolume": 27.377017974853516,
+  "state": {
+    "role": "chemist",
+    "x": 3.414658308029175,
+    "z": 3.5122241973876953,
+    "walking": false,
+    "triangles": 158,
+    "cameraX": 0,
+    "cameraY": 19,
+    "cameraZ": -23,
+    "cameraSize": 5.349999904632568,
+    "paused": false,
+    "characterState": "Idle",
+    "animationTime": 8.35966968536377,
+    "productionTime": 27.025999069213867,
+    "bottleX": -5.585679531097412,
+    "hmiFrame": 1,
+    "steamParticles": 29,
+    "steamEmitters": 2,
+    "npcStates": "InspectSample,OperateValve,OperatePanel",
+    "computerOpen": false,
+    "computerNear": false,
+    "computerCompleted": true,
+    "computerPage": "desktop",
+    "computerApp": "desktop",
+    "computerFiles": "Лаборатория качества|Линия розлива|Склад и логистика|Служба оборудования",
+    "computerSelected": "",
+    "computerQuery": "",
+    "computerCalculator": "0",
+    "computerPhoto": "",
+    "computerPhotoZoom": false,
+    "computerPhotoAngle": 0,
+    "computerDetails": false,
+    "computerMaximized": false,
+    "computerTrashCount": 3,
+    "computerAppCount": 0,
+    "computerWindowX": 0,
+    "computerWindowY": 0,
+    "computerExplorerVisible": false,
+    "computerStartVisible": false,
+    "wrongFolders": 0,
+    "computerScreenX": 262.429931640625,
+    "computerScreenY": 235.6163330078125,
+    "labUnlocked": true,
+    "labOpen": true,
+    "labCompleted": false,
+    "labNear": true,
+    "helpOpen": false,
+    "labProbeRinsed": false,
+    "labPh": 0,
+    "labStep": 2,
+    "labCorrections": 0,
+    "labSampleMl": 0,
+    "labFlaskMl": 30.000001907348633,
+    "labMixTurns": 0,
+    "labScreenX": 864.2990112304688,
+    "labScreenY": 605.8980712890625,
+    "labHeld": "",
+    "labItems": [
+      {
+        "x": 130.196533203125,
+        "y": 502.2537841796875
+      },
+      {
+        "x": 307.451171875,
+        "y": 502.2537841796875
+      },
+      {
+        "x": 538.0389404296875,
+        "y": 481.6195983886719
+      },
+      {
+        "x": 796.86279296875,
+        "y": 481.6195983886719
+      },
+      {
+        "x": 1024.31396484375,
+        "y": 469.2391052246094
+      }
+    ]
+  },
+  "scriptErrors": [],
+  "buildAssets": [
+    {
+      "file": "WebGL.ae344627016bf719.loader.js",
+      "sha256": "ae344627016bf7194cc73a411086c26324435d17f80fd720476b4647e814d0f9",
+      "bytes": 26983
+    },
+    {
+      "file": "WebGL.09b3d81cf0fce4c0.data",
+      "sha256": "09b3d81cf0fce4c0331ed59832b1374b393eb90155b1b4949dc866cd644f049f",
+      "bytes": 27408208
+    },
+    {
+      "file": "WebGL.7e6b097a3d8b9f2e.framework.js",
+      "sha256": "7e6b097a3d8b9f2ee4eac0de90edc7d0a02f99d7dde843598f540c1e70183bdb",
+      "bytes": 426398
+    },
+    {
+      "file": "WebGL.6f6309827f0f6747.wasm",
+      "sha256": "6f6309827f0f6747ab830aef7f52cc5cebce686d99c220f3b5738cbd69a18a67",
+      "bytes": 32064325
+    }
+  ]
+}

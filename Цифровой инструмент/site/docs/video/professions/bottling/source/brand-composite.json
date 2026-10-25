@@ -1,0 +1,14 @@
+{
+  "raw_video": "06-flow.mp4",
+  "output": "06-branded.mp4",
+  "official_label_image": "../../shared/ochakovsky-05-official.png",
+  "source_label_rectangle": [
+    43,
+    354,
+    374,
+    654
+  ],
+  "tracked_front_labels_from_seconds": 4.5,
+  "selected_in_final_film": "4.55–5.95 seconds only; generated front labels replaced by original raster",
+  "tracking": "Median Lucas-Kanade optical-flow translation of two frontal label planes"
+}

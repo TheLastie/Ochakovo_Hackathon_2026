@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "checks": [
+    "video skip opens kvass overlay",
+    "fill follows controlled Unity progress messages",
+    "progress monotonic",
+    "actual Unity scene loads and dismisses overlay",
+    "MacBook-size scene fits",
+    "reduced motion disables stream",
+    "mobile layout",
+    "natural video end opens loading",
+    "failure restores interactive retry"
+  ],
+  "progressScreenshots": "Controlled progress messages, actual Unity frame; full game startup also verified",
+  "scriptErrors": []
+}

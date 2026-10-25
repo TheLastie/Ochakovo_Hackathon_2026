@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-24",
+  "note": "Unmodified final profession films; play after role selection, before Unity.",
+  "videos": [
+    {
+      "role": "chemist",
+      "source": "docs/video/professions/chemist/export/chemist-mikhalych.mp4",
+      "file": "chemist.mp4",
+      "sha256": "5150747e5d4f3cabf2ff12dde79a38b9dc4aa87b395ede5b8e9de96044052da9",
+      "bytes": 6942612
+    },
+    {
+      "role": "bottling",
+      "source": "docs/video/professions/bottling/export/bottling-mikhalych.mp4",
+      "file": "bottling.mp4",
+      "sha256": "760a2553465638553275616b0837eefbfba0b03675ad27be80d8c69ef5511be5",
+      "bytes": 8671470
+    },
+    {
+      "role": "machinery",
+      "source": "docs/video/professions/machinery/export/machinery-mikhalych.mp4",
+      "file": "machinery.mp4",
+      "sha256": "c66c644b37b2aba359ac34b69003e34eae9c08ccd360d0cd720dc14760ba4998",
+      "bytes": 6518740
+    },
+    {
+      "role": "brewer",
+      "source": "docs/video/professions/brewer/export/brewer-mikhalych.mp4",
+      "file": "brewer.mp4",
+      "sha256": "d7b8aa4cdb8b3e9513b485945691881ed59823c748b87890476a568c76b0c2c7",
+      "bytes": 8255720
+    }
+  ]
+}

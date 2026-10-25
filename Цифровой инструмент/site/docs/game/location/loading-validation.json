@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "checks": [
+    "first launch",
+    "repeat launch in same browser context",
+    "loader failure returns to selection",
+    "retry after loader failure loads real Unity",
+    "all four build assets use content hashes",
+    "fresh manifest URL for each attempt"
+  ],
+  "attempts": [
+    "http://127.0.0.1:8000/static/unity/index.html?role=chemist&attempt=1792855442252",
+    "http://127.0.0.1:8000/static/unity/index.html?role=chemist&attempt=1792855447039",
+    "http://127.0.0.1:8000/static/unity/index.html?role=chemist&attempt=1792855451566"
+  ],
+  "assets": [
+    "http://127.0.0.1:8000/static/unity/Build/WebGL.8716a3a5e42c17f4.loader.js",
+    "http://127.0.0.1:8000/static/unity/Build/WebGL.1ea37c2ea90e2abc.framework.js",
+    "http://127.0.0.1:8000/static/unity/Build/WebGL.95900f9830714a81.data",
+    "http://127.0.0.1:8000/static/unity/Build/WebGL.47a28ae21ae5fedd.wasm"
+  ],
+  "scriptErrors": []
+}

@@ -7,6 +7,16 @@
 <section id="shift" class="game-only" aria-label="Первая смена — игра"><div class="game-stage" id="game-stage">
 <iframe id="factory-frame" title="Игровая сцена" data-src="{% static 'unity/index.html' %}" allow="autoplay; fullscreen" hidden></iframe>
 <iframe id="character-frame" title="Выбор персонажа" data-src="{% static 'game-menu/characters/index.html' %}" hidden></iframe>
+<section class="profession-film" id="profession-film" aria-label="Видео о выбранной профессии" hidden data-base="{% static 'videos/professions/' %}">
+<video id="profession-video" playsinline controls preload="none" aria-label="Знакомство с профессией"></video>
+<div class="profession-film-top"><span id="profession-film-title"></span><button id="profession-film-back" type="button">К выбору профессии</button></div>
+<button id="profession-film-skip" type="button">Пропустить →</button>
+<div id="profession-film-fallback" hidden><p id="profession-film-status" role="status"></p><button id="profession-film-play" type="button">Смотреть видео</button></div>
+</section>
+<section class="shift-ending" id="shift-ending" hidden aria-label="Обращение Михалыча" data-base="{% static 'videos/game/' %}">
+<div class="shift-ending-media"><video playsinline preload="none" aria-label="Михалыч о первой смене"></video><button type="button" data-ending-play>Смотреть</button><p role="status"></p></div>
+<div class="shift-ending-bottom"><div><h2></h2><p class="shift-ending-detail"></p></div><div class="shift-ending-actions"><button type="button" data-ending-chemist hidden>Попробовать химика</button><button type="button" data-ending-apply>Оставить анкету</button><button type="button" data-ending-select>Другая профессия</button></div></div>
+</section>
 <div class="game-menu" id="game-menu">
 <img class="game-menu-art" id="game-menu-art" src="{% static 'game-menu/desk.png' %}" alt="" loading="lazy" decoding="async">
 <canvas class="game-menu-wind" id="game-menu-wind" aria-hidden="true"></canvas>

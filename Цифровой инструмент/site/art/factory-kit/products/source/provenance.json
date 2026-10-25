@@ -1,0 +1,42 @@
+[
+  {
+    "id": "Ochakovsky_Label",
+    "source": "ochakovsky-official-pet.png",
+    "source_url": "https://ochakovo.ru/wp-content/uploads/2024/09/ochak_05_p.png",
+    "page": "https://ochakovo.ru/brand/ochakovskij/",
+    "accessed": "2026-10-24",
+    "source_sha256": "3880e18458bbad08bc9af5287a9d069862e435975138065d1f3959160a59fb67",
+    "crop_pixels": [
+      43,
+      354,
+      367,
+      653
+    ],
+    "atlas_pixels": [
+      2048,
+      1024
+    ],
+    "method": "inverse cylindrical front projection; plain reverse continuation",
+    "rights": "Official Ochakovo product artwork; not CC0; source retained without modification"
+  },
+  {
+    "id": "Mojito_Label",
+    "source": "mojito-official-can.png",
+    "source_url": "https://ochakovo.ru/wp-content/uploads/2024/09/mohito-can.png",
+    "page": "https://ochakovo.ru/brand/moxito-osvezhayushhij-4/",
+    "accessed": "2026-10-24",
+    "source_sha256": "c9c429a241a4c5a55441ffb21628dbbe59dc274044d6411db7125d7d724bcb6f",
+    "crop_pixels": [
+      61,
+      26,
+      369,
+      758
+    ],
+    "atlas_pixels": [
+      2048,
+      1024
+    ],
+    "method": "inverse cylindrical front projection; plain reverse continuation",
+    "rights": "Official Ochakovo product artwork; not CC0; source retained without modification"
+  }
+]

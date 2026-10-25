@@ -1,10 +1,13 @@
 import { animateFoliage } from './menu-wind';
+import { createKvassLoading } from './kvass-loading';
+import { createShiftEnding } from './shift-ending';
 
-/** Intro → character choice → Unity. Both menus stay independent of the game build. */
+/** Intro → character choice → profession film → Unity. Both menus stay independent of the game build. */
 export function initGameMenu() {
   const menu = document.querySelector<HTMLElement>('#game-menu');
   if (!menu) return;
   const stage = document.querySelector<HTMLElement>('#game-stage')!;
+  const loading = createKvassLoading(stage);
   const start = document.querySelector<HTMLButtonElement>('#game-menu-start')!;
   const sound = document.querySelector<HTMLButtonElement>('#game-menu-sound')!;
   const status = document.querySelector<HTMLElement>('#game-menu-status')!;
@@ -12,9 +15,14 @@ export function initGameMenu() {
   const choice = document.querySelector<HTMLIFrameElement>('#character-frame')!;
   const image = document.querySelector<HTMLImageElement>('#game-menu-art')!;
   const canvas = document.querySelector<HTMLCanvasElement>('#game-menu-wind')!;
+  const film = document.querySelector<HTMLElement>('#profession-film')!;
+  const video = document.querySelector<HTMLVideoElement>('#profession-video')!;
+  const filmFallback = document.querySelector<HTMLElement>('#profession-film-fallback')!;
+  const filmStatus = document.querySelector<HTMLElement>('#profession-film-status')!;
+  const filmTitles: Record<string, string> = {chemist: 'Химик-лаборант', bottling: 'Оператор линии розлива', machinery: 'Машинист оборудования', brewer: 'Квасовар'};
   const roles = new Set(['chemist', 'bottling', 'machinery', 'brewer']);
   let selected = 'chemist';
-  let screen: 'intro' | 'selection' | 'loading' | 'game' = 'intro';
+  let screen: 'intro' | 'selection' | 'video' | 'loading' | 'game' | 'ending' = 'intro';
   let choiceReady = false;
   let disposeWind = () => {};
   let timer: ReturnType<typeof setTimeout> | undefined;
@@ -26,6 +34,33 @@ export function initGameMenu() {
   let transitioning = false;
   let transitionId = 0;
   let transitions: Animation[] = [];
+
+  const ending = createShiftEnding(stage, (chemist = false) => {
+    screen = 'selection';
+    if (chemist) selected = 'chemist';
+    stage.dataset.selectedRole = selected;
+    choice.hidden = false;
+    choice.inert = false;
+    choice.removeAttribute('aria-hidden');
+    sendChoice({type: 'select', role: selected});
+    sendChoice({type: 'loading', value: false});
+    updateActivity();
+    choice.contentDocument?.querySelector<HTMLButtonElement>(`[data-role="${selected}"]`)?.focus({preventScroll: true});
+    if (chemist) showFilm();
+  });
+  const showEnding = (kind: 'completed' | 'unavailable') => {
+    screen = 'ending';
+    choice.hidden = true;
+    frame.hidden = true;
+    frame.setAttribute('inert', '');
+    frame.setAttribute('aria-hidden', 'true');
+    // Release the completed Unity instance; a new shift starts from a clean iframe.
+    frame.removeAttribute('src');
+    const bounds = stage.getBoundingClientRect();
+    if (bounds.top < 0 || bounds.bottom > innerHeight) stage.scrollIntoView({block: 'center', behavior: 'instant'});
+    ending.show(kind, selected);
+    updateActivity();
+  };
 
   const changeMenu = async (from: HTMLElement, to: HTMLElement) => {
     const id = ++transitionId;
@@ -79,10 +114,13 @@ export function initGameMenu() {
     return context;
   };
   const updateActivity = () => {
+    loading.active(visible && !document.hidden);
+    ending.activity(visible && !document.hidden);
     if (audio && volume) {
-      const silent = muted || !visible || document.hidden || screen === 'loading' || screen === 'game';
+      const silent = muted || !visible || document.hidden || screen === 'video' || screen === 'loading' || screen === 'game' || screen === 'ending';
       volume.gain.setTargetAtTime(silent ? 0 : 0.045, audio.currentTime, 0.25);
     }
+    if (screen === 'video' && (!visible || document.hidden)) video.pause();
     sendChoice({ type: 'active', value: visible && !document.hidden && screen === 'selection' && !transitioning });
   };
   const toggleSound = async () => {
@@ -157,9 +195,12 @@ export function initGameMenu() {
   const failed = () => {
     if (screen !== 'loading') return;
     clearTimeout(timer);
+    loading.hide();
     frame.hidden = true;
     frame.removeAttribute('src');
     screen = 'selection';
+    choice.hidden = false;
+    choice.inert = false;
     stage.removeAttribute('aria-busy');
     sendChoice({ type: 'loading', value: false, error: 'Не удалось загрузить игру. Проверь соединение и попробуй ещё раз.' });
     choice.contentDocument?.querySelector<HTMLButtonElement>('.start')?.focus({ preventScroll: true });
@@ -168,6 +209,12 @@ export function initGameMenu() {
   const launch = () => {
     if (screen !== 'selection' || !choiceReady || transitioning) return;
     screen = 'loading';
+    const loadingBounds = stage.getBoundingClientRect();
+    if (loadingBounds.top < 0 || loadingBounds.bottom > innerHeight) {
+      stage.scrollIntoView({ block: 'center', behavior: 'instant' });
+    }
+    loading.show();
+    choice.inert = true;
     stage.dataset.selectedRole = selected;
     stage.setAttribute('aria-busy', 'true');
     sendChoice({ type: 'loading', value: true });
@@ -177,9 +224,67 @@ export function initGameMenu() {
     frame.setAttribute('inert', '');
     const url = new URL(frame.dataset.src!, location.href);
     url.searchParams.set('role', selected);
+    // Retry against the current manifest, including in a tab opened before a new build.
+    url.searchParams.set('attempt', String(Date.now()));
     frame.src = url.href;
     timer = setTimeout(failed, 120_000);
   };
+  const clearFilm = () => {
+    video.pause();
+    video.removeAttribute('src');
+    video.load();
+    film.hidden = true;
+    filmFallback.hidden = true;
+  };
+  const finishFilm = () => {
+    if (screen !== 'video') return;
+    clearFilm();
+    screen = 'selection';
+    if (selected === 'chemist') launch(); else showEnding('unavailable');
+  };
+  const playFilm = async () => {
+    filmFallback.hidden = true;
+    try { await video.play(); }
+    catch {
+      if (screen !== 'video') return;
+      filmStatus.textContent = 'Нажми, чтобы посмотреть ролик, или пропусти его и перейди к производству.';
+      filmFallback.hidden = false;
+    }
+  };
+  const showFilm = () => {
+    if (screen !== 'selection' || !choiceReady || transitioning) return;
+    screen = 'video';
+    stage.dataset.selectedRole = selected;
+    sendChoice({type: 'loading', value: true});
+    film.hidden = false;
+    filmFallback.hidden = true;
+    document.querySelector<HTMLElement>('#profession-film-title')!.textContent = filmTitles[selected];
+    video.setAttribute('aria-label', `Видео: ${filmTitles[selected]}`);
+    video.src = `${film.dataset.base}${selected}.mp4`;
+    video.currentTime = 0;
+    updateActivity();
+    void playFilm();
+    document.querySelector<HTMLButtonElement>('#profession-film-skip')!.focus({preventScroll: true});
+  };
+  video.addEventListener('ended', finishFilm);
+  video.addEventListener('error', () => {
+    if (screen !== 'video') return;
+    filmStatus.textContent = 'Видео не загрузилось. Можно повторить просмотр или сразу перейти к производству.';
+    filmFallback.hidden = false;
+  });
+  document.querySelector('#profession-film-skip')!.addEventListener('click', finishFilm);
+  document.querySelector('#profession-film-play')!.addEventListener('click', () => {
+    if (video.error) { video.load(); }
+    void playFilm();
+  });
+  document.querySelector('#profession-film-back')!.addEventListener('click', () => {
+    if (screen !== 'video') return;
+    clearFilm();
+    screen = 'selection';
+    sendChoice({type: 'loading', value: false});
+    updateActivity();
+    choice.contentDocument?.querySelector<HTMLButtonElement>('.start')?.focus({preventScroll: true});
+  });
   frame.addEventListener('error', failed);
   frame.addEventListener('load', () => {
     if (screen === 'loading' && !frame.contentDocument?.querySelector('#unity-canvas')) failed();
@@ -199,7 +304,7 @@ export function initGameMenu() {
       if ((data.type === 'select' || data.type === 'start') && roles.has(data.role)) {
         selected = data.role;
         stage.dataset.selectedRole = selected;
-        if (data.type === 'start') launch();
+        if (data.type === 'start') showFilm();
       } else if (data.type === 'back') {
         showIntro();
       } else if (data.type === 'sound') {
@@ -207,9 +312,14 @@ export function initGameMenu() {
       }
       return;
     }
-    if (event.source !== frame.contentWindow || data.channel !== 'ochakovo-unity' || screen !== 'loading') return;
+    if (event.source !== frame.contentWindow || data.channel !== 'ochakovo-unity') return;
+    if (data.type === 'completed' && screen === 'game' && selected === 'chemist') {
+      showEnding('completed');
+      return;
+    }
+    if (screen !== 'loading') return;
     if (data.type === 'progress' && typeof data.value === 'number') {
-      sendChoice({ type: 'loading', value: true, progress: Math.max(0, Math.min(1, data.value)) });
+      loading.progress(data.value);
     } else if (data.type === 'error') {
       failed();
     } else if (data.type === 'ready') {
@@ -219,12 +329,18 @@ export function initGameMenu() {
       frame.removeAttribute('aria-hidden');
       frame.removeAttribute('inert');
       choice.hidden = true;
-      frame.focus({ preventScroll: true });
+      void loading.finish().then(() => {
+        frame.focus({ preventScroll: true });
+        frame.contentDocument?.querySelector<HTMLCanvasElement>('#unity-canvas')?.focus({ preventScroll: true });
+      });
+      const bounds = stage.getBoundingClientRect();
+      if (bounds.top < 0 || bounds.bottom > innerHeight) {
+        stage.scrollIntoView({ block: 'center', behavior: 'instant' });
+      }
       disposeWind();
-      observer.disconnect();
-      document.removeEventListener('visibilitychange', updateActivity);
+
       sendChoice({ type: 'active', value: false });
-      void audio?.close();
+      if (volume && audio) volume.gain.setTargetAtTime(0, audio.currentTime, .1);
     }
   });
 }

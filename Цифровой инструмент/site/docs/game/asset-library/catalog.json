@@ -1,0 +1,1317 @@
+{
+  "version": 1,
+  "units": "metres",
+  "up": "Y in Unity",
+  "assets": [
+    {
+      "id": "Floor_4x4",
+      "category": "Architecture",
+      "label": "Пол — 4x4",
+      "reference": "panorama",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        4.0,
+        0.164,
+        4.0
+      ],
+      "triangles": 132,
+      "renderers": 2,
+      "sockets": [],
+      "path": "Models/Architecture/Floor_4x4.fbx",
+      "sha256": "d4da72927f9bdab5ac3b2e0e15923d06489c8efc2447f6bcf9cf4f3a53208d5c",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Floor_2x2",
+      "category": "Architecture",
+      "label": "Пол — 2x2",
+      "reference": "panorama",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        2.0,
+        0.164,
+        2.0
+      ],
+      "triangles": 132,
+      "renderers": 2,
+      "sockets": [],
+      "path": "Models/Architecture/Floor_2x2.fbx",
+      "sha256": "2fc732fb45ca01ae3644d66cffdb8e9a7ba5868b4492ec1fddea25d5ae20b1da",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Wall_4m",
+      "category": "Architecture",
+      "label": "Стена 4 м",
+      "reference": "panorama",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        4.0,
+        3.5,
+        0.191
+      ],
+      "triangles": 156,
+      "renderers": 2,
+      "sockets": [],
+      "path": "Models/Architecture/Wall_4m.fbx",
+      "sha256": "e0b421608e9b3732412fa987a9ba9628e17a89a1919cdb94a5463db8a73ffd3b",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Wall_Window_4m",
+      "category": "Architecture",
+      "label": "Стена с окном",
+      "reference": "panorama",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        4.0,
+        3.5,
+        0.18
+      ],
+      "triangles": 768,
+      "renderers": 3,
+      "sockets": [],
+      "path": "Models/Architecture/Wall_Window_4m.fbx",
+      "sha256": "2baa5869173dd79ca1a5e8ba7f9403b82db4385ce1740c089ab07fba357c6f06",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Wall_Door_4m",
+      "category": "Architecture",
+      "label": "Стена с красной дверью",
+      "reference": "panorama",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        4.0,
+        3.5,
+        0.235
+      ],
+      "triangles": 584,
+      "renderers": 4,
+      "sockets": [],
+      "path": "Models/Architecture/Wall_Door_4m.fbx",
+      "sha256": "7b3103a24cae44d0290ba999839a16649e87a2c99761d9ec30e66ac3920f5a83",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Column_4m",
+      "category": "Architecture",
+      "label": "Колонна 4 м",
+      "reference": "panorama",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        0.5,
+        4.0,
+        0.5
+      ],
+      "triangles": 216,
+      "renderers": 2,
+      "sockets": [],
+      "path": "Models/Architecture/Column_4m.fbx",
+      "sha256": "fba84b9ff4d5b971e9002558cc76a0eb17833f9f355f3184e03980586a26b7b0",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Roof_Truss_8m",
+      "category": "Architecture",
+      "label": "Ферма 8 м",
+      "reference": "panorama",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        8.0287,
+        0.79,
+        0.09
+      ],
+      "triangles": 440,
+      "renderers": 1,
+      "sockets": [],
+      "path": "Models/Architecture/Roof_Truss_8m.fbx",
+      "sha256": "25e672426002342c81499ada7ea81b9f413029f9116ad134eee58e08c67cb53a",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Light_Batten_2m",
+      "category": "Architecture",
+      "label": "Линейный светильник",
+      "reference": "panorama",
+      "collision": "none",
+      "grid": 0.5,
+      "size": [
+        2.0,
+        0.1225,
+        0.18
+      ],
+      "triangles": 216,
+      "renderers": 2,
+      "sockets": [],
+      "path": "Models/Architecture/Light_Batten_2m.fbx",
+      "sha256": "52df774619b948833aa3a2cb5308c8e2802b137e7ad3026fc93de74c0a4a9249",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Floor_Marking_2m",
+      "category": "Architecture",
+      "label": "Разметка прохода",
+      "reference": "panorama",
+      "collision": "none",
+      "grid": 0.5,
+      "size": [
+        0.07,
+        0.006,
+        2.0
+      ],
+      "triangles": 12,
+      "renderers": 1,
+      "sockets": [],
+      "path": "Models/Architecture/Floor_Marking_2m.fbx",
+      "sha256": "8382f399320f23bae4d5ac0a4d93dac37df5245ad34e5e1404de9d065e27b2b5",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Stairs_1_5m",
+      "category": "Architecture",
+      "label": "Лестница на платформу",
+      "reference": "panorama",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        1.09,
+        2.5292,
+        2.1112
+      ],
+      "triangles": 1216,
+      "renderers": 1,
+      "sockets": [],
+      "path": "Models/Architecture/Stairs_1_5m.fbx",
+      "sha256": "a7c05c76c4e2fae4628b4551207cd148c60c436a73c3387c8a8bb1707cd7897a",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Catwalk_2m",
+      "category": "Architecture",
+      "label": "Платформа 2 м",
+      "reference": "panorama",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        2.05,
+        2.488,
+        1.2
+      ],
+      "triangles": 636,
+      "renderers": 1,
+      "sockets": [],
+      "path": "Models/Architecture/Catwalk_2m.fbx",
+      "sha256": "ffa701e32193c2a0ce5876eab7467366aa43312400202389ee1a3ef7bf75d67e",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Brew_Kettle",
+      "category": "Process",
+      "label": "Варочная ёмкость",
+      "reference": "brewing-vats",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        2.364,
+        3.65,
+        2.735
+      ],
+      "triangles": 2344,
+      "renderers": 5,
+      "sockets": [
+        "Interaction_Valve",
+        "Socket_In",
+        "Socket_Out",
+        "Interaction_Sample"
+      ],
+      "path": "Models/Process/Brew_Kettle.fbx",
+      "sha256": "4fe23597c014b69ac3cddb8e2fd68c3fb03122c5353eda9b97ef63309a0abe97",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Fermentation_Tank",
+      "category": "Process",
+      "label": "Бродильная ёмкость",
+      "reference": "fermentation-tanks",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        1.664,
+        4.17,
+        2.035
+      ],
+      "triangles": 2644,
+      "renderers": 4,
+      "sockets": [
+        "Interaction_Valve.001",
+        "Socket_In.001",
+        "Socket_Out.001",
+        "Interaction_Sample.001"
+      ],
+      "path": "Models/Process/Fermentation_Tank.fbx",
+      "sha256": "add6976cdf2a4dd7a9a1a74f4e0a53af8aa48b974efad4c4e73378534c04349e",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Storage_Tank",
+      "category": "Process",
+      "label": "Накопительная ёмкость",
+      "reference": "fermentation-tanks",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        2.064,
+        3.42,
+        2.435
+      ],
+      "triangles": 2552,
+      "renderers": 4,
+      "sockets": [
+        "Interaction_Valve.002",
+        "Socket_In.002",
+        "Socket_Out.002",
+        "Interaction_Sample.002"
+      ],
+      "path": "Models/Process/Storage_Tank.fbx",
+      "sha256": "bac7f6ef9ce470c10bd3c1e0024886891920f9c7efbf794100b200b699dc9d56",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Wine_Tank",
+      "category": "Process",
+      "label": "Винная ёмкость",
+      "reference": "branches",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        1.964,
+        3.32,
+        2.335
+      ],
+      "triangles": 2552,
+      "renderers": 4,
+      "sockets": [
+        "Interaction_Valve.003",
+        "Socket_In.003",
+        "Socket_Out.003",
+        "Interaction_Sample.003"
+      ],
+      "path": "Models/Process/Wine_Tank.fbx",
+      "sha256": "e9790fedac8ba4d88557f26f4a3be45773c3128d757c8df5a5d2c353203368e4",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Grain_Silo",
+      "category": "Process",
+      "label": "Зерновой силос",
+      "reference": "branches",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        2.664,
+        5.27,
+        3.035
+      ],
+      "triangles": 2644,
+      "renderers": 4,
+      "sockets": [
+        "Interaction_Valve.004",
+        "Socket_In.004",
+        "Socket_Out.004",
+        "Interaction_Sample.004"
+      ],
+      "path": "Models/Process/Grain_Silo.fbx",
+      "sha256": "4d36ffbbdc74eaa62ea603ef704b8295886b96306e3ed47fd856a1a7be2487b1",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Pipe_Straight_1m",
+      "category": "Pipes",
+      "label": "Труба 1 м",
+      "reference": "panorama",
+      "collision": "none",
+      "grid": 0.5,
+      "size": [
+        1.04,
+        0.2,
+        0.2
+      ],
+      "triangles": 228,
+      "renderers": 1,
+      "sockets": [
+        "Socket_In.005",
+        "Socket_Out.005"
+      ],
+      "path": "Models/Pipes/Pipe_Straight_1m.fbx",
+      "sha256": "e673d51890304ef7283cdc415ae9123f1136c83c6842060797fdd0313c93836f",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Pipe_Straight_2m",
+      "category": "Pipes",
+      "label": "Труба 2 м",
+      "reference": "panorama",
+      "collision": "none",
+      "grid": 0.5,
+      "size": [
+        2.04,
+        0.2,
+        0.2
+      ],
+      "triangles": 228,
+      "renderers": 1,
+      "sockets": [
+        "Socket_In.006",
+        "Socket_Out.006"
+      ],
+      "path": "Models/Pipes/Pipe_Straight_2m.fbx",
+      "sha256": "d09f89dd9ac31b607a3e8c5b31857fb88fcd1fcf29a179ba899d3fe5d2fe6c47",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Pipe_Straight_4m",
+      "category": "Pipes",
+      "label": "Труба 4 м",
+      "reference": "panorama",
+      "collision": "none",
+      "grid": 0.5,
+      "size": [
+        4.04,
+        0.2,
+        0.2
+      ],
+      "triangles": 228,
+      "renderers": 1,
+      "sockets": [
+        "Socket_In.007",
+        "Socket_Out.007"
+      ],
+      "path": "Models/Pipes/Pipe_Straight_4m.fbx",
+      "sha256": "306ec3867324680e91ed98c8e06db1682869cd9c7b2f63dc55fc6d98a896c093",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Pipe_Elbow_90",
+      "category": "Pipes",
+      "label": "Отвод 90°",
+      "reference": "panorama",
+      "collision": "none",
+      "grid": 0.5,
+      "size": [
+        0.6407,
+        0.15,
+        0.5895
+      ],
+      "triangles": 528,
+      "renderers": 1,
+      "sockets": [
+        "Socket_In.008",
+        "Socket_Out.008"
+      ],
+      "path": "Models/Pipes/Pipe_Elbow_90.fbx",
+      "sha256": "ad1b41bd7dc787b37279f865927170177610fff6876c2bd2b6733c48745965be",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Pipe_Tee",
+      "category": "Pipes",
+      "label": "Тройник",
+      "reference": "panorama",
+      "collision": "none",
+      "grid": 0.5,
+      "size": [
+        1.0,
+        0.15,
+        0.575
+      ],
+      "triangles": 88,
+      "renderers": 1,
+      "sockets": [
+        "Socket_In.009",
+        "Socket_Out.009",
+        "Socket_Branch"
+      ],
+      "path": "Models/Pipes/Pipe_Tee.fbx",
+      "sha256": "642287eb28d611ff8c386d1f80e9f9ce6414c761d30421424cbb11e87665b397",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Valve_Handwheel",
+      "category": "Pipes",
+      "label": "Ручной клапан",
+      "reference": "panorama",
+      "collision": "none",
+      "grid": 0.5,
+      "size": [
+        0.6,
+        0.603,
+        0.26
+      ],
+      "triangles": 652,
+      "renderers": 2,
+      "sockets": [
+        "Interaction_Valve.005"
+      ],
+      "path": "Models/Pipes/Valve_Handwheel.fbx",
+      "sha256": "08a384fbac61a3652d6edac8fdd2c592cbef53fdaab7ddb98515887aea1bae51",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Pressure_Gauge",
+      "category": "Pipes",
+      "label": "Манометр",
+      "reference": "machinery-video",
+      "collision": "none",
+      "grid": 0.5,
+      "size": [
+        0.26,
+        0.31,
+        0.0874
+      ],
+      "triangles": 248,
+      "renderers": 3,
+      "sockets": [
+        "Interaction_Read"
+      ],
+      "path": "Models/Pipes/Pressure_Gauge.fbx",
+      "sha256": "0c2c3130061c92fc73efe6d5059724fc5f13bddcb26c20e171d42ec33c7f1d39",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Centrifugal_Pump",
+      "category": "Process",
+      "label": "Насос на раме",
+      "reference": "machinery-video",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        1.3,
+        0.85,
+        0.65
+      ],
+      "triangles": 380,
+      "renderers": 2,
+      "sockets": [
+        "Socket_In.010",
+        "Socket_Out.010"
+      ],
+      "path": "Models/Process/Centrifugal_Pump.fbx",
+      "sha256": "3c714d430b635110f50a1ca47ffa534f4eb3a8ff8f3d52ab4e88de3740451a79",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Heat_Exchanger",
+      "category": "Process",
+      "label": "Пластинчатый теплообменник",
+      "reference": "machinery-video",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        1.27,
+        1.6,
+        0.87
+      ],
+      "triangles": 2276,
+      "renderers": 3,
+      "sockets": [],
+      "path": "Models/Process/Heat_Exchanger.fbx",
+      "sha256": "fc962d34e78a974ff734b6daf23aefe327e8c1bedfd167187759e45874690042",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "CIP_Skid",
+      "category": "Process",
+      "label": "Модуль моечной станции",
+      "reference": "fermentation-tanks",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        2.0,
+        1.96,
+        1.123
+      ],
+      "triangles": 2732,
+      "renderers": 3,
+      "sockets": [
+        "Interaction_Valve.006",
+        "Interaction_Valve.007",
+        "Socket_CIP_Return",
+        "Socket_CIP_Supply"
+      ],
+      "path": "Models/Process/CIP_Skid.fbx",
+      "sha256": "cdca8a7102a8c10c9487472e21e67f767082df4edad9f8ca263b5cf15fbab472",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Control_Cabinet",
+      "category": "Process",
+      "label": "Шкаф управления",
+      "reference": "machinery-video",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        0.9,
+        2.1,
+        0.48
+      ],
+      "triangles": 844,
+      "renderers": 8,
+      "sockets": [
+        "Interaction_HMI"
+      ],
+      "path": "Models/Process/Control_Cabinet.fbx",
+      "sha256": "c364e05995d0c7aeb2f66e7a7a9f1382495e2620f7ded2132c6a97d9342b195a",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Operator_Console",
+      "category": "Process",
+      "label": "Пульт оператора",
+      "reference": "machinery-video",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        1.0,
+        1.7,
+        0.65
+      ],
+      "triangles": 708,
+      "renderers": 9,
+      "sockets": [
+        "Interaction_HMI.001"
+      ],
+      "path": "Models/Process/Operator_Console.fbx",
+      "sha256": "4e9bec1b54661676da4b51687fce20da700f4cfe15be92a359b5f7558f277f7b",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Conveyor_2m",
+      "category": "Bottling",
+      "label": "Конвейер 2 м",
+      "reference": "bottling-video",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        0.8,
+        1.205,
+        2.0
+      ],
+      "triangles": 832,
+      "renderers": 2,
+      "sockets": [
+        "Socket_In.011",
+        "Socket_Out.011"
+      ],
+      "path": "Models/Bottling/Conveyor_2m.fbx",
+      "sha256": "09e3c056857b9dc1e24a11856a42e9852afd0231ddf9342fa491808a0e48d25b",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Conveyor_4m",
+      "category": "Bottling",
+      "label": "Конвейер 4 м",
+      "reference": "bottling-video",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        0.8,
+        1.205,
+        4.0
+      ],
+      "triangles": 832,
+      "renderers": 2,
+      "sockets": [
+        "Socket_In.012",
+        "Socket_Out.012"
+      ],
+      "path": "Models/Bottling/Conveyor_4m.fbx",
+      "sha256": "a34649768be669427b0e21306d55c4525d5e3fa843c59164dca08d96715d0259",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Roller_Conveyor_2m",
+      "category": "Bottling",
+      "label": "Конвейер 2 м роликовый",
+      "reference": "bottling-video",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        0.8,
+        1.205,
+        2.0
+      ],
+      "triangles": 1828,
+      "renderers": 2,
+      "sockets": [
+        "Socket_In.013",
+        "Socket_Out.013"
+      ],
+      "path": "Models/Bottling/Roller_Conveyor_2m.fbx",
+      "sha256": "0eeb2e36aeddecb71f9c423d6f9218f6132e476a560dfc27fa1f9920ec20f72c",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Conveyor_Corner_90",
+      "category": "Bottling",
+      "label": "Угловой конвейер",
+      "reference": "bottling-video",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        1.4753,
+        0.99,
+        1.5704
+      ],
+      "triangles": 1104,
+      "renderers": 2,
+      "sockets": [
+        "Socket_In.014",
+        "Socket_Out.014"
+      ],
+      "path": "Models/Bottling/Conveyor_Corner_90.fbx",
+      "sha256": "449dc8c33d165efd46934306529b916f6697e04d21bf5369c05ee7a06865ffdd",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Filling_Machine",
+      "category": "Bottling",
+      "label": "Защищённый модуль розлива",
+      "reference": "bottling-video",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        1.635,
+        2.96,
+        2.0
+      ],
+      "triangles": 2468,
+      "renderers": 9,
+      "sockets": [
+        "Socket_In.015",
+        "Socket_Out.015",
+        "Interaction_HMI.002",
+        "Interaction_Inspect"
+      ],
+      "path": "Models/Bottling/Filling_Machine.fbx",
+      "sha256": "75e87d8ac0c104daa2c2f1e88a6e32363c7fe9da8e12c24d422ecf8ff7aff595",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Labeling_Machine",
+      "category": "Bottling",
+      "label": "Модуль этикетировки",
+      "reference": "bottling-video",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        1.635,
+        2.96,
+        2.0
+      ],
+      "triangles": 2432,
+      "renderers": 9,
+      "sockets": [
+        "Socket_In.016",
+        "Socket_Out.016",
+        "Interaction_HMI.003",
+        "Interaction_Inspect.001"
+      ],
+      "path": "Models/Bottling/Labeling_Machine.fbx",
+      "sha256": "f701f55d769a18167c37e8c91a56ad03fd952d525f278ea35aa8660e79854d10",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Packing_Machine",
+      "category": "Bottling",
+      "label": "Упаковочная станция",
+      "reference": "bottling-video",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        1.635,
+        2.96,
+        2.0
+      ],
+      "triangles": 2356,
+      "renderers": 9,
+      "sockets": [
+        "Socket_In.017",
+        "Socket_Out.017",
+        "Interaction_HMI.004",
+        "Interaction_Inspect.002"
+      ],
+      "path": "Models/Bottling/Packing_Machine.fbx",
+      "sha256": "d2bdfd32a40db1e5d0962dfa41425149ea103855b8f2050d87bae1b40c64ec34",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "PET_Bottle_Prototype",
+      "category": "Props",
+      "label": "Наполненная ПЭТ-бутылка без печати",
+      "reference": "product-reference",
+      "collision": "none",
+      "grid": 0.05,
+      "size": [
+        0.0916,
+        0.329,
+        0.0916
+      ],
+      "triangles": 300,
+      "renderers": 2,
+      "sockets": [],
+      "path": "Models/Props/PET_Bottle_Prototype.fbx",
+      "sha256": "b9091882ccab0cfc4a6591563b6b8b372a1ab91aaf373959ebbc37635036b95e",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Can_Prototype",
+      "category": "Props",
+      "label": "Банка без печати",
+      "reference": "bottling-video",
+      "collision": "none",
+      "grid": 0.05,
+      "size": [
+        0.068,
+        0.171,
+        0.068
+      ],
+      "triangles": 660,
+      "renderers": 3,
+      "sockets": [],
+      "path": "Models/Props/Can_Prototype.fbx",
+      "sha256": "317c0fdc1161fd3a0ae8a2caa0c90c4ef191cbb532fdc14a4c1ad3b179ddf1cf",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Bottle_Tray_12",
+      "category": "Props",
+      "label": "Лоток с 12 бутылками",
+      "reference": "product-reference",
+      "collision": "none",
+      "grid": 0.1,
+      "size": [
+        0.36,
+        0.394,
+        0.47
+      ],
+      "triangles": 3708,
+      "renderers": 3,
+      "sockets": [],
+      "path": "Models/Props/Bottle_Tray_12.fbx",
+      "sha256": "dabaf33ef2d8f6caa23cfba41ff9ef3ba57b1b068341901937c6fbfd9ece1489",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Lab_Bench_2m",
+      "category": "Laboratory",
+      "label": "Лабораторный стол 2 м",
+      "reference": "chemist-video",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        2.0,
+        1.23,
+        0.85
+      ],
+      "triangles": 1000,
+      "renderers": 4,
+      "sockets": [
+        "Socket_Worktop"
+      ],
+      "path": "Models/Laboratory/Lab_Bench_2m.fbx",
+      "sha256": "22a75e8fdc887313a34cbdecc9bd34482f64d62404926fefdd56d4d6e47e176b",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Lab_Stool",
+      "category": "Laboratory",
+      "label": "Табурет лаборатории",
+      "reference": "panorama",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        0.575,
+        0.7722,
+        0.5915
+      ],
+      "triangles": 356,
+      "renderers": 3,
+      "sockets": [],
+      "path": "Models/Laboratory/Lab_Stool.fbx",
+      "sha256": "7e8a843ae44898863bb6694e5d8773358de7f142b86ca9f641a380cee344fa7a",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Erlenmeyer_Flask",
+      "category": "Laboratory",
+      "label": "Колба с пробой",
+      "reference": "chemist-video",
+      "collision": "none",
+      "grid": 0.05,
+      "size": [
+        0.15,
+        0.237,
+        0.15
+      ],
+      "triangles": 660,
+      "renderers": 3,
+      "sockets": [
+        "Interaction_Sample.005"
+      ],
+      "path": "Models/Laboratory/Erlenmeyer_Flask.fbx",
+      "sha256": "fbd5d655df6d4654f41aacfe6469da3b1b0bf8c15959190c5ebf5c6399772958",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Beaker",
+      "category": "Laboratory",
+      "label": "Мерный стакан",
+      "reference": "chemist-video",
+      "collision": "none",
+      "grid": 0.05,
+      "size": [
+        0.118,
+        0.154,
+        0.118
+      ],
+      "triangles": 616,
+      "renderers": 4,
+      "sockets": [],
+      "path": "Models/Laboratory/Beaker.fbx",
+      "sha256": "9020643e23896976f86008eeeb531954f7d146e8430dc02a9e0c84aa0dc62565",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Test_Tube_Rack",
+      "category": "Laboratory",
+      "label": "Штатив с пробирками",
+      "reference": "chemist-video",
+      "collision": "none",
+      "grid": 0.05,
+      "size": [
+        0.32,
+        0.188,
+        0.12
+      ],
+      "triangles": 656,
+      "renderers": 3,
+      "sockets": [],
+      "path": "Models/Laboratory/Test_Tube_Rack.fbx",
+      "sha256": "7abc7b6f6614e348cb13d913ef938c8a7e49bbb7f1a14f33954886cd0aff8fc0",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Lab_Balance",
+      "category": "Laboratory",
+      "label": "Лабораторные весы",
+      "reference": "chemist-video",
+      "collision": "none",
+      "grid": 0.05,
+      "size": [
+        0.3,
+        0.1025,
+        0.32
+      ],
+      "triangles": 308,
+      "renderers": 3,
+      "sockets": [
+        "Interaction_Read.001"
+      ],
+      "path": "Models/Laboratory/Lab_Balance.fbx",
+      "sha256": "56c3cb61486727ba6967cd4fa5d0f0a99ec27e88a4e7a182a6fecd617173302e",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Microscope",
+      "category": "Laboratory",
+      "label": "Микроскоп",
+      "reference": "chemist-video",
+      "collision": "none",
+      "grid": 0.05,
+      "size": [
+        0.26,
+        0.5216,
+        0.32
+      ],
+      "triangles": 392,
+      "renderers": 3,
+      "sockets": [],
+      "path": "Models/Laboratory/Microscope.fbx",
+      "sha256": "81ae122cf343da6606a498550c44177a4551f6d36043d569c495f67dec2f4478",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "PH_Meter",
+      "category": "Laboratory",
+      "label": "Измеритель с электродом",
+      "reference": "chemist-video",
+      "collision": "none",
+      "grid": 0.05,
+      "size": [
+        0.273,
+        0.408,
+        0.26
+      ],
+      "triangles": 348,
+      "renderers": 4,
+      "sockets": [
+        "Interaction_Read.002"
+      ],
+      "path": "Models/Laboratory/PH_Meter.fbx",
+      "sha256": "6fae4c49881c9b06ebe3acdf0334e3a659bab11103595e54d13ee0dbbda89c94",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Sample_Bottle",
+      "category": "Laboratory",
+      "label": "Бутылка для пробы",
+      "reference": "chemist-video",
+      "collision": "none",
+      "grid": 0.05,
+      "size": [
+        0.076,
+        0.1525,
+        0.076
+      ],
+      "triangles": 132,
+      "renderers": 2,
+      "sockets": [],
+      "path": "Models/Laboratory/Sample_Bottle.fbx",
+      "sha256": "988e5f27d164ea31d0fbf6becfc9f57bc2518cbd941c8bff65b2361b07884721",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Euro_Pallet",
+      "category": "Logistics",
+      "label": "Поддон 1200×800",
+      "reference": "bottling-video",
+      "collision": "box",
+      "grid": 0.1,
+      "size": [
+        1.2,
+        0.19,
+        0.95
+      ],
+      "triangles": 1512,
+      "renderers": 1,
+      "sockets": [],
+      "path": "Models/Logistics/Euro_Pallet.fbx",
+      "sha256": "30f0b365a1062de54f4032d7c705ebe1d95fe0b1c1a90e1f005aecdbe6f2bf11",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Carton_Box",
+      "category": "Logistics",
+      "label": "Транспортная коробка",
+      "reference": "panorama",
+      "collision": "box",
+      "grid": 0.1,
+      "size": [
+        0.6,
+        0.4045,
+        0.4
+      ],
+      "triangles": 120,
+      "renderers": 2,
+      "sockets": [],
+      "path": "Models/Logistics/Carton_Box.fbx",
+      "sha256": "3a5bc3bb132a6cf4083958606d48311c854d117b067541bcf9b5fab12ae58f70",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Pallet_Loaded",
+      "category": "Logistics",
+      "label": "Поддон с коробками",
+      "reference": "bottling-video",
+      "collision": "box",
+      "grid": 0.1,
+      "size": [
+        1.2,
+        1.4145,
+        0.95
+      ],
+      "triangles": 2952,
+      "renderers": 3,
+      "sockets": [],
+      "path": "Models/Logistics/Pallet_Loaded.fbx",
+      "sha256": "fe91ee19a34bbbfb9c12df2ffd7ccbee047344ac14b218941f77b79a19535e36",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Warehouse_Rack_3m",
+      "category": "Logistics",
+      "label": "Складской стеллаж 3 м",
+      "reference": "panorama",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        3.0,
+        3.6,
+        1.14
+      ],
+      "triangles": 1404,
+      "renderers": 3,
+      "sockets": [],
+      "path": "Models/Logistics/Warehouse_Rack_3m.fbx",
+      "sha256": "cb40761558778d7964ad3b55992b942a59cbf1be6839619061c4cdd50208f555",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Pallet_Jack",
+      "category": "Logistics",
+      "label": "Ручная тележка",
+      "reference": "panorama",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        0.64,
+        1.335,
+        1.5934
+      ],
+      "triangles": 840,
+      "renderers": 3,
+      "sockets": [],
+      "path": "Models/Logistics/Pallet_Jack.fbx",
+      "sha256": "57b89e3a4de75ff4ef131647a72523b4728425cf375a0366e88b7509437cd7d2",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Safety_Bollard",
+      "category": "Logistics",
+      "label": "Защитный столбик",
+      "reference": "panorama",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        0.32,
+        0.9,
+        0.32
+      ],
+      "triangles": 212,
+      "renderers": 3,
+      "sockets": [],
+      "path": "Models/Logistics/Safety_Bollard.fbx",
+      "sha256": "833bbdc94ba46681fc876e6ba35268559a979761fc3abc6a2e7bdca6d9a3c565",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Locker",
+      "category": "Logistics",
+      "label": "Шкаф для формы",
+      "reference": "chemist-video",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        0.8,
+        1.9,
+        0.5525
+      ],
+      "triangles": 612,
+      "renderers": 4,
+      "sockets": [],
+      "path": "Models/Logistics/Locker.fbx",
+      "sha256": "f53a4245d85ad17d7946e43ebc73717184a868421b3052e3fda9677c669e531a",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Tablet",
+      "category": "Props",
+      "label": "Рабочий планшет",
+      "reference": "panorama",
+      "collision": "none",
+      "grid": 0.05,
+      "size": [
+        0.2,
+        0.0285,
+        0.28
+      ],
+      "triangles": 216,
+      "renderers": 2,
+      "sockets": [],
+      "path": "Models/Props/Tablet.fbx",
+      "sha256": "598a8ab7db0108b0b8563ff0f0ce07ea69213a0fa6d7e8707225143ab32bac6f",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Clipboard",
+      "category": "Props",
+      "label": "Планшет с листом",
+      "reference": "panorama",
+      "collision": "none",
+      "grid": 0.05,
+      "size": [
+        0.24,
+        0.033,
+        0.33
+      ],
+      "triangles": 228,
+      "renderers": 3,
+      "sockets": [],
+      "path": "Models/Props/Clipboard.fbx",
+      "sha256": "b241839604871615ff8c790cf0b2b6926a108b4653b6844ab5ce09e458384c52",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Grain_Sack",
+      "category": "Agriculture",
+      "label": "Мешок зерна",
+      "reference": "malt-house",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        0.48,
+        0.71,
+        0.34
+      ],
+      "triangles": 572,
+      "renderers": 1,
+      "sockets": [],
+      "path": "Models/Agriculture/Grain_Sack.fbx",
+      "sha256": "d721529bfc42a8a7f7fd64cb0863c964a487e78028ea577184837fe89635d779",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Malt_Hopper",
+      "category": "Agriculture",
+      "label": "Приёмный бункер",
+      "reference": "malt-house",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        2.2,
+        2.2,
+        2.2
+      ],
+      "triangles": 564,
+      "renderers": 2,
+      "sockets": [],
+      "path": "Models/Agriculture/Malt_Hopper.fbx",
+      "sha256": "107f69e40f3b63f67d54e51b5e53af8ec972cdeb5e78f24271fcb69950d25078",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Wine_Barrel",
+      "category": "Agriculture",
+      "label": "Дубовая бочка",
+      "reference": "branches",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        0.774,
+        0.98,
+        0.774
+      ],
+      "triangles": 1996,
+      "renderers": 2,
+      "sockets": [],
+      "path": "Models/Agriculture/Wine_Barrel.fbx",
+      "sha256": "04cd7048c7fa04a84ef7ab585f2e7d1dc66534f1d0d2b8b7b693a4417ebc3c99",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    },
+    {
+      "id": "Vineyard_Row_4m",
+      "category": "Agriculture",
+      "label": "Секция виноградника 4 м",
+      "reference": "branches",
+      "collision": "box",
+      "grid": 0.5,
+      "size": [
+        4.19,
+        1.803,
+        0.445
+      ],
+      "triangles": 13304,
+      "renderers": 4,
+      "sockets": [],
+      "path": "Models/Agriculture/Vineyard_Row_4m.fbx",
+      "sha256": "61aa93cb11ba2f8e319f69f8ff27697a0ee8501b3a79b01583cb200a60c95fd2",
+      "license": "Original project geometry",
+      "status": "stylized concept; not a measured replica"
+    }
+  ],
+  "materialLibrary": {
+    "textures": "Textures/Surfaces",
+    "sets": [
+      "BrushedSteel",
+      "FactoryTile",
+      "KraftCardboard",
+      "PaintedMetal",
+      "Rubber",
+      "WoodGrain"
+    ],
+    "resolution": 512,
+    "maps": [
+      "Albedo",
+      "Normal",
+      "Roughness",
+      "MetallicSmoothness"
+    ]
+  }
+}

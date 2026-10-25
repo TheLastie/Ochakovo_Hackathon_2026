@@ -1,0 +1,121 @@
+[
+  {
+    "file": "branch-1.jpg",
+    "title": "Московский пиво-безалкогольный комбинат",
+    "url": "https://ochakovo.ru/wp-content/uploads/2024/10/ochakovo-filialy.jpg",
+    "page": "https://ochakovo.ru/kompaniya/",
+    "accessed": "2026-10-24",
+    "rights": "Ochakovo, reference only; not a redistributable game texture"
+  },
+  {
+    "file": "branch-2.jpg",
+    "title": "Пиво-безалкогольный комбинат в Краснодаре",
+    "url": "https://ochakovo.ru/wp-content/uploads/2024/10/branch-2-2.jpg",
+    "page": "https://ochakovo.ru/kompaniya/",
+    "accessed": "2026-10-24",
+    "rights": "Ochakovo, reference only; not a redistributable game texture"
+  },
+  {
+    "file": "branch-3.jpg",
+    "title": "Пиво-безалкогольный комбинат в Пензе",
+    "url": "https://ochakovo.ru/wp-content/uploads/2024/12/penza.jpg",
+    "page": "https://ochakovo.ru/kompaniya/",
+    "accessed": "2026-10-24",
+    "rights": "Ochakovo, reference only; not a redistributable game texture"
+  },
+  {
+    "file": "branch-4.jpg",
+    "title": "Пиво-безалкогольный комбинат в Тюмени",
+    "url": "https://ochakovo.ru/wp-content/uploads/2024/12/tyumen-kv.jpg",
+    "page": "https://ochakovo.ru/kompaniya/",
+    "accessed": "2026-10-24",
+    "rights": "Ochakovo, reference only; not a redistributable game texture"
+  },
+  {
+    "file": "branch-5.png",
+    "title": "Солодовня в Липецкой области",
+    "url": "https://ochakovo.ru/wp-content/uploads/2024/10/branch-5.png",
+    "page": "https://ochakovo.ru/kompaniya/",
+    "accessed": "2026-10-24",
+    "rights": "Ochakovo, reference only; not a redistributable game texture"
+  },
+  {
+    "file": "branch-6.png",
+    "title": "«Южная винная компания» в Краснодарском крае",
+    "url": "https://ochakovo.ru/wp-content/uploads/2024/10/branch-6.png",
+    "page": "https://ochakovo.ru/kompaniya/",
+    "accessed": "2026-10-24",
+    "rights": "Ochakovo, reference only; not a redistributable game texture"
+  },
+  {
+    "file": "01-canning-line.jpg",
+    "url": "https://ochakovo.ru/wp-content/uploads/2024/09/0-1520x1010-6.jpg",
+    "article": "https://ochakovo.ru/kak-delayut-nastoyashhij-kvas/",
+    "accessed": "2026-10-24",
+    "use": "Visual location reference for Flow; source photo belongs to Ochakovo.",
+    "rights": "Ochakovo; reference only"
+  },
+  {
+    "file": "02-malt-house.jpg",
+    "url": "https://ochakovo.ru/wp-content/uploads/2024/09/2-1.jpg",
+    "article": "https://ochakovo.ru/kak-delayut-nastoyashhij-kvas/",
+    "accessed": "2026-10-24",
+    "use": "Visual location reference for Flow; source photo belongs to Ochakovo.",
+    "rights": "Ochakovo; reference only"
+  },
+  {
+    "file": "03-brewing-vats.jpg",
+    "url": "https://ochakovo.ru/wp-content/uploads/2024/09/4.jpg",
+    "article": "https://ochakovo.ru/kak-delayut-nastoyashhij-kvas/",
+    "accessed": "2026-10-24",
+    "use": "Visual location reference for Flow; source photo belongs to Ochakovo.",
+    "rights": "Ochakovo; reference only"
+  },
+  {
+    "file": "04-fermentation-tanks.jpg",
+    "url": "https://ochakovo.ru/wp-content/uploads/2024/09/5.jpg",
+    "article": "https://ochakovo.ru/kak-delayut-nastoyashhij-kvas/",
+    "accessed": "2026-10-24",
+    "use": "Visual location reference for Flow; source photo belongs to Ochakovo.",
+    "rights": "Ochakovo; reference only"
+  },
+  {
+    "file": "05-product-reference.jpg",
+    "url": "https://ochakovo.ru/wp-content/uploads/2024/09/6.jpg",
+    "article": "https://ochakovo.ru/kak-delayut-nastoyashhij-kvas/",
+    "accessed": "2026-10-24",
+    "use": "Visual location reference for Flow; source photo belongs to Ochakovo.",
+    "rights": "Ochakovo; reference only"
+  },
+  {
+    "file": "06-laboratory.jpg",
+    "url": "https://nonalco.ochakovo.ru/wp-content/uploads/2019/01/1.jpg",
+    "article": "https://nonalco.ochakovo.ru/kak-proxodit-dvojnoe-brozhenie/",
+    "accessed": "2026-10-24",
+    "use": "Reference for generative location; source photo from official Ochakovo website.",
+    "rights": "Ochakovo; reference only"
+  },
+  {
+    "file": "07-workplace.jpg",
+    "url": "https://ochakovo.ru/wp-content/uploads/2024/09/0-2280h1520-2.jpg",
+    "article": "https://ochakovo.ru/gde-uchitsya-na-kvasovara/",
+    "accessed": "2026-10-24",
+    "use": "Reference for generative location; source photo from official Ochakovo website.",
+    "rights": "Ochakovo; reference only"
+  },
+  {
+    "file": "chemist-video-contact.jpg",
+    "source": "ОЧАКОВО/Химик-лаборант.mp4",
+    "use": "User-provided footage, 6-second contact sheet; not game texture"
+  },
+  {
+    "file": "bottling-video-contact.jpg",
+    "source": "ОЧАКОВО/Оператор линии розлива.mp4",
+    "use": "User-provided footage, 6-second contact sheet; not game texture"
+  },
+  {
+    "file": "machinery-video-contact.jpg",
+    "source": "ОЧАКОВО/Машинист оборудования.mp4",
+    "use": "User-provided footage, 6-second contact sheet; not game texture"
+  }
+]

@@ -1,0 +1,69 @@
+using System;
+using System.Runtime.InteropServices;
+using UnityEngine;
+using UnityEngine.AI;
+
+/// <summary>Factory exploration and interaction with the introductory lab workstation.</summary>
+public class FactoryExplorer : MonoBehaviour {
+ public NavMeshData navigation; public Transform player; public NavMeshAgent agent; public Camera view; public Font uiFont,uiBoldFont;
+ public string Role=>role;public bool IsPaused=>paused;FactoryComputerPuzzle computer;FactoryLabPreparation preparation;FactoryShiftHud help;public bool HelpBlocksInput=>help&&help.BlocksInput;
+ NavMeshDataInstance mesh; Vector3 originalCamera;float originalSize,zoom;string role="chemist";bool paused,hasInteracted;bool TouchControls=>Application.isMobilePlatform;FactoryCharacter character;FactoryActivity activity;LineRenderer ring,destination;Vector2 stick;int stickFinger=-1;bool mouseStick;GUIStyle label;float reportAt;
+ #if UNITY_WEBGL && !UNITY_EDITOR
+ [DllImport("__Internal")] static extern void FactoryLocationState(string json);
+ #endif
+ [Serializable] class LocationState {public string role;public float x,z;public bool walking;public int triangles;public float cameraX,cameraY,cameraZ,cameraSize;public bool paused;public string characterState;public float animationTime,productionTime,bottleX;public int hmiFrame,steamParticles,steamEmitters;public string npcStates;public bool computerOpen,computerNear,computerCompleted;public string computerPage,computerApp,computerFiles,computerSelected,computerQuery,computerCalculator,computerPhoto;public bool computerPhotoZoom;public int computerPhotoAngle;public bool computerDetails,computerMaximized;public int computerTrashCount,computerAppCount;public float computerWindowX,computerWindowY;public bool computerExplorerVisible,computerStartVisible;public int wrongFolders;public float computerScreenX,computerScreenY;public bool labUnlocked,labOpen,labCompleted,labNear,helpOpen,labProbeRinsed;public float labPh;public int labStep,labCorrections;public float labSampleMl,labFlaskMl,labMixTurns,labScreenX,labScreenY;public string labHeld;public Vector2[] labItems;}
+ void Awake(){mesh=NavMesh.AddNavMeshData(navigation);agent.enabled=true;originalCamera=view.transform.position;originalSize=view.orthographicSize;zoom=originalSize;
+  computer=GetComponent<FactoryComputerPuzzle>();preparation=GetComponent<FactoryLabPreparation>();help=GetComponent<FactoryShiftHud>();var url=Application.absoluteURL;foreach(var pair in url.Split('?').Length>1?url.Split('?')[1].Split('&'):new string[0]){var p=pair.Split('=');if(p.Length==2&&p[0]=="role"&&Array.IndexOf(new[]{"chemist","bottling","machinery","brewer"},p[1])>=0)role=p[1];}
+  activity=FindFirstObjectByType<FactoryActivity>();character=player.GetComponent<FactoryCharacter>();character?.SelectRole(role);ring=Circle("Player selection",.46f,new Color(1,1,1,.9f));ring.transform.SetParent(player,false);ring.transform.localPosition=Vector3.up*.035f;destination=Circle("Walking destination",.23f,new Color(1,1,1,.9f));destination.gameObject.SetActive(false);
+ }
+ LineRenderer Circle(string n,float radius,Color color){var o=new GameObject(n);var l=o.AddComponent<LineRenderer>();l.useWorldSpace=false;l.loop=true;l.positionCount=48;l.widthMultiplier=.035f;l.material=new Material(Shader.Find("Sprites/Default"));l.startColor=l.endColor=color;for(int i=0;i<48;i++){float a=i*Mathf.PI*2/48;l.SetPosition(i,new Vector3(Mathf.Sin(a)*radius,0,Mathf.Cos(a)*radius));}return l;}
+ public void MoveTo(string coordinates){var values=coordinates.Split(',');if(values.Length==2&&float.TryParse(values[0],System.Globalization.NumberStyles.Float,System.Globalization.CultureInfo.InvariantCulture,out float x)&&float.TryParse(values[1],System.Globalization.NumberStyles.Float,System.Globalization.CultureInfo.InvariantCulture,out float z))Go(new Vector3(x,0,z));}
+ void Go(Vector3 p){if(paused||!agent.isOnNavMesh)return;if(NavMesh.SamplePosition(p,out var hit,.8f,NavMesh.AllAreas)){var path=new NavMeshPath();if(agent.CalculatePath(hit.position,path)&&path.status==NavMeshPathStatus.PathComplete){agent.SetPath(path);destination.gameObject.SetActive(true);destination.transform.position=hit.position+Vector3.up*.03f;}}}
+ public void LockForComputer(bool locked){if(agent.isOnNavMesh){if(locked)agent.ResetPath();agent.isStopped=locked||paused;}stick=Vector2.zero;stickFinger=-1;mouseStick=false;character?.SetMovement(0,0);if(destination)destination.gameObject.SetActive(false);}
+ void Point(Vector2 p){if(preparation&&preparation.ConsumePointer(p))return;if(computer&&computer.ConsumePointer(p))return;preparation?.CancelApproach();computer?.CancelApproach();var ray=view.ScreenPointToRay(p);var plane=new Plane(Vector3.up,Vector3.zero);if(plane.Raycast(ray,out float enter))Go(ray.GetPoint(enter));}
+ Rect PauseRect()=>new Rect(Screen.width-138,18,120,38);
+ bool OverUI(Vector2 p){var top=new Vector2(p.x,Screen.height-p.y);return HelpBlocksInput||(computer&&computer.BlocksWorldInput)||(preparation&&preparation.BlocksWorldInput)||(UnityEngine.EventSystems.EventSystem.current&&UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())||PauseRect().Contains(top)||(TouchControls&&(p.x<140&&p.y<150))||(paused);}
+ void Update(){
+  if(HelpBlocksInput||computer&&computer.BlocksWorldInput||preparation&&preparation.BlocksWorldInput){ReportState();return;}
+  if(Input.GetKeyDown(KeyCode.Escape)){paused=!paused;agent.isStopped=paused;Time.timeScale=paused?0:1;stick=Vector2.zero;stickFinger=-1;mouseStick=false;}
+  ReportState();
+  if(Input.GetMouseButtonDown(0)||Input.anyKeyDown||Input.touchCount>0)hasInteracted=true;
+  if(paused)return;
+  if(Input.touchCount>0){foreach(var t in Input.touches){if(t.phase==TouchPhase.Began){if(t.position.x<140&&t.position.y<150){stickFinger=t.fingerId;}else if(!OverUI(t.position))Point(t.position);}if(t.fingerId==stickFinger){stick=Vector2.ClampMagnitude((t.position-new Vector2(78,78))/45,1);if(t.phase==TouchPhase.Ended||t.phase==TouchPhase.Canceled){stick=Vector2.zero;stickFinger=-1;}}}}
+  else {
+   if(Input.GetMouseButtonDown(0)){var p=(Vector2)Input.mousePosition;if(TouchControls&&p.x<140&&p.y<150)mouseStick=true;else if(!OverUI(p))Point(p);}
+   if(mouseStick){stick=Vector2.ClampMagnitude(((Vector2)Input.mousePosition-new Vector2(78,78))/45,1);if(Input.GetMouseButtonUp(0)){stick=Vector2.zero;mouseStick=false;}}
+  }
+  var input=new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"))+stick;
+  if(input.sqrMagnitude>.02f&&agent.isOnNavMesh){agent.ResetPath();destination.gameObject.SetActive(false);var right=view.transform.right;right.y=0;right.Normalize();var forward=Vector3.ProjectOnPlane(view.transform.forward,Vector3.up).normalized;var dir=(right*input.x+forward*input.y).normalized;agent.Move(dir*agent.speed*Time.deltaTime);player.rotation=Quaternion.RotateTowards(player.rotation,Quaternion.LookRotation(dir),600*Time.deltaTime);}
+  // Movement never changes the camera pose or projection. Zoom is explicit input only.
+  view.transform.position=originalCamera;
+  if(Mathf.Abs(Input.mouseScrollDelta.y)>.01f){zoom=Mathf.Clamp(zoom-Input.mouseScrollDelta.y*.35f,4.7f,5.35f);view.orthographicSize=zoom;}
+  if(Input.GetKeyDown(KeyCode.Space)){zoom=originalSize;view.orthographicSize=originalSize;}
+  character?.SetMovement(agent.velocity.magnitude,input.magnitude);
+  if(destination.gameObject.activeSelf&&!agent.pathPending&&agent.remainingDistance<.15f)destination.gameObject.SetActive(false);
+ }
+ int SteamCount(){int count=0;foreach(var ps in FindObjectsByType<ParticleSystem>(FindObjectsSortMode.None))count+=ps.particleCount;return count;}
+ string WorkStates(){var names=new System.Collections.Generic.List<string>();foreach(var c in FindObjectsByType<FactoryCharacter>(FindObjectsSortMode.None))if(!c.isPlayer)names.Add(c.CurrentState);return string.Join(",",names);}
+ void ReportState(){if(Time.unscaledTime<reportAt)return;reportAt=Time.unscaledTime+(preparation&&preparation.IsOpen?.1f:1f);
+   #if UNITY_WEBGL && !UNITY_EDITOR
+   FactoryLocationState(JsonUtility.ToJson(new LocationState{role=role,x=player.position.x,z=player.position.z,walking=agent.velocity.sqrMagnitude>.02f,triangles=NavMesh.CalculateTriangulation().indices.Length/3,cameraX=view.transform.position.x,cameraY=view.transform.position.y,cameraZ=view.transform.position.z,cameraSize=view.orthographicSize,paused=paused,characterState=character?character.CurrentState:"none",animationTime=character?character.AnimationTime:0,productionTime=Time.time,bottleX=activity&&activity.bottles.Length>0?activity.bottles[0].position.x:0,hmiFrame=activity?activity.CurrentFrame:0,steamEmitters=FindObjectsByType<ParticleSystem>(FindObjectsSortMode.None).Length,steamParticles=SteamCount(),npcStates=WorkStates(),computerOpen=computer&&computer.IsOpen,computerNear=computer&&computer.Near,computerCompleted=computer&&computer.Completed,computerPage=computer?computer.Page:"none",computerApp=computer&&computer.desktop?computer.desktop.ActiveApp:"desktop",computerFiles=computer&&computer.desktop?computer.desktop.VisibleNames:"",computerSelected=computer&&computer.desktop?computer.desktop.SelectedName:"",computerQuery=computer&&computer.desktop?computer.desktop.SearchQuery:"",computerCalculator=computer&&computer.desktop?computer.desktop.CalculatorResult:"",computerPhoto=computer&&computer.desktop?computer.desktop.CurrentPhoto:"",computerPhotoZoom=computer&&computer.desktop&&computer.desktop.PhotoZoomed,computerPhotoAngle=computer&&computer.desktop?computer.desktop.PhotoAngle:0,computerDetails=computer&&computer.desktop&&computer.desktop.DetailsView,computerMaximized=computer&&computer.desktop&&computer.desktop.Maximized,computerTrashCount=computer&&computer.desktop?computer.desktop.TrashCount:0,computerAppCount=computer&&computer.desktop?computer.desktop.AppCount:0,computerWindowX=computer&&computer.desktop?computer.desktop.ExplorerX:0,computerWindowY=computer&&computer.desktop?computer.desktop.ExplorerY:0,computerExplorerVisible=computer&&computer.desktop&&computer.desktop.ExplorerVisible,computerStartVisible=computer&&computer.desktop&&computer.desktop.StartVisible,wrongFolders=computer?computer.WrongFolders:0,computerScreenX=computer?computer.ScreenPosition.x:0,computerScreenY=computer?computer.ScreenPosition.y:0,helpOpen=help&&help.Showing,labProbeRinsed=preparation&&preparation.ProbeRinsed,labPh=preparation?preparation.MeasuredPh:0,labUnlocked=preparation&&preparation.Unlocked,labOpen=preparation&&preparation.IsOpen,labCompleted=preparation&&preparation.Completed,labNear=preparation&&preparation.Near,labStep=preparation?preparation.Step:0,labCorrections=preparation?preparation.Corrections:0,labSampleMl=preparation?preparation.SampleMl:0,labFlaskMl=preparation?preparation.FlaskMl:0,labMixTurns=preparation?preparation.MixTurns:0,labScreenX=preparation?preparation.ScreenPosition.x:0,labScreenY=preparation?preparation.ScreenPosition.y:0,labHeld=preparation?preparation.Held:"",labItems=preparation?preparation.ItemScreenPoints():null}));
+   #endif
+ }
+
+ void OnApplicationFocus(bool hasFocus){if(!hasFocus&&hasInteracted){paused=true;if(agent&&agent.isOnNavMesh)agent.isStopped=true;Time.timeScale=0;stick=Vector2.zero;stickFinger=-1;mouseStick=false;}}
+ Texture2D redTexture,hoverTexture,activeTexture;GUIStyle brandButton;
+ Texture2D Solid(Color color){var t=new Texture2D(1,1);t.SetPixel(0,0,color);t.Apply();return t;}
+ void Paint(Rect r,Color color){var previous=GUI.color;GUI.color=color;GUI.DrawTexture(r,Texture2D.whiteTexture);GUI.color=previous;}
+ void OnGUI(){
+  if(computer&&computer.IsOpen||preparation&&preparation.IsOpen)return;
+  if(brandButton==null){redTexture=Solid(new Color(213/255f,0,50/255f));hoverTexture=Solid(new Color(.71f,0,.17f));activeTexture=Solid(new Color(.57f,0,.13f));brandButton=new GUIStyle{font=uiBoldFont?uiBoldFont:uiFont,fontSize=16,alignment=TextAnchor.MiddleCenter,padding=new RectOffset(14,14,0,0),normal={background=redTexture,textColor=Color.white},hover={background=hoverTexture,textColor=Color.white},active={background=activeTexture,textColor=Color.white},focused={background=hoverTexture,textColor=Color.white}};}
+
+  if(label==null)label=new GUIStyle(GUI.skin.label){font=uiFont,fontSize=16,normal={textColor=new Color(.16f,.17f,.16f)}};
+  var old=GUI.color;if(GUI.Button(PauseRect(),paused?"Продолжить":"Пауза",brandButton)){paused=!paused;if(agent.isOnNavMesh)agent.isStopped=paused;Time.timeScale=paused?0:1;}
+  var hint=new GUIStyle(label){fontSize=13};GUI.color=new Color(1,1,1,.86f);GUI.DrawTexture(new Rect(20,Screen.height-44,TouchControls?245:450,28),Texture2D.whiteTexture);GUI.color=old;GUI.Label(new Rect(30,Screen.height-40,450,25),TouchControls?"Коснись пола · джойстик слева":"Клик — идти    WASD — движение    Колесо — ближе",hint);
+  if(TouchControls&&!paused){var center=new Vector2(78,Screen.height-78);GUI.color=new Color(1,1,1,.4f);GUI.DrawTexture(new Rect(center.x-48,center.y-48,96,96),Texture2D.whiteTexture);GUI.color=new Color(1,1,1,.85f);GUI.DrawTexture(new Rect(center.x-16+stick.x*30,center.y-16-stick.y*30,32,32),Texture2D.whiteTexture);GUI.color=old;}
+  if(paused){GUI.color=new Color(0,0,0,.25f);GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height),Texture2D.whiteTexture);GUI.color=old;var r=new Rect(Screen.width/2-165,Screen.height/2-80,330,160);Paint(r,Color.white);GUI.DrawTexture(new Rect(r.x,r.y,330,4),redTexture);GUI.Label(new Rect(r.x+24,r.y+22,282,36),"Смена на паузе",new GUIStyle(label){font=uiBoldFont?uiBoldFont:uiFont,fontSize=24});if(GUI.Button(new Rect(r.x+24,r.y+88,282,44),"Продолжить прогулку",brandButton)){paused=false;agent.isStopped=false;Time.timeScale=1;}}
+ }
+ void OnDestroy(){Time.timeScale=1;if(mesh.valid)mesh.Remove();if(redTexture)Destroy(redTexture);if(hoverTexture)Destroy(hoverTexture);if(activeTexture)Destroy(activeTexture);if(ring)Destroy(ring.material);if(destination)Destroy(destination.material);}
+}

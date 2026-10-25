@@ -1,0 +1,381 @@
+{
+  "role": "brewer",
+  "title": "Квасовар",
+  "duration": 30,
+  "fps": 24,
+  "size": [
+    1280,
+    720
+  ],
+  "timeline": [
+    {
+      "start": 0,
+      "end": 0.9166666666666666,
+      "source": "source/03-branded-intro.mp4",
+      "in": 0,
+      "out": 1,
+      "purpose": "amber kvass"
+    },
+    {
+      "start": 0.9166666666666666,
+      "end": 2.4166666666666665,
+      "source": "source/03-branded-intro.mp4",
+      "in": 1,
+      "out": 2,
+      "purpose": "rare craft"
+    },
+    {
+      "start": 2.4166666666666665,
+      "end": 4.333333333333333,
+      "source": "source/03-branded-intro.mp4",
+      "in": 2,
+      "out": 4,
+      "purpose": "Mikhalych introduces"
+    },
+    {
+      "start": 4.333333333333333,
+      "end": 6.0,
+      "source": "source/04-flow.mp4",
+      "in": 0,
+      "out": 1.6,
+      "purpose": "technology"
+    },
+    {
+      "start": 6.0,
+      "end": 7.5,
+      "source": "source/04-flow.mp4",
+      "in": 2,
+      "out": 3.4,
+      "purpose": "fermentation observation"
+    },
+    {
+      "start": 7.5,
+      "end": 8.916666666666666,
+      "source": "source/01-flow.mp4",
+      "in": 0,
+      "out": 1.4,
+      "purpose": "grain and malt"
+    },
+    {
+      "start": 8.916666666666666,
+      "end": 10.25,
+      "source": "source/01-flow.mp4",
+      "in": 0,
+      "out": 1.4,
+      "purpose": "check grain and malt"
+    },
+    {
+      "start": 10.25,
+      "end": 11.583333333333334,
+      "source": "source/04-flow.mp4",
+      "in": 4,
+      "out": 5.4,
+      "purpose": "monitor fermentation"
+    },
+    {
+      "start": 11.583333333333334,
+      "end": 13.0,
+      "source": "source/01-flow.mp4",
+      "in": 4,
+      "out": 5.4,
+      "purpose": "record"
+    },
+    {
+      "start": 13.0,
+      "end": 14.5,
+      "source": "source/05-flow.mp4",
+      "in": 0,
+      "out": 1.5,
+      "purpose": "notice trend"
+    },
+    {
+      "start": 14.5,
+      "end": 16.208333333333332,
+      "source": "source/05-flow.mp4",
+      "in": 2,
+      "out": 3.5,
+      "purpose": "consult journal"
+    },
+    {
+      "start": 16.208333333333332,
+      "end": 17.708333333333332,
+      "source": "source/02-flow.mp4",
+      "in": 0,
+      "out": 1.5,
+      "purpose": "discuss finding"
+    },
+    {
+      "start": 17.708333333333332,
+      "end": 19.416666666666668,
+      "source": "source/05-flow.mp4",
+      "in": 4,
+      "out": 5.6,
+      "purpose": "compare instruction"
+    },
+    {
+      "start": 19.416666666666668,
+      "end": 21.0,
+      "source": "source/02-flow.mp4",
+      "in": 1.5,
+      "out": 3,
+      "purpose": "Mikhalych explains"
+    },
+    {
+      "start": 21.0,
+      "end": 22.458333333333332,
+      "source": "source/02-flow.mp4",
+      "in": 3.2,
+      "out": 4.6,
+      "purpose": "young brewer records"
+    },
+    {
+      "start": 22.458333333333332,
+      "end": 23.833333333333332,
+      "source": "source/02-flow.mp4",
+      "in": 4.6,
+      "out": 5.9,
+      "purpose": "apply independently"
+    },
+    {
+      "start": 23.833333333333332,
+      "end": 25.208333333333332,
+      "source": "source/03-branded-intro.mp4",
+      "in": 4,
+      "out": 5.3,
+      "purpose": "finished kvass"
+    },
+    {
+      "start": 25.208333333333332,
+      "end": 26.541666666666668,
+      "source": "source/01-flow.mp4",
+      "in": 2,
+      "out": 3.3,
+      "purpose": "personal contribution"
+    },
+    {
+      "start": 26.541666666666668,
+      "end": 28.0,
+      "source": "source/03-branded-intro.mp4",
+      "in": 2,
+      "out": 3.5,
+      "purpose": "invitation"
+    }
+  ],
+  "typography": [
+    {
+      "text": "ЗНАКОМЫЙ ВКУС",
+      "start": 0,
+      "end": 2.4,
+      "size": 44
+    },
+    {
+      "text": "РЕДКОЕ МАСТЕРСТВО",
+      "start": 0.72,
+      "end": 2.4,
+      "size": 67
+    },
+    {
+      "text": "ПРОФЕССИИ ОЧАКОВО",
+      "start": 2.4,
+      "end": 4.35,
+      "size": 25
+    },
+    {
+      "text": "Квасовар",
+      "start": 2.4,
+      "end": 4.35,
+      "size": 62
+    },
+    {
+      "text": "ОЧАКОВО",
+      "start": 4.35,
+      "end": 28,
+      "size": 26
+    },
+    {
+      "text": "ПРИГОДИТСЯ",
+      "start": 4.35,
+      "end": 6.989,
+      "size": 24
+    },
+    {
+      "text": "Технология и микробиология",
+      "start": 4.35,
+      "end": 6.989,
+      "size": 38
+    },
+    {
+      "text": "ПРИГОДИТСЯ",
+      "start": 6.989,
+      "end": 8.9,
+      "size": 24
+    },
+    {
+      "text": "Знание сырья",
+      "start": 6.989,
+      "end": 8.9,
+      "size": 38
+    },
+    {
+      "text": "01  /  В ДЕЛЕ",
+      "start": 8.9,
+      "end": 10.266666666666667,
+      "size": 24
+    },
+    {
+      "text": "Проверять сырьё",
+      "start": 8.9,
+      "end": 10.266666666666667,
+      "size": 38
+    },
+    {
+      "text": "02  /  В ДЕЛЕ",
+      "start": 10.266666666666667,
+      "end": 11.633333333333333,
+      "size": 24
+    },
+    {
+      "text": "Следить за брожением",
+      "start": 10.266666666666667,
+      "end": 11.633333333333333,
+      "size": 38
+    },
+    {
+      "text": "03  /  В ДЕЛЕ",
+      "start": 11.633333333333333,
+      "end": 13.0,
+      "size": 24
+    },
+    {
+      "text": "Вести записи",
+      "start": 11.633333333333333,
+      "end": 13.0,
+      "size": 38
+    },
+    {
+      "text": "ПОКАЗАНИЯ ИЗМЕНИЛИСЬ?",
+      "start": 13,
+      "end": 15.112,
+      "size": 33
+    },
+    {
+      "text": "ПРОВЕРЬ",
+      "start": 15.112,
+      "end": 17.352,
+      "size": 24
+    },
+    {
+      "text": "Свериться с инструкцией",
+      "start": 15.112,
+      "end": 17.352,
+      "size": 38
+    },
+    {
+      "text": "ДЕЙСТВУЙ",
+      "start": 17.352,
+      "end": 19.4,
+      "size": 24
+    },
+    {
+      "text": "Обсудить с командой",
+      "start": 17.352,
+      "end": 19.4,
+      "size": 38
+    },
+    {
+      "text": "МИХАЛЫЧ РЯДОМ",
+      "start": 19.4,
+      "end": 21.625,
+      "size": 24
+    },
+    {
+      "text": "Учиться у опытных",
+      "start": 19.4,
+      "end": 21.625,
+      "size": 38
+    },
+    {
+      "text": "ТВОЙ ХОД",
+      "start": 21.625,
+      "end": 23.85,
+      "size": 24
+    },
+    {
+      "text": "Применять самому",
+      "start": 21.625,
+      "end": 23.85,
+      "size": 38
+    },
+    {
+      "text": "ТВОЙ ВКЛАД",
+      "start": 23.85,
+      "end": 26.55,
+      "size": 25
+    },
+    {
+      "text": "Качество",
+      "start": 23.85,
+      "end": 26.55,
+      "size": 48
+    },
+    {
+      "text": "знакомого кваса",
+      "start": 24.130000000000003,
+      "end": 26.55,
+      "size": 36
+    },
+    {
+      "text": "ТВОЙ СЛЕДУЮЩИЙ ШАГ",
+      "start": 26.55,
+      "end": 28,
+      "size": 24
+    },
+    {
+      "text": "Хочешь попробовать?",
+      "start": 26.55,
+      "end": 28,
+      "size": 38
+    },
+    {
+      "text": "ОЧАКОВО",
+      "start": 28,
+      "end": 30,
+      "size": 28
+    },
+    {
+      "text": "Твои знания",
+      "start": 28,
+      "end": 30,
+      "size": 83
+    },
+    {
+      "text": "нужны в деле",
+      "start": 28.15,
+      "end": 30,
+      "size": 83
+    },
+    {
+      "text": "Узнай о практике",
+      "start": 28,
+      "end": 30,
+      "size": 43
+    }
+  ],
+  "narration": {
+    "text": "Знакомый вкус. Редкое мастерство. Ты — квасовар. Пригодятся технология напитков, микробиология и знание сырья. Проверяешь сырьё, следишь за брожением, ведёшь записи. Показатели изменились? Сверяешься с технологической инструкцией, обсуждаешь результат с коллегами. Мастерство осваиваешь на производстве, рядом с опытным наставником. Твой вклад — качество знакомого кваса. Хочешь освоить это дело? Узнай о практике.",
+    "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-8bit",
+    "seed": 42,
+    "temperature": 0.35,
+    "top_p": 0.85,
+    "sample_rate": 24000,
+    "duration": 29.6,
+    "reference": "Exact greeting, brand.mp4, 0–2.208333 seconds",
+    "reference_text": "Привет! Я Михалыч.",
+    "pitch_shift_semitones": 0,
+    "speed_change": false,
+    "voice_settings": "Same as user-approved chemist film",
+    "silence_cuts": []
+  },
+  "audio": "Approved greeting-based narration, original low-level percussion bed; Flow source audio discarded",
+  "status": "Complete review film; audience impact not measured"
+}

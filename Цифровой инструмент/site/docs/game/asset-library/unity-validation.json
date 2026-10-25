@@ -1,0 +1,753 @@
+{
+    "originalPrefabs": 62,
+    "thirdPartyPrefabs": 180,
+    "unityVersion": "6000.3.22f1",
+    "status": "passed",
+    "originals": [
+        {
+            "id": "Floor_4x4",
+            "path": "Assets/FactoryKit/Prefabs/Architecture/Floor_4x4.prefab",
+            "triangles": 132,
+            "renderers": 2,
+            "colliders": 1,
+            "size": {
+                "x": 4.000000476837158,
+                "y": 0.16400045156478883,
+                "z": 3.999999761581421
+            }
+        },
+        {
+            "id": "Floor_2x2",
+            "path": "Assets/FactoryKit/Prefabs/Architecture/Floor_2x2.prefab",
+            "triangles": 132,
+            "renderers": 2,
+            "colliders": 1,
+            "size": {
+                "x": 2.000000238418579,
+                "y": 0.16400021314620973,
+                "z": 1.9999998807907105
+            }
+        },
+        {
+            "id": "Wall_4m",
+            "path": "Assets/FactoryKit/Prefabs/Architecture/Wall_4m.prefab",
+            "triangles": 156,
+            "renderers": 2,
+            "colliders": 1,
+            "size": {
+                "x": 4.0,
+                "y": 3.499999761581421,
+                "z": 0.19100072979927064
+            }
+        },
+        {
+            "id": "Wall_Window_4m",
+            "path": "Assets/FactoryKit/Prefabs/Architecture/Wall_Window_4m.prefab",
+            "triangles": 768,
+            "renderers": 3,
+            "colliders": 1,
+            "size": {
+                "x": 4.0,
+                "y": 3.499999761581421,
+                "z": 0.18000075221061707
+            }
+        },
+        {
+            "id": "Wall_Door_4m",
+            "path": "Assets/FactoryKit/Prefabs/Architecture/Wall_Door_4m.prefab",
+            "triangles": 584,
+            "renderers": 4,
+            "colliders": 1,
+            "size": {
+                "x": 4.0,
+                "y": 3.499999761581421,
+                "z": 0.23500047624111176
+            }
+        },
+        {
+            "id": "Column_4m",
+            "path": "Assets/FactoryKit/Prefabs/Architecture/Column_4m.prefab",
+            "triangles": 216,
+            "renderers": 2,
+            "colliders": 1,
+            "size": {
+                "x": 0.5000000596046448,
+                "y": 3.999999523162842,
+                "z": 0.4999999701976776
+            }
+        },
+        {
+            "id": "Roof_Truss_8m",
+            "path": "Assets/FactoryKit/Prefabs/Architecture/Roof_Truss_8m.prefab",
+            "triangles": 440,
+            "renderers": 1,
+            "colliders": 1,
+            "size": {
+                "x": 8.028672218322754,
+                "y": 0.790000319480896,
+                "z": 0.0900028720498085
+            }
+        },
+        {
+            "id": "Light_Batten_2m",
+            "path": "Assets/FactoryKit/Prefabs/Architecture/Light_Batten_2m.prefab",
+            "triangles": 216,
+            "renderers": 2,
+            "colliders": 0,
+            "size": {
+                "x": 2.0,
+                "y": 0.12250001728534699,
+                "z": 0.1800001859664917
+            }
+        },
+        {
+            "id": "Floor_Marking_2m",
+            "path": "Assets/FactoryKit/Prefabs/Architecture/Floor_Marking_2m.prefab",
+            "triangles": 12,
+            "renderers": 1,
+            "colliders": 0,
+            "size": {
+                "x": 0.07000017166137696,
+                "y": 0.0060002380050718788,
+                "z": 1.999999761581421
+            }
+        },
+        {
+            "id": "Stairs_1_5m",
+            "path": "Assets/FactoryKit/Prefabs/Architecture/Stairs_1_5m.prefab",
+            "triangles": 1216,
+            "renderers": 1,
+            "colliders": 1,
+            "size": {
+                "x": 1.0900003910064698,
+                "y": 2.5291662216186525,
+                "z": 2.1112234592437746
+            }
+        },
+        {
+            "id": "Catwalk_2m",
+            "path": "Assets/FactoryKit/Prefabs/Architecture/Catwalk_2m.prefab",
+            "triangles": 636,
+            "renderers": 1,
+            "colliders": 1,
+            "size": {
+                "x": 2.049999952316284,
+                "y": 2.48799991607666,
+                "z": 1.2000006437301636
+            }
+        },
+        {
+            "id": "Brew_Kettle",
+            "path": "Assets/FactoryKit/Prefabs/Process/Brew_Kettle.prefab",
+            "triangles": 2344,
+            "renderers": 5,
+            "colliders": 1,
+            "size": {
+                "x": 2.364000082015991,
+                "y": 3.6499996185302736,
+                "z": 2.7350003719329836
+            }
+        },
+        {
+            "id": "Fermentation_Tank",
+            "path": "Assets/FactoryKit/Prefabs/Process/Fermentation_Tank.prefab",
+            "triangles": 2644,
+            "renderers": 4,
+            "colliders": 1,
+            "size": {
+                "x": 1.6639999151229859,
+                "y": 4.170000076293945,
+                "z": 2.0350003242492677
+            }
+        },
+        {
+            "id": "Storage_Tank",
+            "path": "Assets/FactoryKit/Prefabs/Process/Storage_Tank.prefab",
+            "triangles": 2552,
+            "renderers": 4,
+            "colliders": 1,
+            "size": {
+                "x": 2.064000129699707,
+                "y": 3.419999599456787,
+                "z": 2.435000419616699
+            }
+        },
+        {
+            "id": "Wine_Tank",
+            "path": "Assets/FactoryKit/Prefabs/Process/Wine_Tank.prefab",
+            "triangles": 2552,
+            "renderers": 4,
+            "colliders": 1,
+            "size": {
+                "x": 1.9640001058578492,
+                "y": 3.3199996948242189,
+                "z": 2.335000514984131
+            }
+        },
+        {
+            "id": "Grain_Silo",
+            "path": "Assets/FactoryKit/Prefabs/Process/Grain_Silo.prefab",
+            "triangles": 2644,
+            "renderers": 4,
+            "colliders": 1,
+            "size": {
+                "x": 2.6640002727508547,
+                "y": 5.2699995040893559,
+                "z": 3.0350005626678469
+            }
+        },
+        {
+            "id": "Pipe_Straight_1m",
+            "path": "Assets/FactoryKit/Prefabs/Pipes/Pipe_Straight_1m.prefab",
+            "triangles": 228,
+            "renderers": 1,
+            "colliders": 0,
+            "size": {
+                "x": 1.0399999618530274,
+                "y": 0.2000000774860382,
+                "z": 0.20000018179416657
+            }
+        },
+        {
+            "id": "Pipe_Straight_2m",
+            "path": "Assets/FactoryKit/Prefabs/Pipes/Pipe_Straight_2m.prefab",
+            "triangles": 228,
+            "renderers": 1,
+            "colliders": 0,
+            "size": {
+                "x": 2.0399999618530275,
+                "y": 0.20000016689300538,
+                "z": 0.20000037550926209
+            }
+        },
+        {
+            "id": "Pipe_Straight_4m",
+            "path": "Assets/FactoryKit/Prefabs/Pipes/Pipe_Straight_4m.prefab",
+            "triangles": 228,
+            "renderers": 1,
+            "colliders": 0,
+            "size": {
+                "x": 4.039999961853027,
+                "y": 0.2000003457069397,
+                "z": 0.20000076293945313
+            }
+        },
+        {
+            "id": "Pipe_Elbow_90",
+            "path": "Assets/FactoryKit/Prefabs/Pipes/Pipe_Elbow_90.prefab",
+            "triangles": 528,
+            "renderers": 1,
+            "colliders": 0,
+            "size": {
+                "x": 0.6407303810119629,
+                "y": 0.1500002145767212,
+                "z": 0.5894712805747986
+            }
+        },
+        {
+            "id": "Pipe_Tee",
+            "path": "Assets/FactoryKit/Prefabs/Pipes/Pipe_Tee.prefab",
+            "triangles": 88,
+            "renderers": 1,
+            "colliders": 0,
+            "size": {
+                "x": 1.0000001192092896,
+                "y": 0.15000012516975404,
+                "z": 0.5750001072883606
+            }
+        },
+        {
+            "id": "Valve_Handwheel",
+            "path": "Assets/FactoryKit/Prefabs/Pipes/Valve_Handwheel.prefab",
+            "triangles": 652,
+            "renderers": 2,
+            "colliders": 0,
+            "size": {
+                "x": 0.6000000834465027,
+                "y": 0.6029999256134033,
+                "z": 0.260000079870224
+            }
+        },
+        {
+            "id": "Pressure_Gauge",
+            "path": "Assets/FactoryKit/Prefabs/Pipes/Pressure_Gauge.prefab",
+            "triangles": 248,
+            "renderers": 3,
+            "colliders": 0,
+            "size": {
+                "x": 0.25999999046325686,
+                "y": 0.3099999725818634,
+                "z": 0.0874282643198967
+            }
+        },
+        {
+            "id": "Centrifugal_Pump",
+            "path": "Assets/FactoryKit/Prefabs/Process/Centrifugal_Pump.prefab",
+            "triangles": 380,
+            "renderers": 2,
+            "colliders": 1,
+            "size": {
+                "x": 1.2999999523162842,
+                "y": 0.8500000238418579,
+                "z": 0.6500001549720764
+            }
+        },
+        {
+            "id": "Heat_Exchanger",
+            "path": "Assets/FactoryKit/Prefabs/Process/Heat_Exchanger.prefab",
+            "triangles": 2276,
+            "renderers": 3,
+            "colliders": 1,
+            "size": {
+                "x": 1.2700001001358033,
+                "y": 1.5999999046325684,
+                "z": 0.8700000047683716
+            }
+        },
+        {
+            "id": "CIP_Skid",
+            "path": "Assets/FactoryKit/Prefabs/Process/CIP_Skid.prefab",
+            "triangles": 2732,
+            "renderers": 3,
+            "colliders": 1,
+            "size": {
+                "x": 2.0,
+                "y": 1.9600000381469727,
+                "z": 1.1230002641677857
+            }
+        },
+        {
+            "id": "Control_Cabinet",
+            "path": "Assets/FactoryKit/Prefabs/Process/Control_Cabinet.prefab",
+            "triangles": 844,
+            "renderers": 8,
+            "colliders": 1,
+            "size": {
+                "x": 0.9000000357627869,
+                "y": 2.0999996662139894,
+                "z": 0.4800000786781311
+            }
+        },
+        {
+            "id": "Operator_Console",
+            "path": "Assets/FactoryKit/Prefabs/Process/Operator_Console.prefab",
+            "triangles": 708,
+            "renderers": 9,
+            "colliders": 1,
+            "size": {
+                "x": 1.0,
+                "y": 1.7000000476837159,
+                "z": 0.6499999761581421
+            }
+        },
+        {
+            "id": "Conveyor_2m",
+            "path": "Assets/FactoryKit/Prefabs/Bottling/Conveyor_2m.prefab",
+            "triangles": 832,
+            "renderers": 2,
+            "colliders": 1,
+            "size": {
+                "x": 0.8000009655952454,
+                "y": 1.2050002813339234,
+                "z": 2.000000238418579
+            }
+        },
+        {
+            "id": "Conveyor_4m",
+            "path": "Assets/FactoryKit/Prefabs/Bottling/Conveyor_4m.prefab",
+            "triangles": 832,
+            "renderers": 2,
+            "colliders": 1,
+            "size": {
+                "x": 0.8000017404556274,
+                "y": 1.205000877380371,
+                "z": 4.0
+            }
+        },
+        {
+            "id": "Roller_Conveyor_2m",
+            "path": "Assets/FactoryKit/Prefabs/Bottling/Roller_Conveyor_2m.prefab",
+            "triangles": 1828,
+            "renderers": 2,
+            "colliders": 1,
+            "size": {
+                "x": 0.8000009655952454,
+                "y": 1.2050002813339234,
+                "z": 2.000000238418579
+            }
+        },
+        {
+            "id": "Conveyor_Corner_90",
+            "path": "Assets/FactoryKit/Prefabs/Bottling/Conveyor_Corner_90.prefab",
+            "triangles": 1104,
+            "renderers": 2,
+            "colliders": 1,
+            "size": {
+                "x": 1.475289225578308,
+                "y": 0.990000307559967,
+                "z": 1.5704078674316407
+            }
+        },
+        {
+            "id": "Filling_Machine",
+            "path": "Assets/FactoryKit/Prefabs/Bottling/Filling_Machine.prefab",
+            "triangles": 2468,
+            "renderers": 9,
+            "colliders": 1,
+            "size": {
+                "x": 1.6349999904632569,
+                "y": 2.9600000381469728,
+                "z": 2.000000238418579
+            }
+        },
+        {
+            "id": "Labeling_Machine",
+            "path": "Assets/FactoryKit/Prefabs/Bottling/Labeling_Machine.prefab",
+            "triangles": 2432,
+            "renderers": 9,
+            "colliders": 1,
+            "size": {
+                "x": 1.6349999904632569,
+                "y": 2.9600000381469728,
+                "z": 2.000000238418579
+            }
+        },
+        {
+            "id": "Packing_Machine",
+            "path": "Assets/FactoryKit/Prefabs/Bottling/Packing_Machine.prefab",
+            "triangles": 2356,
+            "renderers": 9,
+            "colliders": 1,
+            "size": {
+                "x": 1.6349999904632569,
+                "y": 2.9599995613098146,
+                "z": 2.000000238418579
+            }
+        },
+        {
+            "id": "PET_Bottle_Prototype",
+            "path": "Assets/FactoryKit/Prefabs/Props/PET_Bottle_Prototype.prefab",
+            "triangles": 300,
+            "renderers": 2,
+            "colliders": 0,
+            "size": {
+                "x": 0.09160000830888748,
+                "y": 0.32899999618530276,
+                "z": 0.09160003066062927
+            }
+        },
+        {
+            "id": "Can_Prototype",
+            "path": "Assets/FactoryKit/Prefabs/Props/Can_Prototype.prefab",
+            "triangles": 660,
+            "renderers": 3,
+            "colliders": 0,
+            "size": {
+                "x": 0.06800000369548798,
+                "y": 0.17100000381469727,
+                "z": 0.06800002604722977
+            }
+        },
+        {
+            "id": "Bottle_Tray_12",
+            "path": "Assets/FactoryKit/Prefabs/Props/Bottle_Tray_12.prefab",
+            "triangles": 3708,
+            "renderers": 3,
+            "colliders": 0,
+            "size": {
+                "x": 0.36000004410743716,
+                "y": 0.39400002360343935,
+                "z": 0.4699999988079071
+            }
+        },
+        {
+            "id": "Lab_Bench_2m",
+            "path": "Assets/FactoryKit/Prefabs/Laboratory/Lab_Bench_2m.prefab",
+            "triangles": 1000,
+            "renderers": 4,
+            "colliders": 1,
+            "size": {
+                "x": 2.0,
+                "y": 1.2300000190734864,
+                "z": 0.8500002026557922
+            }
+        },
+        {
+            "id": "Lab_Stool",
+            "path": "Assets/FactoryKit/Prefabs/Laboratory/Lab_Stool.prefab",
+            "triangles": 356,
+            "renderers": 3,
+            "colliders": 1,
+            "size": {
+                "x": 0.5749753713607788,
+                "y": 0.7722381949424744,
+                "z": 0.5915335416793823
+            }
+        },
+        {
+            "id": "Erlenmeyer_Flask",
+            "path": "Assets/FactoryKit/Prefabs/Laboratory/Erlenmeyer_Flask.prefab",
+            "triangles": 660,
+            "renderers": 3,
+            "colliders": 0,
+            "size": {
+                "x": 0.15000002086162568,
+                "y": 0.2370000034570694,
+                "z": 0.15000003576278687
+            }
+        },
+        {
+            "id": "Beaker",
+            "path": "Assets/FactoryKit/Prefabs/Laboratory/Beaker.prefab",
+            "triangles": 616,
+            "renderers": 4,
+            "colliders": 0,
+            "size": {
+                "x": 0.11800000816583634,
+                "y": 0.15400001406669618,
+                "z": 0.11800000071525574
+            }
+        },
+        {
+            "id": "Test_Tube_Rack",
+            "path": "Assets/FactoryKit/Prefabs/Laboratory/Test_Tube_Rack.prefab",
+            "triangles": 656,
+            "renderers": 3,
+            "colliders": 0,
+            "size": {
+                "x": 0.3199999928474426,
+                "y": 0.18799999356269837,
+                "z": 0.12000002712011337
+            }
+        },
+        {
+            "id": "Lab_Balance",
+            "path": "Assets/FactoryKit/Prefabs/Laboratory/Lab_Balance.prefab",
+            "triangles": 308,
+            "renderers": 3,
+            "colliders": 0,
+            "size": {
+                "x": 0.30000004172325137,
+                "y": 0.10250002145767212,
+                "z": 0.3199999928474426
+            }
+        },
+        {
+            "id": "Microscope",
+            "path": "Assets/FactoryKit/Prefabs/Laboratory/Microscope.prefab",
+            "triangles": 392,
+            "renderers": 3,
+            "colliders": 0,
+            "size": {
+                "x": 0.2600000202655792,
+                "y": 0.5216000080108643,
+                "z": 0.3200000524520874
+            }
+        },
+        {
+            "id": "PH_Meter",
+            "path": "Assets/FactoryKit/Prefabs/Laboratory/PH_Meter.prefab",
+            "triangles": 348,
+            "renderers": 4,
+            "colliders": 0,
+            "size": {
+                "x": 0.2730000913143158,
+                "y": 0.40799999237060549,
+                "z": 0.25999999046325686
+            }
+        },
+        {
+            "id": "Sample_Bottle",
+            "path": "Assets/FactoryKit/Prefabs/Laboratory/Sample_Bottle.prefab",
+            "triangles": 132,
+            "renderers": 2,
+            "colliders": 0,
+            "size": {
+                "x": 0.07600000500679016,
+                "y": 0.1525000035762787,
+                "z": 0.07600001245737076
+            }
+        },
+        {
+            "id": "Euro_Pallet",
+            "path": "Assets/FactoryKit/Prefabs/Logistics/Euro_Pallet.prefab",
+            "triangles": 1512,
+            "renderers": 1,
+            "colliders": 1,
+            "size": {
+                "x": 1.2000001668930054,
+                "y": 0.19000010192394257,
+                "z": 0.9500001668930054
+            }
+        },
+        {
+            "id": "Carton_Box",
+            "path": "Assets/FactoryKit/Prefabs/Logistics/Carton_Box.prefab",
+            "triangles": 120,
+            "renderers": 2,
+            "colliders": 1,
+            "size": {
+                "x": 0.6000000834465027,
+                "y": 0.40450000762939455,
+                "z": 0.40000009536743166
+            }
+        },
+        {
+            "id": "Pallet_Loaded",
+            "path": "Assets/FactoryKit/Prefabs/Logistics/Pallet_Loaded.prefab",
+            "triangles": 2952,
+            "renderers": 3,
+            "colliders": 1,
+            "size": {
+                "x": 1.2000001668930054,
+                "y": 1.4144999980926514,
+                "z": 0.9500001072883606
+            }
+        },
+        {
+            "id": "Warehouse_Rack_3m",
+            "path": "Assets/FactoryKit/Prefabs/Logistics/Warehouse_Rack_3m.prefab",
+            "triangles": 1404,
+            "renderers": 3,
+            "colliders": 1,
+            "size": {
+                "x": 3.0,
+                "y": 3.5999999046325685,
+                "z": 1.1400004625320435
+            }
+        },
+        {
+            "id": "Pallet_Jack",
+            "path": "Assets/FactoryKit/Prefabs/Logistics/Pallet_Jack.prefab",
+            "triangles": 840,
+            "renderers": 3,
+            "colliders": 1,
+            "size": {
+                "x": 0.6400001049041748,
+                "y": 1.334999918937683,
+                "z": 1.5934069156646729
+            }
+        },
+        {
+            "id": "Safety_Bollard",
+            "path": "Assets/FactoryKit/Prefabs/Logistics/Safety_Bollard.prefab",
+            "triangles": 212,
+            "renderers": 3,
+            "colliders": 1,
+            "size": {
+                "x": 0.320000022649765,
+                "y": 0.8999998569488525,
+                "z": 0.3199999928474426
+            }
+        },
+        {
+            "id": "Locker",
+            "path": "Assets/FactoryKit/Prefabs/Logistics/Locker.prefab",
+            "triangles": 612,
+            "renderers": 4,
+            "colliders": 1,
+            "size": {
+                "x": 0.8000000715255737,
+                "y": 1.8999998569488526,
+                "z": 0.5525001287460327
+            }
+        },
+        {
+            "id": "Tablet",
+            "path": "Assets/FactoryKit/Prefabs/Props/Tablet.prefab",
+            "triangles": 216,
+            "renderers": 2,
+            "colliders": 0,
+            "size": {
+                "x": 0.20000003278255464,
+                "y": 0.02850002981722355,
+                "z": 0.2800000011920929
+            }
+        },
+        {
+            "id": "Clipboard",
+            "path": "Assets/FactoryKit/Prefabs/Props/Clipboard.prefab",
+            "triangles": 228,
+            "renderers": 3,
+            "colliders": 0,
+            "size": {
+                "x": 0.24000002443790437,
+                "y": 0.032999999821186069,
+                "z": 0.33000001311302187
+            }
+        },
+        {
+            "id": "Grain_Sack",
+            "path": "Assets/FactoryKit/Prefabs/Agriculture/Grain_Sack.prefab",
+            "triangles": 572,
+            "renderers": 1,
+            "colliders": 1,
+            "size": {
+                "x": 0.4799998104572296,
+                "y": 0.7099999785423279,
+                "z": 0.34000009298324587
+            }
+        },
+        {
+            "id": "Malt_Hopper",
+            "path": "Assets/FactoryKit/Prefabs/Agriculture/Malt_Hopper.prefab",
+            "triangles": 564,
+            "renderers": 2,
+            "colliders": 1,
+            "size": {
+                "x": 2.200000762939453,
+                "y": 2.200000286102295,
+                "z": 2.200000524520874
+            }
+        },
+        {
+            "id": "Wine_Barrel",
+            "path": "Assets/FactoryKit/Prefabs/Agriculture/Wine_Barrel.prefab",
+            "triangles": 1996,
+            "renderers": 2,
+            "colliders": 1,
+            "size": {
+                "x": 0.7740001082420349,
+                "y": 0.9800001382827759,
+                "z": 0.7740001678466797
+            }
+        },
+        {
+            "id": "Vineyard_Row_4m",
+            "path": "Assets/FactoryKit/Prefabs/Agriculture/Vineyard_Row_4m.prefab",
+            "triangles": 13304,
+            "renderers": 4,
+            "colliders": 1,
+            "size": {
+                "x": 4.190000057220459,
+                "y": 1.8029887676239014,
+                "z": 0.4450003504753113
+            }
+        },
+        {
+            "id": "Ochakovsky_Kvass_PET_500ml",
+            "path": "Assets/FactoryKit/Prefabs/Products/Ochakovsky_Kvass_PET_500ml.prefab",
+            "triangles": 7056,
+            "renderers": 8,
+            "colliders": 1,
+            "size": {
+                "x": 0.06730000674724579,
+                "y": 0.2240000069141388,
+                "z": 0.06730000674724579
+            }
+        },
+        {
+            "id": "Mojito_Fresh_Can_450ml",
+            "path": "Assets/FactoryKit/Prefabs/Products/Mojito_Fresh_Can_450ml.prefab",
+            "triangles": 7452,
+            "renderers": 6,
+            "colliders": 1,
+            "size": {
+                "x": 0.06630000472068787,
+                "y": 0.1679999828338623,
+                "z": 0.06630001962184906
+            }
+        }
+    ],
+    "errors": []
+}

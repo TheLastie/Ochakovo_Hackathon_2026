@@ -1,0 +1,29 @@
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+
+/// <summary>Panorama-style avatar/progress and contextual help, shared by the factory and close-up.</summary>
+[DefaultExecutionOrder(-110)]
+public class FactoryShiftHud : MonoBehaviour {
+ public FactoryExplorer explorer;public FactoryComputerPuzzle computer;public FactoryLabPreparation lab;public Font font,bold;public Texture2D mentor,chemist,bottling,machinery,brewer;
+ public bool Showing{get;private set;}public bool BlocksInput=>Showing||Time.unscaledTime<blockUntil;
+ Canvas canvas;GameObject popup,veil;Text advice;Image[] dots=new Image[4];RawImage portrait;float blockUntil;
+ RectTransform R(Transform p,string n,float x,float y,float w,float h){var o=new GameObject(n,typeof(RectTransform));var r=(RectTransform)o.transform;r.SetParent(p,false);r.anchorMin=r.anchorMax=r.pivot=new Vector2(0,1);r.anchoredPosition=new Vector2(x,-y);r.sizeDelta=new Vector2(w,h);return r;}
+ Text T(Transform p,string s,float x,float y,float w,float h,int size,bool heavy=false){var t=R(p,s,x,y,w,h).gameObject.AddComponent<Text>();t.font=heavy?bold:font;t.fontSize=size;t.text=s;t.color=new Color32(21,21,21,255);t.raycastTarget=false;return t;}
+ Button B(Transform p,string s,float x,float y,float w,float h,UnityEngine.Events.UnityAction action){var r=R(p,s,x,y,w,h);var image=r.gameObject.AddComponent<Image>();image.color=Color.white;var outline=r.gameObject.AddComponent<Outline>();outline.effectColor=new Color32(213,0,50,255);outline.effectDistance=new Vector2(1,-1);var b=r.gameObject.AddComponent<Button>();b.targetGraphic=image;b.onClick.AddListener(action);var t=T(r,s,0,0,w,h,15,true);t.color=new Color32(213,0,50,255);t.alignment=TextAnchor.MiddleCenter;return b;}
+ void Start(){
+  var o=new GameObject("Shift HUD",typeof(Canvas),typeof(CanvasScaler),typeof(GraphicRaycaster));canvas=o.GetComponent<Canvas>();canvas.renderMode=RenderMode.ScreenSpaceOverlay;canvas.sortingOrder=90;var scaler=o.GetComponent<CanvasScaler>();scaler.uiScaleMode=CanvasScaler.ScaleMode.ScaleWithScreenSize;scaler.referenceResolution=new Vector2(1280,800);scaler.matchWidthOrHeight=1;
+  var pill=R(o.transform,"Four step progress",51,35,210,36).gameObject.AddComponent<Image>();pill.color=new Color(1,1,1,.96f);
+  for(int i=0;i<4;i++){dots[i]=R(o.transform,"Shift step "+i,91+i*43,44,18,18).gameObject.AddComponent<Image>();dots[i].sprite=Circle();dots[i].raycastTarget=false;}
+  var avatar=R(o.transform,"Player avatar",18,18,70,70);var mask=avatar.gameObject.AddComponent<Image>();mask.sprite=Circle();mask.color=Color.white;avatar.gameObject.AddComponent<Mask>().showMaskGraphic=true;portrait=R(avatar,"Selected role portrait",4,4,62,62).gameObject.AddComponent<RawImage>();portrait.uvRect=new Rect(.34f,.78f,.32f,.21f);portrait.raycastTarget=false;
+  veil=R(o.transform,"Hint input shield",0,0,1280,800).gameObject;veil.AddComponent<Image>().color=new Color(0,0,0,.07f);veil.SetActive(false);
+  B(o.transform,"Что делать?",1114,739,148,38,Toggle);
+  popup=R(o.transform,"Mikhalych hint",746,452,516,270).gameObject;popup.AddComponent<Image>().color=new Color(1,1,1,.98f);popup.AddComponent<Outline>().effectColor=new Color32(213,0,50,255);
+  var image=R(popup.transform,"Михалыч",14,42,130,210).gameObject.AddComponent<RawImage>();image.texture=mentor;image.uvRect=new Rect(.06f,.28f,.32f,.70f);image.raycastTarget=false;
+  T(popup.transform,"МИХАЛЫЧ ПОДСКАЖЕТ",161,19,310,29,17,true);advice=T(popup.transform,"",161,58,330,193,18);B(popup.transform,"×",477,10,27,27,Toggle);popup.SetActive(false);
+ }
+ void Update(){if(!canvas)return;if(Input.GetKeyDown(KeyCode.H)&&!computer.IsOpen)Toggle();else if(Showing&&Input.GetKeyDown(KeyCode.Escape))Toggle();int stage=!computer.Completed?0:lab.Completed?4:lab.Step>=3?2:1;for(int i=0;i<4;i++)dots[i].color=i<=stage?new Color32(213,0,50,255):new Color32(198,189,185,255);portrait.texture=explorer.Role=="chemist"?chemist:explorer.Role=="bottling"?bottling:explorer.Role=="machinery"?machinery:brewer;if(Showing)advice.text=Hint();}
+ string Hint(){if(explorer.Role!="chemist")return "Осмотрись на производстве. Клик по полу задаёт путь, WASD управляет шагами. Подробный рабочий сценарий пока доступен химику-лаборанту.";if(computer.IsOpen&&!computer.Completed){switch(computer.Page){case "desktop":return "Начни с «Рабочих папок». Найди свою лабораторию и смену 24.10.2026. В журнале распределения указан твой код пробы.";case "departments":return "Ты химик-лаборант — ищи лабораторию качества. Чужие папки можно читать, за любопытство не штрафуем.";case "today":return "Открой журнал распределения: исполнитель «Стажёр», код ЛК-024. Затем найди карточку во входящих пробах.";case "incoming":return "Нужна карточка LK024_MOXITO.txt за текущую смену. Проверь, что партия — М-2410.";default:return "Проверь дату 24.10.2026, исполнителя и код ЛК-024. Журнал распределения поможет найти нужную карточку.";}}if(!computer.Completed)return computer.Near?"Это рабочий компьютер. Нажми E, открой рабочие папки и найди поручение химика-лаборанта.":"Подойди к компьютеру слева внизу. Красный значок показывает доступное рабочее место. Кликни по монитору — персонаж подойдёт сам.";return lab.HelpText;}
+ public void Toggle(){Showing=!Showing;veil.SetActive(Showing);popup.SetActive(Showing);blockUntil=Time.unscaledTime+.2f;if(Showing){lab.AbortForHelp();explorer.LockForComputer(true);advice.text=Hint();}else{explorer.LockForComputer(computer.IsOpen||lab.IsOpen);if(EventSystem.current)EventSystem.current.SetSelectedGameObject(null);}}
+ static Sprite circle;static Sprite Circle(){if(circle)return circle;var t=new Texture2D(64,64,TextureFormat.RGBA32,false);for(int y=0;y<64;y++)for(int x=0;x<64;x++)t.SetPixel(x,y,new Color(1,1,1,Mathf.Clamp01((.49f-Vector2.Distance(new Vector2(x+.5f,y+.5f),new Vector2(32,32))/64)*64)));t.Apply();return circle=Sprite.Create(t,new Rect(0,0,64,64),new Vector2(.5f,.5f));}
+}

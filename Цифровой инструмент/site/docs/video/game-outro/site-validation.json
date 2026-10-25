@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "viewport": "1280x800 Retina 2",
+  "checks": [
+    "actual task-file gating",
+    "full second puzzle triggers final video",
+    "Unity instance unloaded after completion",
+    "apply prefills role and focuses form without submitting",
+    "return to profession choice",
+    "all three unavailable roles show Mikhalych stub without loading Unity",
+    "stub retains selected role for application",
+    "chemist shortcut updates actual selection and opens chemist intro",
+    "video failure keeps working navigation"
+  ],
+  "applicationSubmissions": 0,
+  "scriptErrors": []
+}

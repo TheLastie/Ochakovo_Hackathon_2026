@@ -1,0 +1,13 @@
+{
+    "status": "passed",
+    "renderers": 871,
+    "triangles": 252422,
+    "navigationTriangles": 158,
+    "allRoutes": true,
+    "routes": [
+        "(3.80, 0.00, 2.70): True",
+        "(-2.20, 0.00, 1.80): True",
+        "(-4.90, 0.00, -5.00): True",
+        "(3.00, 0.00, -3.00): True"
+    ]
+}

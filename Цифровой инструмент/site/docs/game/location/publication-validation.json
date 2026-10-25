@@ -1,0 +1,128 @@
+{
+  "status": "passed",
+  "viewport": "1280x800, deviceScaleFactor 2",
+  "checks": [
+    "site menu, role and film transition",
+    "real walk and E",
+    "folders clickable in MacBook-size window",
+    "retina framebuffer input",
+    "entire game visible",
+    "complete and Escape close",
+    "task unlocks laboratory",
+    "beacon click approaches lab",
+    "3D bench visible on site",
+    "Retina coordinates drag and pour 30 ml",
+    "return to factory after measurement"
+  ],
+  "rect": {
+    "x": 115.203125,
+    "y": 115.796875,
+    "width": 1049.59375,
+    "height": 655.984375
+  },
+  "state": {
+    "role": "chemist",
+    "x": 3.39046049118042,
+    "z": 3.533661127090454,
+    "walking": false,
+    "triangles": 158,
+    "cameraX": 0,
+    "cameraY": 19,
+    "cameraZ": -23,
+    "cameraSize": 5.349999904632568,
+    "paused": false,
+    "characterState": "Idle",
+    "animationTime": 2.272803544998169,
+    "productionTime": 30.413999557495117,
+    "bottleX": -4.007920742034912,
+    "hmiFrame": 2,
+    "steamParticles": 28,
+    "steamEmitters": 2,
+    "npcStates": "OperatePanel,OperateValve,InspectSample",
+    "computerOpen": false,
+    "computerNear": false,
+    "computerCompleted": true,
+    "computerPage": "task",
+    "computerApp": "notepad",
+    "computerFiles": "LK023_Kvas.txt|LK024_MOXITO.txt|LK025_Kvas.txt",
+    "computerSelected": "LK024_MOXITO.txt",
+    "computerQuery": "",
+    "computerCalculator": "0",
+    "computerPhoto": "",
+    "computerPhotoZoom": false,
+    "computerPhotoAngle": 0,
+    "computerDetails": false,
+    "computerMaximized": false,
+    "computerTrashCount": 3,
+    "computerAppCount": 1,
+    "computerWindowX": 150,
+    "computerWindowY": 46,
+    "computerExplorerVisible": true,
+    "computerStartVisible": false,
+    "wrongFolders": 0,
+    "computerScreenX": 323.0887756347656,
+    "computerScreenY": 289.8080749511719,
+    "labUnlocked": true,
+    "labOpen": false,
+    "labCompleted": false,
+    "labNear": true,
+    "helpOpen": false,
+    "labProbeRinsed": false,
+    "labPh": 0,
+    "labStep": 1,
+    "labCorrections": 0,
+    "labSampleMl": 29.327045440673828,
+    "labFlaskMl": 0,
+    "labMixTurns": 0,
+    "labScreenX": 1063.3878173828125,
+    "labScreenY": 745.2545776367188,
+    "labHeld": "",
+    "labItems": [
+      {
+        "x": 160.4408416748047,
+        "y": 617.7721557617188
+      },
+      {
+        "x": 378.4645080566406,
+        "y": 617.7721557617188
+      },
+      {
+        "x": 662.0881958007812,
+        "y": 592.39208984375
+      },
+      {
+        "x": 980.441162109375,
+        "y": 592.39208984375
+      },
+      {
+        "x": 1260.2060546875,
+        "y": 577.1640625
+      }
+    ]
+  },
+  "scriptErrors": [],
+  "buildAssets": [
+    {
+      "file": "WebGL.ae344627016bf719.loader.js",
+      "sha256": "ae344627016bf7194cc73a411086c26324435d17f80fd720476b4647e814d0f9",
+      "bytes": 26983
+    },
+    {
+      "file": "WebGL.09b3d81cf0fce4c0.data",
+      "sha256": "09b3d81cf0fce4c0331ed59832b1374b393eb90155b1b4949dc866cd644f049f",
+      "bytes": 27408208
+    },
+    {
+      "file": "WebGL.7e6b097a3d8b9f2e.framework.js",
+      "sha256": "7e6b097a3d8b9f2ee4eac0de90edc7d0a02f99d7dde843598f540c1e70183bdb",
+      "bytes": 426398
+    },
+    {
+      "file": "WebGL.6f6309827f0f6747.wasm",
+      "sha256": "6f6309827f0f6747ab830aef7f52cc5cebce686d99c220f3b5738cbd69a18a67",
+      "bytes": 32064325
+    }
+  ],
+  "httpAssetsVerified": true,
+  "publicationScope": "local website"
+}
